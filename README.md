@@ -2,6 +2,11 @@
 
 ----
 
+[Project Kanban Board](https://zube.io/enigmadragons/ldjam44/w/jam-board/kanban)
+
+
+----
+
 ### Development Environment Setup
 
 ----
@@ -54,7 +59,10 @@ Requirements:
 
 ----
 
-Music/Sound Lead: 
-Design Lead:
-Programmer Lead: 
-Art Lead: 
+- SilasReinagel: Project Manager/Director/Programming 
+- Brad: Audio Lead/Composer/Sound Effects
+- ZavixDragon: Lead Designer 
+- sahilpohare: Lead Programmer 
+- EzraIII: Programmer
+- shaddo: Art Lead/3D Modelling
+- GordyKeene: Lead Tester
