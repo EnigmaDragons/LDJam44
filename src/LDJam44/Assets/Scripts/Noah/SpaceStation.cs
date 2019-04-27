@@ -1,6 +1,4 @@
-﻿using UnityEngine;
-
-public class SpaceStation : MonoBehaviour
+﻿public class SpaceStation : Singleton<SpaceStation>
 {
     public int ShipmentUnitCost;
 }

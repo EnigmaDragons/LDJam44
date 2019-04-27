@@ -18,7 +18,7 @@ public class LevelEnd : MonoBehaviour
         if (levelEnded == true)
             return;
         levelEnded = true;
-        //ship.Stop();
+        ship.Stop();
         GameObject.Instantiate(TravelSummary);
     }
 }
