@@ -26,15 +26,18 @@ public class EnemyTypeA : Enemy
             this.transform.position = Vector3.Lerp(this.transform.position, location, moveSpeed * Time.deltaTime);
         }
     }
+
     public void AddMovementVector(Vector3 input)
     {
         targetLocation += input; 
+
     }
 
     void Update()
     {
-        Move(new Vector3(target.transform.position.x,target.transform.position.y,0), Speed);
-        
-
+        AddMovementVector(new Vector3(0, 0, 10));
+        AddMovementVector(target.transform.position);
+        Move(new Vector3(targetLocation.x,targetLocation.y,targetLocation.z), Speed);
+       
     }
 }
