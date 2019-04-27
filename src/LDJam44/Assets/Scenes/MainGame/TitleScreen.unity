@@ -147,15 +147,15 @@ RectTransform:
   m_GameObject: {fileID: 406918336}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.1875, y: 0.8043165, z: 1}
   m_Children: []
   m_Father: {fileID: 1473595794}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0025024, y: 0.000022888}
-  m_SizeDelta: {x: 843.01, y: 512}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -0.0025024414, y: 0.000030517578}
+  m_SizeDelta: {x: -160.98999, y: 234}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &406918338
 MonoBehaviour:
@@ -292,11 +292,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4689318459675380153}
     m_Modifications:
-    - target: {fileID: 7714527606982670518, guid: c27256bc142ef5f47a5e613ae178e558,
-        type: 3}
-      propertyPath: m_Name
-      value: CreditsButton
-      objectReference: {fileID: 0}
     - target: {fileID: 1476295146453492895, guid: c27256bc142ef5f47a5e613ae178e558,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -401,6 +396,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7714527606982670518, guid: c27256bc142ef5f47a5e613ae178e558,
+        type: 3}
+      propertyPath: m_Name
+      value: CreditsButton
       objectReference: {fileID: 0}
     - target: {fileID: 7634785881052054535, guid: c27256bc142ef5f47a5e613ae178e558,
         type: 3}
@@ -891,11 +891,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5609525996610948643}
     m_Modifications:
-    - target: {fileID: 7714527606982670518, guid: c27256bc142ef5f47a5e613ae178e558,
-        type: 3}
-      propertyPath: m_Name
-      value: BackButton
-      objectReference: {fileID: 0}
     - target: {fileID: 1476295146453492895, guid: c27256bc142ef5f47a5e613ae178e558,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1000,6 +995,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7714527606982670518, guid: c27256bc142ef5f47a5e613ae178e558,
+        type: 3}
+      propertyPath: m_Name
+      value: BackButton
       objectReference: {fileID: 0}
     - target: {fileID: 7634785881052054535, guid: c27256bc142ef5f47a5e613ae178e558,
         type: 3}
@@ -1165,6 +1165,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 883908467511338987, guid: ba85e8ec3ae64044d9b664aaecef8449,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6426703024956095054, guid: ba85e8ec3ae64044d9b664aaecef8449,
         type: 3}
