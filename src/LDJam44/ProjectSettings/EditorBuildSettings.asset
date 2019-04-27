@@ -23,4 +23,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainGame/WinScreen.unity
     guid: d9f87720fd530484791f690d27998b28
+  - enabled: 1
+    path: Assets/Scenes/ShipTravel.unity
+    guid: a28cbac4d2e376d4c8998be70003333e
+  - enabled: 1
+    path: Assets/Scenes/SpaceStation.unity
+    guid: b36c6b13e00c46a47b1bc5ce5c0d833f
   m_configObjects: {}

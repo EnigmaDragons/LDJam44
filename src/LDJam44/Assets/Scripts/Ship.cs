@@ -7,8 +7,8 @@ public class Ship : MonoBehaviour
     [SerializeField] float hSpeed = 6f;
     [SerializeField] float vSpeed = 6f;
     [SerializeField] Weapon weapon;
-    private bool stopping = false;
 
+    private bool stopping = false;
     private Rigidbody Rigidbody;
 
     void Start()
