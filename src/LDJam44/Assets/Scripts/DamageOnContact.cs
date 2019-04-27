@@ -3,7 +3,8 @@
 public class DamageOnContact : MonoBehaviour
 {
     [SerializeField] int damageAmount = 10;
-    [SerializeField] Role appliesTo = Role.All; 
+    [SerializeField] Role appliesTo = Role.All;
+    [SerializeField] AudioClip soundEffect;
 
     bool resolvedDamage;
 
@@ -12,9 +13,17 @@ public class DamageOnContact : MonoBehaviour
 
     private void ApplyDamageTo(GameObject target)
     {
+        if (resolvedDamage)
+            return;
+
         var health = target.GetComponent<Health>();
         if (health == null)
             Debug.LogError($"No Health Component Found on {target.name}");
-        health?.ApplyDamage(damageAmount);
+        else
+        {
+            health?.ApplyDamage(damageAmount);
+            AudioSource.PlayClipAtPoint(soundEffect, Camera.main.transform.position);
+            resolvedDamage = true;
+        }
     }
 }
