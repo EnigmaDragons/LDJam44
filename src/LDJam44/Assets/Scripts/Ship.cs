@@ -2,14 +2,19 @@
 
 public class Ship : MonoBehaviour
 {
-    [SerializeField] float speed = 10f;
+    [SerializeField] float zSpeed = 10f;
+    [SerializeField] float hSpeed = 6f;
+    [SerializeField] float vSpeed = 6f;
 
     private Rigidbody Rigidbody;
 
     void Start()
     {
         Rigidbody = GetComponent<Rigidbody>();
-        Rigidbody.velocity = transform.forward * speed;
     }
 
+    void Update()
+    {
+        Rigidbody.velocity = new Vector3(hSpeed * Input.GetAxis("Horizontal"), vSpeed * Input.GetAxis("Vertical"), zSpeed);
+    }
 }
