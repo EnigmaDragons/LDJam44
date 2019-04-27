@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -35,28 +36,7 @@ public class LevelSummary : MonoBehaviour
         TotalNum.text = total.ToString();
         player.ShipmentUnits = 0;
         player.LifeForce = total;
-    }
-
-    void Update()
-    {
-        timeSpent += Time.deltaTime;
-        if (timeSpent * 1000 >= AnimationMilliseconds)
-        {
-            Shipment.gameObject.SetActive(true);
-            ShipmentNum.gameObject.SetActive(true);
-        }
-        if (timeSpent * 1000 >= AnimationMilliseconds * 2)
-        {
-            RemainingLifeForce.gameObject.SetActive(true);
-            RemainingLifeForceNum.gameObject.SetActive(true);
-        }
-        if (timeSpent * 1000 >= AnimationMilliseconds * 3)
-        {
-            Line.gameObject.SetActive(true);
-            Total.gameObject.SetActive(true);
-            TotalNum.gameObject.SetActive(true);
-            Ok.gameObject.SetActive(true);
-        }
+        StartCoroutine(PresentElements());
     }
 
     public void Done()
@@ -65,5 +45,20 @@ public class LevelSummary : MonoBehaviour
             SceneManager.LoadScene(SceneNames.SpaceStationScene);
         else
             SceneManager.LoadScene(SceneNames.WinScene);
+    }
+
+    private IEnumerator PresentElements()
+    {
+        yield return new WaitForSeconds(AnimationMilliseconds / 1000);
+        Shipment.gameObject.SetActive(true);
+        ShipmentNum.gameObject.SetActive(true);
+        yield return new WaitForSeconds(AnimationMilliseconds / 1000);
+        RemainingLifeForce.gameObject.SetActive(true);
+        RemainingLifeForceNum.gameObject.SetActive(true);
+        yield return new WaitForSeconds(AnimationMilliseconds / 1000);
+        Line.gameObject.SetActive(true);
+        Total.gameObject.SetActive(true);
+        TotalNum.gameObject.SetActive(true);
+        Ok.gameObject.SetActive(true);
     }
 }
