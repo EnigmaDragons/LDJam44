@@ -4,11 +4,5 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes:
-  - enabled: 1
-    path: Assets/Scenes/ShipTravel.unity
-    guid: a28cbac4d2e376d4c8998be70003333e
-  - enabled: 1
-    path: Assets/Scenes/SpaceStation.unity
-    guid: b36c6b13e00c46a47b1bc5ce5c0d833f
+  m_Scenes: []
   m_configObjects: {}
