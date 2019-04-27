@@ -9,12 +9,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2614984062132937996}
+  - component: {fileID: 2614984062132937999}
+  - component: {fileID: 398340866599469093}
+  - component: {fileID: 2614984062132937998}
   - component: {fileID: 2614984062132937997}
   - component: {fileID: 2614984062132937986}
   - component: {fileID: 2614984062132937987}
-  - component: {fileID: 2614984062132937999}
   - component: {fileID: 2614984062132937993}
-  - component: {fileID: 2614984062132937998}
   m_Layer: 0
   m_Name: Asteroid
   m_TagString: Untagged
@@ -36,6 +37,54 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2614984062132937999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2614984062132937984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6bacb28e6ef4444494b54f073ff87ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAmount: 10
+  appliesTo: 0
+  soundEffect: {fileID: 8300000, guid: 33ae92e52b8cbe141b7427443c750159, type: 3}
+--- !u!114 &398340866599469093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2614984062132937984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 650da5cfef6a67e4fb803131d35c89a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  role: 2
+  maxHp: 1
+  currentHp: 1
+  onDeath: {fileID: 8300000, guid: 33ae92e52b8cbe141b7427443c750159, type: 3}
+  onDeathVfx: {fileID: 541646883767013081, guid: a6c2ce95cd676f54c881f3a367a2ac5a,
+    type: 3}
+--- !u!114 &2614984062132937998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2614984062132937984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ae32121151c3754395dcf09ba02314a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  x: 0.8
+  y: -1.8
+  z: -4
 --- !u!33 &2614984062132937997
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -94,21 +143,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &2614984062132937999
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2614984062132937984}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6bacb28e6ef4444494b54f073ff87ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damageAmount: 10
-  appliesTo: 0
-  soundEffect: {fileID: 8300000, guid: 33ae92e52b8cbe141b7427443c750159, type: 3}
 --- !u!54 &2614984062132937993
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -125,18 +159,3 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &2614984062132937998
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2614984062132937984}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ae32121151c3754395dcf09ba02314a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  x: 0.8
-  y: -1.8
-  z: -4

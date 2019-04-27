@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 2689443013312590356}
   - component: {fileID: 4660932460096110771}
   - component: {fileID: 3183516837162617594}
+  - component: {fileID: 1172654454563117989}
   m_Layer: 0
   m_Name: Spaceship
   m_TagString: Untagged
@@ -127,6 +128,7 @@ MonoBehaviour:
   zSpeed: 10
   hSpeed: 4
   vSpeed: 4
+  weapon: {fileID: 0}
 --- !u!114 &4660932460096110771
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -143,6 +145,8 @@ MonoBehaviour:
   maxHp: 10
   currentHp: 10
   onDeath: {fileID: 8300000, guid: 1350ced706204a545b010ee85b4817fd, type: 3}
+  onDeathVfx: {fileID: 541646883767013081, guid: a6c2ce95cd676f54c881f3a367a2ac5a,
+    type: 3}
 --- !u!82 &3183516837162617594
 AudioSource:
   m_ObjectHideFlags: 0
@@ -239,3 +243,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1172654454563117989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2689443013312590353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6bacb28e6ef4444494b54f073ff87ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAmount: 10
+  appliesTo: 2
+  soundEffect: {fileID: 8300000, guid: 1d4666ef3a2021441b83701935242d79, type: 3}

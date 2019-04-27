@@ -16,9 +16,11 @@ public class DamageOnContact : MonoBehaviour
         if (resolvedDamage)
             return;
 
+        Debug.Log($"{target.name} was hit by {name}");
+
         var health = target.GetComponent<Health>();
         if (health == null)
-            Debug.LogError($"No Health Component Found on {target.name}");
+            Debug.Log($"No Health Component Found on {target.name}");
         else
         {
             health?.ApplyDamage(damageAmount);
