@@ -1,13 +1,11 @@
 ﻿using System;
+using Assets.Scripts;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class UpgradesUI : MonoBehaviour
 {
-    public string SpaceStationName;
-    public string PlayerName;
-
-    private SpaceStation spaceStation;
+    private SpaceStationState _spaceStationState;
     private PlayerState player;
     private Action onAccept;
     private Action onReject;
@@ -50,16 +48,17 @@ public class UpgradesUI : MonoBehaviour
 
     public void Start()
     {
-        spaceStation = GameObject.Find(SpaceStationName).GetComponent<SpaceStation>();
-        player = GameObject.Find(PlayerName).GetComponent<PlayerState>();
-        UpdateUpgrade(ThrusterButton, ThrusterCost, CurrentThrusters, player.Thrusters, spaceStation.ThrusterCosts);
-        UpdateUpgrade(StabilizerButton, StabilizerCost, CurrentStabilizers, player.Stabilizers, spaceStation.StabilizerCosts);
-        UpdateUpgrade(TradingButton, TradingCost, CurrentTrading, player.Trading, spaceStation.TradingCosts);
-        UpdateUpgrade(LootingButton, LootingCost, CurrentLooting, player.Looting, spaceStation.LootingCosts);
-        UpdateUpgrade(DroneButton, DroneCost, CurrentDrones, player.Drones, spaceStation.DroneCosts);
-        UpdateUpgrade(AmpButton, AmpCost, CurrentAmp, player.Amp, spaceStation.AmpCosts);
-        UpdateUpgrade(ShieldButton, ShieldCost, CurrentShields, player.Shields, spaceStation.ShieldCosts);
-        UpdateUpgrade(DrainButton, DrainCost, CurrentDrain, player.Drain, spaceStation.DrainCosts);
+        var gameState = GameObject.Find("GameState").GetComponent<GameState>();
+        _spaceStationState = gameState.SpaceStationData;
+        player = gameState.PlayerData;
+        UpdateUpgrade(ThrusterButton, ThrusterCost, CurrentThrusters, player.Thrusters, _spaceStationState.ThrusterCosts);
+        UpdateUpgrade(StabilizerButton, StabilizerCost, CurrentStabilizers, player.Stabilizers, _spaceStationState.StabilizerCosts);
+        UpdateUpgrade(TradingButton, TradingCost, CurrentTrading, player.Trading, _spaceStationState.TradingCosts);
+        UpdateUpgrade(LootingButton, LootingCost, CurrentLooting, player.Looting, _spaceStationState.LootingCosts);
+        UpdateUpgrade(DroneButton, DroneCost, CurrentDrones, player.Drones, _spaceStationState.DroneCosts);
+        UpdateUpgrade(AmpButton, AmpCost, CurrentAmp, player.Amp, _spaceStationState.AmpCosts);
+        UpdateUpgrade(ShieldButton, ShieldCost, CurrentShields, player.Shields, _spaceStationState.ShieldCosts);
+        UpdateUpgrade(DrainButton, DrainCost, CurrentDrain, player.Drain, _spaceStationState.DrainCosts);
     }
 
     private void UpdateUpgrade(Button button, Text cost, Text currentUpgradeLevel, int playerUpgradeLevel, int[] upgradeCosts)
@@ -118,42 +117,42 @@ public class UpgradesUI : MonoBehaviour
 
     public void BuyThrusters()
     {
-        BuyUpgrade(MovementUI, ThrusterButton, ThrusterCost, CurrentThrusters, player.Thrusters, spaceStation.ThrusterCosts, "Thrusters", () => player.Thrusters++);
+        BuyUpgrade(MovementUI, ThrusterButton, ThrusterCost, CurrentThrusters, player.Thrusters, _spaceStationState.ThrusterCosts, "Thrusters", () => player.Thrusters++);
     }
 
     public void BuyStabilizers()
     {
-        BuyUpgrade(MovementUI, StabilizerButton, StabilizerCost, CurrentStabilizers, player.Stabilizers, spaceStation.StabilizerCosts, "Stabilizers", () => player.Stabilizers++);
+        BuyUpgrade(MovementUI, StabilizerButton, StabilizerCost, CurrentStabilizers, player.Stabilizers, _spaceStationState.StabilizerCosts, "Stabilizers", () => player.Stabilizers++);
     }
 
     public void BuyTrading()
     {
-        BuyUpgrade(EconomicUI, TradingButton, TradingCost, CurrentTrading, player.Trading, spaceStation.TradingCosts, "Trading", () => player.Trading++);
+        BuyUpgrade(EconomicUI, TradingButton, TradingCost, CurrentTrading, player.Trading, _spaceStationState.TradingCosts, "Trading", () => player.Trading++);
     }
 
     public void BuyLooting()
     {
-        BuyUpgrade(EconomicUI, LootingButton, LootingCost, CurrentLooting, player.Looting, spaceStation.LootingCosts, "Looting", () => player.Looting++);
+        BuyUpgrade(EconomicUI, LootingButton, LootingCost, CurrentLooting, player.Looting, _spaceStationState.LootingCosts, "Looting", () => player.Looting++);
     }
 
     public void BuyDrones()
     {
-        BuyUpgrade(OffensiveUI, DroneButton, DroneCost, CurrentDrones, player.Drones, spaceStation.DroneCosts, "A Drone", () => player.Drones++);
+        BuyUpgrade(OffensiveUI, DroneButton, DroneCost, CurrentDrones, player.Drones, _spaceStationState.DroneCosts, "A Drone", () => player.Drones++);
     }
 
     public void BuyAmp()
     {
-        BuyUpgrade(OffensiveUI, AmpButton, AmpCost, CurrentAmp, player.Amp, spaceStation.AmpCosts, "A Amp", () => player.Amp++);
+        BuyUpgrade(OffensiveUI, AmpButton, AmpCost, CurrentAmp, player.Amp, _spaceStationState.AmpCosts, "A Amp", () => player.Amp++);
     }
 
     public void BuyShields()
     {
-        BuyUpgrade(DefensiveUI, ShieldButton, ShieldCost, CurrentShields, player.Shields, spaceStation.ShieldCosts, "Shields", () => player.Shields++);
+        BuyUpgrade(DefensiveUI, ShieldButton, ShieldCost, CurrentShields, player.Shields, _spaceStationState.ShieldCosts, "Shields", () => player.Shields++);
     }
 
     public void BuyDrain()
     {
-        BuyUpgrade(DefensiveUI, DrainButton, DrainCost, CurrentDrain, player.Drain, spaceStation.DroneCosts, "Drain", () => player.Drain++);
+        BuyUpgrade(DefensiveUI, DrainButton, DrainCost, CurrentDrain, player.Drain, _spaceStationState.DroneCosts, "Drain", () => player.Drain++);
     }
 
     private void BuyUpgrade(GameObject upgradeUI, Button upgradeButton, Text upgradeCost, Text currentUpgradeLevel, int playerUpgradeLevel, int[] upgradeCosts, string upgrade, Action buyUpgrade)

@@ -1,13 +1,11 @@
-﻿using UnityEngine;
+﻿using Assets.Scripts;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class SpaceStationUI : MonoBehaviour
 {
-    public string SpaceStationName;
-    public string PlayerName;
-
-    private SpaceStation spaceStation;
+    private SpaceStationState _spaceStationState;
     private PlayerState player;
 
     public Text ErrorText;
@@ -19,9 +17,10 @@ public class SpaceStationUI : MonoBehaviour
 
     void Start()
     {
-        spaceStation = GameObject.Find(SpaceStationName).GetComponent<SpaceStation>();
-        player = GameObject.Find(PlayerName).GetComponent<PlayerState>();
-        ShipmentCostText.text = "Cost: " + spaceStation.ShipmentUnitCost;
+        var gameState = GameObject.Find("GameState").GetComponent<GameState>();
+        _spaceStationState = gameState.SpaceStationData;
+        player = gameState.PlayerData;
+        ShipmentCostText.text = "Cost: " + _spaceStationState.ShipmentUnitCost;
     }
 
     void Update()
@@ -36,18 +35,18 @@ public class SpaceStationUI : MonoBehaviour
             ErrorText.text = "No shipments to sell";
         else
         {
-            player.LifeForce += spaceStation.ShipmentUnitCost;
+            player.LifeForce += _spaceStationState.ShipmentUnitCost;
             player.ShipmentUnits--;
         }
     }
 
     public void AddShipment()
     {
-        if (player.LifeForce <= spaceStation.ShipmentUnitCost)
+        if (player.LifeForce <= _spaceStationState.ShipmentUnitCost)
             ErrorText.text = "You must keep at least 1 Life Force remaining";
         else
         {
-            player.LifeForce -= spaceStation.ShipmentUnitCost;
+            player.LifeForce -= _spaceStationState.ShipmentUnitCost;
             player.ShipmentUnits++;
         }
     }

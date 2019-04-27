@@ -1,10 +1,8 @@
-﻿using UnityEngine;
+﻿using Assets.Scripts;
+using UnityEngine;
 
 public class LevelGenerator : MonoBehaviour
 {
-    // Settings
-    [SerializeField] float travelDistance = 95f;
-    [SerializeField] int difficulty = 3;
 
     // Object Prototypes
     [SerializeField] GameObject levelEnd;
@@ -20,9 +18,10 @@ public class LevelGenerator : MonoBehaviour
 
     private void Start()
     {
-        Instantiate(levelEnd, new Vector3(0, 0, travelDistance), Quaternion.identity);
-        Instantiate(spaceStation, new Vector3(0, 0, travelDistance + 5f), Quaternion.identity);
-        var settings = new LevelSettings { TravelDistance = travelDistance, Difficulty = difficulty };
+        var travelPlan = GameObject.Find("GameState").GetComponent<GameState>().TravelPlanData;
+        Instantiate(levelEnd, new Vector3(0, 0, travelPlan.Distance), Quaternion.identity);
+        Instantiate(spaceStation, new Vector3(0, 0, travelPlan.Distance + 5f), Quaternion.identity);
+        var settings = new LevelSettings { TravelDistance = travelPlan.Distance, Difficulty = travelPlan.Difficulty };
         asteroids.Init(settings);
     }
 }

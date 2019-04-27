@@ -1,14 +1,12 @@
 ﻿using System.Collections;
+using Assets.Scripts;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class LevelSummary : MonoBehaviour
 {
-    public string SpaceStationName;
-    public string PlayerName;
-
-    private SpaceStation spaceStation;
+    private SpaceStationState _spaceStationState;
     private PlayerState player;
     private int shipmentProfit;
     private int total;
@@ -27,9 +25,10 @@ public class LevelSummary : MonoBehaviour
 
     void Start()
     {
-        spaceStation = GameObject.Find(SpaceStationName).GetComponent<SpaceStation>();
-        player = GameObject.Find(PlayerName).GetComponent<PlayerState>();
-        shipmentProfit = player.ShipmentUnits * spaceStation.ShipmentUnitCost * 2;
+        var gameState = GameObject.Find("GameState").GetComponent<GameState>();
+        _spaceStationState = gameState.SpaceStationData;
+        player = gameState.PlayerData;
+        shipmentProfit = player.ShipmentUnits * _spaceStationState.ShipmentUnitCost * 2;
         ShipmentNum.text = shipmentProfit.ToString();
         RemainingLifeForceNum.text = player.LifeForce.ToString();
         total = shipmentProfit + player.LifeForce;

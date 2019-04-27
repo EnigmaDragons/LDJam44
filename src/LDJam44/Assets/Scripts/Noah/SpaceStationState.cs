@@ -1,4 +1,7 @@
-﻿public class SpaceStation : Singleton<SpaceStation>
+﻿using UnityEngine;
+
+[CreateAssetMenu(menuName = "SpaceStationRules")]
+public class SpaceStationState : ScriptableObject
 {
     public int ShipmentUnitCost;
     public int[] ThrusterCosts;

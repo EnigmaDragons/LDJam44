@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &4198436507191715182
+--- !u!1 &8399073815608801837
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,22 +8,22 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7191279749949986769}
-  - component: {fileID: 4964006734193190644}
+  - component: {fileID: 8188663200501859457}
+  - component: {fileID: 3149150101419111644}
   m_Layer: 0
-  m_Name: GameStateSingleton
+  m_Name: GameState
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7191279749949986769
+--- !u!4 &8188663200501859457
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4198436507191715182}
+  m_GameObject: {fileID: 8399073815608801837}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 22.34858, y: 11.264601, z: 55.901634}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -31,17 +31,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4964006734193190644
+--- !u!114 &3149150101419111644
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4198436507191715182}
+  m_GameObject: {fileID: 8399073815608801837}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ea8afb0c5cc04e749912c14cd4dc3fdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isPersistant: 0
+  isPersistant: 1
   PlayerData: {fileID: 11400000, guid: 841c0e927452da544ac0c6218624a057, type: 2}
+  SpaceStationData: {fileID: 11400000, guid: 52b3c05d0b735db49a13d290e53a5da7, type: 2}
+  TravelPlanData: {fileID: 11400000, guid: bad413df79872ee489b234022da47beb, type: 2}
