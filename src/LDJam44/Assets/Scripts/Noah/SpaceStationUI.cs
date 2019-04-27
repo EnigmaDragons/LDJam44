@@ -41,7 +41,7 @@ public class SpaceStationUI : MonoBehaviour
 
     public void AddShipment()
     {
-        if (player.LifeForce < spaceStation.ShipmentUnitCost)
+        if (player.LifeForce <= spaceStation.ShipmentUnitCost)
             ErrorText.text = "You must keep at least 1 Life Force remaining";
         else
         {

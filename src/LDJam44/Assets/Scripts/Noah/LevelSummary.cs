@@ -61,6 +61,9 @@ public class LevelSummary : MonoBehaviour
 
     public void Done()
     {
-        SceneManager.LoadScene(SceneNames.SpaceStationScene);
+        if (total < 1000)
+            SceneManager.LoadScene(SceneNames.SpaceStationScene);
+        else
+            SceneManager.LoadScene(SceneNames.WinScene);
     }
 }
