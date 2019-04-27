@@ -2,6 +2,6 @@
 
 public class Player : MonoBehaviour
 {
-    public int Credits;
+    public int LifeForce;
     public int ShipmentUnits;
 }
