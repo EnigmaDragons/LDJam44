@@ -11,7 +11,7 @@ static class SpawnBoundaries
     public const int maxScreenX = 10;
     public const int maxScreenY = 6;
 
-    public static Vector3 RandomOffScreen(float z)
+    public static Vector3 RandomOffPlayZone(float z)
     {
         var x = Random.Range(minX, maxX);
         while (x > minScreenX && x < maxScreenX)
@@ -21,6 +21,11 @@ static class SpawnBoundaries
             y = Random.Range(minY, maxY);
 
         return new Vector3(x, y, z);
+    }
+
+    public static Vector3 RandomInPlayZone(float z)
+    {
+        return new Vector3(Random.Range(minScreenX, maxScreenX), Random.Range(minScreenY, maxScreenY), z);
     }
 
     public static Vector3 RandomInLevel(float z)

@@ -3,7 +3,7 @@
 public class LevelGenerator : MonoBehaviour
 {
     // Settings
-    [SerializeField] float travelDistance = 95f;
+    [SerializeField] float travelDistance = 150f;
     [SerializeField] int difficulty = 3;
 
     // Object Prototypes
