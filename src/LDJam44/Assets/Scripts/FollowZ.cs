@@ -2,7 +2,7 @@
 
 public class FollowZ : MonoBehaviour
 {
-    [SerializeField] private string toFollowName;
+    [SerializeField] private string toFollowName = "Spaceship";
 
     private GameObject toFollow;
     private float zDelta;

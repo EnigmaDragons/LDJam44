@@ -9,6 +9,6 @@ public class FixedVelocity : MonoBehaviour
     void Start()
     {
         var rigidbody = GetComponent<Rigidbody>();
-        rigidbody.velocity = new Vector3(x, y, z);    
+        rigidbody.velocity = new Vector3(x, y, z);  
     }
 }
