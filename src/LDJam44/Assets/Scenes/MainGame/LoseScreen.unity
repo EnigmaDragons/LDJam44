@@ -572,7 +572,7 @@ GameObject:
   - component: {fileID: 1128229924}
   - component: {fileID: 1128229923}
   m_Layer: 5
-  m_Name: GameCanvas
+  m_Name: LoseScreenCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -681,7 +681,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1303791099}
   m_Layer: 0
-  m_Name: WinScreenButtons
+  m_Name: LoseScreenButtons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
