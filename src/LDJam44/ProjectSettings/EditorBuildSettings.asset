@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/MainGame/StartingLogoScene.unity
+    guid: 4cdda69cf9eb5014fa91c95c60b3c2f9
   m_configObjects: {}
