@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class SpaceStationUI : MonoBehaviour
@@ -47,5 +48,10 @@ public class SpaceStationUI : MonoBehaviour
             player.LifeForce -= spaceStation.ShipmentUnitCost;
             player.ShipmentUnits++;
         }
+    }
+
+    public void Done()
+    {
+        SceneManager.LoadScene(SceneNames.ShipTravel);
     }
 }

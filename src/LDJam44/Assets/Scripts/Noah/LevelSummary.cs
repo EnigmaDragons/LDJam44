@@ -61,6 +61,6 @@ public class LevelSummary : MonoBehaviour
 
     public void Done()
     {
-        SceneManager.LoadScene("SpaceStation");
+        SceneManager.LoadScene(SceneNames.SpaceStationScene);
     }
 }

@@ -4,5 +4,26 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/SpaceStation.unity
+    guid: b36c6b13e00c46a47b1bc5ce5c0d833f
+  - enabled: 1
+    path: Assets/Scenes/ShipTravel.unity
+    guid: a28cbac4d2e376d4c8998be70003333e
+  - enabled: 1
+    path: Assets/Scenes/MainGame/CreditsScreen.unity
+    guid: d37d002e13cd67847ac35264f8bb1770
+  - enabled: 1
+    path: Assets/Scenes/MainGame/LoseScreen.unity
+    guid: 58127aa4fc115364086e423c7e6cdcc2
+  - enabled: 1
+    path: Assets/Scenes/MainGame/theGame.unity
+    guid: 5decf2abad2b84b43ba5f7cd00a6638c
+  - enabled: 1
+    path: Assets/Scenes/MainGame/TitleScreen.unity
+    guid: 8e192f5ef5f16b341855d9b67c4134b4
+  - enabled: 1
+    path: Assets/Scenes/MainGame/WinScreen.unity
+    guid: d9f87720fd530484791f690d27998b28
   m_configObjects: {}
