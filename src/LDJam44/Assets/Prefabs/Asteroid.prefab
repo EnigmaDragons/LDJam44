@@ -108,6 +108,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageAmount: 10
   appliesTo: 0
+  soundEffect: {fileID: 8300000, guid: 33ae92e52b8cbe141b7427443c750159, type: 3}
 --- !u!54 &2614984062132937993
 Rigidbody:
   m_ObjectHideFlags: 0
