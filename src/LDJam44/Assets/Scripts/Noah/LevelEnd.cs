@@ -1,24 +1,25 @@
 ﻿using UnityEngine;
 
-public class LevelEnd : MonoBehaviour
+public class LevelEnd : VerboseMonoBehaviour
 {
     public string PlayerShipName;
     public GameObject TravelSummary;
 
-    private Ship ship;
+    private GameObject player;
     private bool levelEnded = false;
 
     void Start()
     {
-        ship = GameObject.Find(PlayerShipName).GetComponent<Ship>();
+        player = Find(PlayerShipName);
     }
 
     void OnTriggerEnter(Collider other)
     {
-        if (levelEnded == true)
+        if (levelEnded || !other.gameObject.Equals(player))
             return;
+        
         levelEnded = true;
-        ship.Stop();
-        GameObject.Instantiate(TravelSummary);
+        player.GetComponent<Ship>().Stop();
+        Instantiate(TravelSummary);
     }
 }

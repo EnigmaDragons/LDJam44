@@ -13,11 +13,16 @@ public class LevelGenerator : MonoBehaviour
     // Spawners
     [SerializeField] AsteroidSpawner asteroids;
 
-    void Start()
+    private void Awake()
     {
-        var settings = new LevelSettings { TravelDistance = travelDistance, Difficulty = difficulty };
+        RenderSettings.skybox.SetFloat("_Rotation", Random.Range(0f, 360f));
+    }
+
+    private void Start()
+    {
         Instantiate(levelEnd, new Vector3(0, 0, travelDistance), Quaternion.identity);
         Instantiate(spaceStation, new Vector3(0, 0, travelDistance + 5f), Quaternion.identity);
+        var settings = new LevelSettings { TravelDistance = travelDistance, Difficulty = difficulty };
         asteroids.Init(settings);
     }
 }
