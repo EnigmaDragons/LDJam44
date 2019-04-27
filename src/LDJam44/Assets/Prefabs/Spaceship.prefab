@@ -142,6 +142,7 @@ MonoBehaviour:
   role: 1
   maxHp: 10
   currentHp: 10
+  onDeath: {fileID: 8300000, guid: 1350ced706204a545b010ee85b4817fd, type: 3}
 --- !u!82 &3183516837162617594
 AudioSource:
   m_ObjectHideFlags: 0
