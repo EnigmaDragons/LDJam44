@@ -25,4 +25,12 @@ public abstract class VerboseMonoBehaviour : MonoBehaviour
             Debug.LogError($"Missing required {typeof(T).Name} on GameObject {name}");
         return o;
     }
+
+    protected GameObject Find(string targetName)
+    {
+        var o = GameObject.Find(targetName);
+        if (o == null)
+            Debug.LogError($"Could not find {targetName}");
+        return o;
+    }
 }
