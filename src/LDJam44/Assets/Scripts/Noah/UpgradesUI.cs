@@ -8,7 +8,7 @@ public class UpgradesUI : MonoBehaviour
     public string PlayerName;
 
     private SpaceStation spaceStation;
-    private Player player;
+    private PlayerState player;
     private Action onAccept;
     private Action onReject;
 
@@ -51,7 +51,7 @@ public class UpgradesUI : MonoBehaviour
     public void Start()
     {
         spaceStation = GameObject.Find(SpaceStationName).GetComponent<SpaceStation>();
-        player = GameObject.Find(PlayerName).GetComponent<Player>();
+        player = GameObject.Find(PlayerName).GetComponent<PlayerState>();
         UpdateUpgrade(ThrusterButton, ThrusterCost, CurrentThrusters, player.Thrusters, spaceStation.ThrusterCosts);
         UpdateUpgrade(StabilizerButton, StabilizerCost, CurrentStabilizers, player.Stabilizers, spaceStation.StabilizerCosts);
         UpdateUpgrade(TradingButton, TradingCost, CurrentTrading, player.Trading, spaceStation.TradingCosts);

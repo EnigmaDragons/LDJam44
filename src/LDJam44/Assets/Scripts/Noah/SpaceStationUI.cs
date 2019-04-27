@@ -8,7 +8,7 @@ public class SpaceStationUI : MonoBehaviour
     public string PlayerName;
 
     private SpaceStation spaceStation;
-    private Player player;
+    private PlayerState player;
 
     public Text ErrorText;
     public Text CreditsText;
@@ -20,7 +20,7 @@ public class SpaceStationUI : MonoBehaviour
     void Start()
     {
         spaceStation = GameObject.Find(SpaceStationName).GetComponent<SpaceStation>();
-        player = GameObject.Find(PlayerName).GetComponent<Player>();
+        player = GameObject.Find(PlayerName).GetComponent<PlayerState>();
         ShipmentCostText.text = "Cost: " + spaceStation.ShipmentUnitCost;
     }
 

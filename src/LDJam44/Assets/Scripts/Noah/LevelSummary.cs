@@ -9,7 +9,7 @@ public class LevelSummary : MonoBehaviour
     public string PlayerName;
 
     private SpaceStation spaceStation;
-    private Player player;
+    private PlayerState player;
     private int shipmentProfit;
     private int total;
 
@@ -28,7 +28,7 @@ public class LevelSummary : MonoBehaviour
     void Start()
     {
         spaceStation = GameObject.Find(SpaceStationName).GetComponent<SpaceStation>();
-        player = GameObject.Find(PlayerName).GetComponent<Player>();
+        player = GameObject.Find(PlayerName).GetComponent<PlayerState>();
         shipmentProfit = player.ShipmentUnits * spaceStation.ShipmentUnitCost * 2;
         ShipmentNum.text = shipmentProfit.ToString();
         RemainingLifeForceNum.text = player.LifeForce.ToString();

@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9912d6ad60e8e08438def42307588bda, type: 3}
+  m_Name: StartingPlayerData
+  m_EditorClassIdentifier: 
+  LifeForce: 10000
+  ShipmentUnits: 0
+  Thrusters: 0
+  Stabilizers: 0
+  Trading: 0
+  Looting: 0
+  Drones: 0
+  Amp: 0
+  Shields: 0
+  Drain: 0

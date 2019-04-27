@@ -1,4 +1,7 @@
-﻿public class Player : Singleton<Player>
+﻿using UnityEngine;
+
+[CreateAssetMenu(menuName = "PlayerState")]
+public class PlayerState : ScriptableObject
 {
     public int LifeForce;
     public int ShipmentUnits;
