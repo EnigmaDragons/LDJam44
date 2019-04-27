@@ -12,6 +12,8 @@ public class SpaceStationUI : MonoBehaviour
 
     public Text ErrorText;
     public Text CreditsText;
+    public GameObject MainUI;
+    public GameObject UpgradesUI;
     public Text ShipmentUnitsText;
     public Text ShipmentCostText;
 
@@ -24,7 +26,7 @@ public class SpaceStationUI : MonoBehaviour
 
     void Update()
     {
-        CreditsText.text = player.LifeForce.ToString();
+        CreditsText.text = player.LifeForce.ToString() + " Life Force";
         ShipmentUnitsText.text = player.ShipmentUnits.ToString();
     }
 
@@ -53,5 +55,17 @@ public class SpaceStationUI : MonoBehaviour
     public void Done()
     {
         SceneManager.LoadScene(SceneNames.ShipTravel);
+    }
+
+    public void GoToUpgrades()
+    {
+        MainUI.SetActive(false);
+        UpgradesUI.SetActive(true);
+    }
+
+    public void LeaveUpgrades()
+    {
+        UpgradesUI.SetActive(false);
+        MainUI.SetActive(true);
     }
 }
