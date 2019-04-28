@@ -13,6 +13,12 @@ public class LevelGenerator : VerboseMonoBehaviour
     private void Awake()
     {
         RenderSettings.skybox.SetFloat("_Rotation", Random.Range(0f, 360f));
+        RenderSettings.fog = true;
+        RenderSettings.fogMode = FogMode.Linear;
+        RenderSettings.fogStartDistance = 300f;
+        RenderSettings.fogEndDistance = 1600f;
+        RenderSettings.fogColor = Color.black;
+        RenderSettings.fogDensity = 150f;
     }
 
     private void Start()
