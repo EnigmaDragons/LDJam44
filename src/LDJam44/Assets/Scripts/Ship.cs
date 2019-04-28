@@ -30,12 +30,24 @@ public class Ship : MonoBehaviour
     private void FixedUpdate()
     {
         if (!stopping)
+        {
             UpdateVelocity();
+            UpdateLeaning();
+            ClampShip();
+        }
+    }
+
+    private void UpdateLeaning()
+    {
+        var vLeanAmount = Rigidbody.velocity.x * 8;
+        var vTurnAmount = Rigidbody.velocity.x * 2;
+        var hLeanAmount = Rigidbody.velocity.y * 3;
+        transform.rotation = Quaternion.Euler(-hLeanAmount, vTurnAmount, 180 - vLeanAmount);
     }
 
     private void UpdateVelocity()
     {
-        var currentXSpeed = Rigidbody.velocity.x;
+        var currentXSpeed = Rigidbody.velocity.x;   
         var targetXSpeed = hSpeed * Input.GetAxis("Horizontal");
         var newXSpeed = Mathf.Clamp(targetXSpeed, currentXSpeed - acceleration, currentXSpeed + acceleration);
 
@@ -44,6 +56,13 @@ public class Ship : MonoBehaviour
         var newYSpeed = Mathf.Clamp(targetYSpeed, currentYSpeed - acceleration, currentYSpeed + acceleration);
 
         Rigidbody.velocity = new Vector3(newXSpeed, newYSpeed, zSpeed);
+    }
+
+    private void ClampShip()
+    {
+        var clampedX = Mathf.Clamp(transform.position.x, SpawnBoundaries.minScreenX, SpawnBoundaries.maxScreenX);
+        var clampedY = Mathf.Clamp(transform.position.y, SpawnBoundaries.minScreenY + SpawnBoundaries.yOffset, SpawnBoundaries.maxScreenY + SpawnBoundaries.yOffset);
+        transform.position = new Vector3(clampedX, clampedY, transform.position.z);
     }
 
     public void Stop()

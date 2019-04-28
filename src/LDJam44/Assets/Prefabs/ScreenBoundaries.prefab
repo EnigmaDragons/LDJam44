@@ -127,6 +127,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Boundary
       objectReference: {fileID: 0}
+    - target: {fileID: 8480120759355946598, guid: 537735e17e4e1ee4c9d76bfd2eff8518,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4598542556039637499, guid: 537735e17e4e1ee4c9d76bfd2eff8518,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -232,6 +237,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Boundary (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8480120759355946598, guid: 537735e17e4e1ee4c9d76bfd2eff8518,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4598542556039637499, guid: 537735e17e4e1ee4c9d76bfd2eff8518,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -317,6 +327,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Boundary (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8480120759355946598, guid: 537735e17e4e1ee4c9d76bfd2eff8518,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4598542556039637499, guid: 537735e17e4e1ee4c9d76bfd2eff8518,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -401,6 +416,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Boundary (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8480120759355946598, guid: 537735e17e4e1ee4c9d76bfd2eff8518,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4598542556039637499, guid: 537735e17e4e1ee4c9d76bfd2eff8518,
         type: 3}

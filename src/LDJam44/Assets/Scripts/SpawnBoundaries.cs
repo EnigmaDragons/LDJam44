@@ -10,6 +10,7 @@ static class SpawnBoundaries
     public const int minScreenY = -6;
     public const int maxScreenX = 10;
     public const int maxScreenY = 6;
+    public const int yOffset = 2;
 
     public static Vector3 RandomOffPlayZone(float z)
     {

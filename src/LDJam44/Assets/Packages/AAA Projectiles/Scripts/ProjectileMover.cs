@@ -52,7 +52,11 @@ public class ProjectileMover : MonoBehaviour
         {
             var hitInstance = Instantiate(hit, pos, rot);
             if (UseFirePointRotation)
-            { hitInstance.transform.rotation = gameObject.transform.rotation * Quaternion.Euler(0, 180f, 0); }
+            {
+                var objRot = gameObject.transform.rotation;
+                var factor = 0.3f;
+                hitInstance.transform.rotation = Quaternion.Euler(objRot.x * factor, objRot.y * factor, objRot.z * factor) * Quaternion.Euler(0, 180f, 0);
+            }
             else
             { hitInstance.transform.LookAt(contact.point + contact.normal); }
 
