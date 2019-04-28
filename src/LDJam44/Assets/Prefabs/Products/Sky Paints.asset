@@ -9,9 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 66fca390067a3f84e89cce1dec6a0b1c, type: 3}
-  m_Name: StartingTravelPlan
+  m_Script: {fileID: 11500000, guid: d5e0a7c889dc30c4f911fb512f53a9fc, type: 3}
+  m_Name: Sky Paints
   m_EditorClassIdentifier: 
-  Distance: 100
-  Difficulty: 3
-  Destination: Fire
+  Name: Sky Paints
+  Description: Banned due to too much sky graffiti
+  MinBuyPrice: 20
+  MaxBuyPrice: 99
+  MinSellPrice: 100
+  MaxSellPrice: 495

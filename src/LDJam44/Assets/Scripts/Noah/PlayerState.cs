@@ -1,10 +1,12 @@
 ﻿using UnityEngine;
 
-[CreateAssetMenu(menuName = "PlayerState")]
+[CreateAssetMenu(menuName = "Player State")]
 public class PlayerState : ScriptableObject
 {
     public int LifeForce;
-    public int ShipmentUnits;
+    public ProductState[] Products;
+    public int[] Counts;
+    public string StationName;
 
     public int Thrusters;
     public int Stabilizers;

@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 476798139245061937}
   - component: {fileID: 476798139245061938}
   - component: {fileID: 476798139245061939}
-  - component: {fileID: 476798138978219212}
   - component: {fileID: 476798139245061964}
   m_Layer: 0
   m_Name: SpaceStation
@@ -93,28 +92,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &476798138978219212
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 476798139245061965}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ea93f82c863086489de7dbbccf2a099, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isPersistant: 1
-  ShipmentUnitCost: 1000
-  ThrusterCosts: a00f0000204e0000a0860100
-  StabilizerCosts: a00f0000204e0000a0860100
-  TradingCosts: a00f0000204e0000a0860100
-  LootingCosts: a00f0000204e0000a0860100
-  DroneCosts: a00f0000204e0000a0860100
-  AmpCosts: a00f0000204e0000a0860100
-  ShieldCosts: a00f0000204e0000a0860100
-  DrainCosts: 000000000000000000000000
 --- !u!114 &476798139245061964
 MonoBehaviour:
   m_ObjectHideFlags: 0

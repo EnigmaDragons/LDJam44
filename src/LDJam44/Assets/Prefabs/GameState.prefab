@@ -44,6 +44,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPersistant: 1
-  PlayerData: {fileID: 11400000, guid: 841c0e927452da544ac0c6218624a057, type: 2}
-  SpaceStationData: {fileID: 11400000, guid: 52b3c05d0b735db49a13d290e53a5da7, type: 2}
+  PlayerState: {fileID: 11400000, guid: 841c0e927452da544ac0c6218624a057, type: 2}
+  GalaxyData: {fileID: 11400000, guid: 0cc39c8ec2275014d8e01330d7777d86, type: 2}
   TravelPlanData: {fileID: 11400000, guid: bad413df79872ee489b234022da47beb, type: 2}

@@ -1,15 +1,18 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
-[CreateAssetMenu(menuName = "SpaceStationRules")]
+[CreateAssetMenu(menuName = "Space Station")]
 public class SpaceStationState : ScriptableObject
 {
-    public int ShipmentUnitCost;
-    public int[] ThrusterCosts;
-    public int[] StabilizerCosts;
-    public int[] TradingCosts;
-    public int[] LootingCosts;
-    public int[] DroneCosts;
-    public int[] AmpCosts;
-    public int[] ShieldCosts;
-    public int[] DrainCosts;
+    public string Name;
+    public int X;
+    public int Y;
+    public ProductState[] CheapProducts;
+    public ProductState[] ReasonableProducts;
+    public ProductState[] ExpensiveProducts;
+
+    //Generated Content
+    public ProductState[] ProductsForSale;
+    public Dictionary<string, int> CurrentBuyPrices = new Dictionary<string, int>();
+    public Dictionary<string, int> CurrentSellPrices = new Dictionary<string, int>();
 }
