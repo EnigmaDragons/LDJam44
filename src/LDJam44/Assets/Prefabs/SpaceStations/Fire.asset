@@ -9,21 +9,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9912d6ad60e8e08438def42307588bda, type: 3}
-  m_Name: StartingPlayerData
+  m_Script: {fileID: 11500000, guid: 2ea93f82c863086489de7dbbccf2a099, type: 3}
+  m_Name: Fire
   m_EditorClassIdentifier: 
-  LifeForce: 1000
-  Products:
+  Name: Fire
+  X: 100
+  Y: 100
+  CheapProducts:
   - {fileID: 11400000, guid: e37c235bb67579a4cb2f4e913e401e69, type: 2}
+  ReasonableProducts:
   - {fileID: 11400000, guid: 4aa6d188529469649a5342ace6b19913, type: 2}
+  ExpensiveProducts:
   - {fileID: 11400000, guid: 52ec701091de6694bac3b36a98ac7af5, type: 2}
-  Counts: 000000000000000000000000
-  StationName: Frost
-  Thrusters: 0
-  Stabilizers: 0
-  Trading: 0
-  Looting: 0
-  Drones: 0
-  Amp: 0
-  Shields: 0
-  Drain: 0
+  ProductsForSale: []

@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ea93f82c863086489de7dbbccf2a099, type: 3}
+  m_Name: Frost
+  m_EditorClassIdentifier: 
+  Name: Frost
+  X: 0
+  Y: 0
+  CheapProducts:
+  - {fileID: 11400000, guid: 5a30fe362b400734b93c1e31781a40a2, type: 2}
+  ReasonableProducts:
+  - {fileID: 11400000, guid: ed2e09956a993164dacdcdab719fc0df, type: 2}
+  ExpensiveProducts:
+  - {fileID: 11400000, guid: 4fd0b53e83708314f87b3eeab0f2eb72, type: 2}
+  ProductsForSale: []
