@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class LevelGenerator : MonoBehaviour
+public class LevelGenerator : VerboseMonoBehaviour
 {
     // Object Prototypes
     [SerializeField] GameObject levelEnd;
@@ -17,12 +17,26 @@ public class LevelGenerator : MonoBehaviour
 
     private void Start()
     {
-        var travelPlan = GameObject.Find("GameState").GetComponent<GameState>().TravelPlanData;
-        Instantiate(levelEnd, new Vector3(0, 0, travelPlan.Distance), Quaternion.identity);
-        var station = Instantiate(spaceStation, new Vector3(0, -3, travelPlan.Distance + 30f), Quaternion.Euler(spaceStation.transform.eulerAngles.x, Random.Range(-180, 180), Random.Range(-180, 180)));
+        var s = Find("GameState").GetComponent<GameState>();
+        Find("Spaceship").GetComponent<Health>().Init(s.PlayerState.LifeForce);
+
+        SetupLevelEnd(s);
+
+        CreateChallenges(s);
+    }
+
+    private void SetupLevelEnd(GameState s)
+    {
+        var travelDistance = s.TravelPlanData.Distance;
+        Instantiate(levelEnd, new Vector3(0, 0, travelDistance), Quaternion.identity);
+        var station = Instantiate(spaceStation, new Vector3(0, -3, travelDistance + 30f), Quaternion.Euler(spaceStation.transform.eulerAngles.x, Random.Range(-180, 180), Random.Range(-180, 180)));
         station.GetComponent<SpaceStationSkin>().IsTravelingTo = true;
         station.transform.localScale = new Vector3(25, 25, 25);
-        var settings = new LevelSettings { TravelDistance = travelPlan.Distance, Difficulty = travelPlan.Difficulty };
+    }
+
+    private void CreateChallenges(GameState s)
+    {
+        var settings = new LevelSettings { TravelDistance = s.TravelPlanData.Distance, Difficulty = s.TravelPlanData.Difficulty };
         asteroids.Init(settings);
         enemies.Init(settings);
     }

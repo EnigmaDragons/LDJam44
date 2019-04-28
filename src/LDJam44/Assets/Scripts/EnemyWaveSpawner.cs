@@ -59,7 +59,6 @@ class EnemyWaveSpawner : VerboseMonoBehaviour
 
         var w = Instantiate(wavePrototype, startPosition, Quaternion.identity);
         w.Init(waveConfig);
-        Debug.Log($"Setup Wave of {waveConfig.NumEnemies} {waveConfig.EnemyProtoype.name} at Z {z}");
     }
 
     private Vector3 NextSaneWaypoint(Vector3 lastWaypoint)
