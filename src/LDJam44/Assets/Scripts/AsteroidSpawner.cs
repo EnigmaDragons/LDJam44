@@ -23,6 +23,8 @@ class AsteroidSpawner : VerboseMonoBehaviour
             ? SpawnBoundaries.RandomInPlayZone(z) 
             : SpawnBoundaries.RandomOffPlayZone(z);
 
-        Instantiate(asteroidPrototypes[selectedAsteroid], position, Quaternion.identity);
+        var scale = Random.Range(asteroidPrototypes[selectedAsteroid].transform.localScale.x / 4, asteroidPrototypes[selectedAsteroid].transform.localScale.x * 2);
+        var o = Instantiate(asteroidPrototypes[selectedAsteroid], position, Quaternion.identity);
+        o.transform.localScale += new Vector3(scale, scale, scale);
     }
 }
