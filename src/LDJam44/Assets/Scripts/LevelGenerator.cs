@@ -1,15 +1,14 @@
-﻿using Assets.Scripts;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class LevelGenerator : MonoBehaviour
 {
-
     // Object Prototypes
     [SerializeField] GameObject levelEnd;
     [SerializeField] GameObject spaceStation;
 
     // Spawners
     [SerializeField] AsteroidSpawner asteroids;
+    [SerializeField] EnemyWaveSpawner enemies;
 
     private void Awake()
     {
@@ -25,5 +24,6 @@ public class LevelGenerator : MonoBehaviour
         station.transform.localScale = new Vector3(25, 25, 25);
         var settings = new LevelSettings { TravelDistance = travelPlan.Distance, Difficulty = travelPlan.Difficulty };
         asteroids.Init(settings);
+        enemies.Init(settings);
     }
 }

@@ -4,12 +4,10 @@ class AsteroidSpawner : VerboseMonoBehaviour
 {
     [SerializeField] GameObject[] asteroidPrototypes = new GameObject[0];
     [SerializeField] float densityFactor = 12f;
-    [SerializeField] float startClearPlayAreaDistance = 38f;
-    [SerializeField] float endClearPlayAreaDistance = 10f;
 
     public void Init(LevelSettings settings)
     {
-        var maxZ = settings.TravelDistance + 50;
+        var maxZ = settings.TravelDistance + 100;
         for (var z = 0f; z < maxZ; z += 40 * (1 / densityFactor))
             SpawnAsteroid(z, settings);
     }
@@ -17,8 +15,8 @@ class AsteroidSpawner : VerboseMonoBehaviour
     private void SpawnAsteroid(float z, LevelSettings settings)
     {
         var selectedAsteroid = Random.Range(0, asteroidPrototypes.Length);
-        var shouldBeObstacle = z >= startClearPlayAreaDistance
-            && z <= settings.TravelDistance - endClearPlayAreaDistance 
+        var shouldBeObstacle = z >= SpawnBoundaries.startClearPlayAreaDistance
+            && z <= settings.TravelDistance - SpawnBoundaries.endClearPlayAreaDistance 
             && Random.Range(0, 10) < settings.Difficulty;
 
         var position = shouldBeObstacle 

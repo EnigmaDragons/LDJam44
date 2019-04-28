@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &5213650918985110081
+--- !u!1 &1920687040846286496
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,45 +8,49 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7231824147294758909}
-  - component: {fileID: 2090129473555191125}
+  - component: {fileID: 3836342461946102710}
+  - component: {fileID: 1602958100771452495}
   m_Layer: 0
-  m_Name: LevelGenerator
+  m_Name: EnemyWaveSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7231824147294758909
+--- !u!4 &3836342461946102710
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5213650918985110081}
+  m_GameObject: {fileID: 1920687040846286496}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -47.693794, y: 11.194947, z: -27.187376}
+  m_LocalPosition: {x: 330.63943, y: 512.53784, z: 3.7289429}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2090129473555191125
+--- !u!114 &1602958100771452495
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5213650918985110081}
+  m_GameObject: {fileID: 1920687040846286496}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9c0e2f36fb462b468a61011817805b4, type: 3}
+  m_Script: {fileID: 11500000, guid: 0f7ae6b374fe6d645b023d3a0956fabf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelEnd: {fileID: 2309704365140382481, guid: 11c35cf75388b314abc2722b87081aac,
+  enemyPrototypes:
+  - {fileID: 5102087257348941164, guid: 5d7d7a03d0fe7f84ab54ac420418a1dd, type: 3}
+  wavePrototype: {fileID: 5384568737590657808, guid: 71f79972a20e2b44383766547f1bd7f9,
     type: 3}
-  spaceStation: {fileID: 476798139245061965, guid: e6cf1d64f20e6da4f899e343fa8d246d,
-    type: 3}
-  asteroids: {fileID: 742695456062999672, guid: 64b2732f34ae78f46a427331369c7171,
-    type: 3}
-  enemies: {fileID: 1602958100771452495, guid: 5570344fa4583064d9dd68288a6c001a, type: 3}
+  densityFactor: 2
+  forwardBias: 1
+  minEnemiesPerWave: 2
+  maxEnemiesPerWave: 6
+  minWaypoints: 3
+  maxWaypoints: 6
+  minWaypointDistance: 15

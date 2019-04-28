@@ -11,8 +11,11 @@ static class SpawnBoundaries
     public const int maxScreenX = 10;
     public const int maxScreenY = 6;
     public const int yOffset = 2;
+    public const float startClearPlayAreaDistance = 38f;
+    public const float endClearPlayAreaDistance = 10f;
+    public const float playZoneFactor = 1.2f;
 
-    public static Vector3 RandomOffPlayZone(float z)
+    public static Vector3 RandomOffPlayZone(float z, float zVariance = 0)
     {
         var x = Random.Range(minX, maxX);
         while (x > minScreenX && x < maxScreenX)
@@ -21,12 +24,15 @@ static class SpawnBoundaries
         while (y > minScreenY && y < maxScreenY)
             y = Random.Range(minY, maxY);
 
-        return new Vector3(x, y, z);
+        return new Vector3(x, y, VariedZ(z, zVariance));
     }
 
-    public static Vector3 RandomInPlayZone(float z)
+    public static Vector3 RandomInPlayZone(float z, float zVariance = 0)
     {
-        return new Vector3(Random.Range(minScreenX, maxScreenX), Random.Range(minScreenY, maxScreenY), z);
+        return new Vector3(
+            Random.Range(minScreenX * playZoneFactor, maxScreenX * playZoneFactor), 
+            Random.Range(minScreenY * playZoneFactor * playZoneFactor, maxScreenY * playZoneFactor * playZoneFactor) + yOffset, 
+            VariedZ(z, zVariance));
     }
 
     public static Vector3 RandomInLevel(float z)
@@ -38,4 +44,6 @@ static class SpawnBoundaries
     {
         return new Vector3(Random.Range(first.x, second.x), Random.Range(first.y, second.y), Random.Range(first.z, second.z));
     }
+
+    private static float VariedZ(float z, float zVariance) => z + Random.Range(-zVariance, zVariance);
 }

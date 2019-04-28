@@ -9,9 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 66fca390067a3f84e89cce1dec6a0b1c, type: 3}
-  m_Name: StartingTravelPlan
+  m_Script: {fileID: 11500000, guid: d5e0a7c889dc30c4f911fb512f53a9fc, type: 3}
+  m_Name: Agro-class Motion Detectors
   m_EditorClassIdentifier: 
-  Distance: 500
-  Difficulty: 3
-  Destination: Fire
+  Name: 
+  Description: 
+  MinBuyPrice: 0
+  MaxBuyPrice: 0
+  MinSellPrice: 0
+  MaxSellPrice: 0
