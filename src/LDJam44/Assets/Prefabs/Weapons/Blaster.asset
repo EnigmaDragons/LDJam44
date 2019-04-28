@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Blaster
   m_EditorClassIdentifier: 
   projectile: {fileID: 1168065043843762, guid: 70cd80e6e8517904da249485ffde005f, type: 3}
-  fireInterval: 0.6
-  fireSound: {fileID: 8300000, guid: b4affeb3e19d63741b62eb795a24f068, type: 3}
+  fireInterval: 0.5
+  fireSound: {fileID: 8300000, guid: 207f12254c2890d448c0e49e3a42b2da, type: 3}

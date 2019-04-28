@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 3183516837162617594}
   - component: {fileID: 1172654454563117989}
   - component: {fileID: -839681382858124626}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Spaceship
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32,12 +32,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2689443013312590353}
   m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
-  m_LocalPosition: {x: 0, y: 0.06, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 5}
-  m_Children: []
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 6, y: 6, z: 6}
+  m_Children:
+  - {fileID: 9136125027378493444}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
+  m_LocalEulerAnglesHint: {x: -20, y: 0, z: -180}
 --- !u!33 &2689443013312590358
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -113,9 +114,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   zSpeed: 10
-  hSpeed: 4
-  vSpeed: 4
-  weapon: {fileID: 0}
+  hSpeed: 6
+  vSpeed: 6
+  weapon: {fileID: 11400000, guid: fa35a085535344b45bdc2e30fb1bee50, type: 2}
+  acceleration: 0.17
 --- !u!114 &4660932460096110771
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -259,3 +261,38 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: 944696844918605244, guid: daf490449acd0364c9ba9c9ec00d1e68, type: 3}
+--- !u!1001 &2990925959505148807
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2689443013312590357}
+    m_Modifications:
+    - target: {fileID: 6290383121023959936, guid: 61dfbebc247d30b4385184599dd595a0,
+        type: 3}
+      propertyPath: m_Name
+      value: Thrusters
+      objectReference: {fileID: 0}
+    - target: {fileID: 6290383121023959939, guid: 61dfbebc247d30b4385184599dd595a0,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6290383121023959939, guid: 61dfbebc247d30b4385184599dd595a0,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6290383121023959939, guid: 61dfbebc247d30b4385184599dd595a0,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 61dfbebc247d30b4385184599dd595a0, type: 3}
+--- !u!4 &9136125027378493444 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6290383121023959939, guid: 61dfbebc247d30b4385184599dd595a0,
+    type: 3}
+  m_PrefabInstance: {fileID: 2990925959505148807}
+  m_PrefabAsset: {fileID: 0}
