@@ -3,7 +3,7 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
-public class ParticleCollisionInstance : MonoBehaviour
+public class ParticleCollisionInstance : VerboseMonoBehaviour
 {
     public GameObject[] EffectsOnCollision;
     public float Offset = 0;
@@ -13,8 +13,8 @@ public class ParticleCollisionInstance : MonoBehaviour
     public bool UseWorldSpacePosition;
     public bool UseFirePointRotation;
     private ParticleSystem part;
+    private GameServices game;
     private List<ParticleCollisionEvent> collisionEvents = new List<ParticleCollisionEvent>();
-    private ParticleSystem ps;
 
     private float zStart;
     private bool isDestroying;
@@ -22,6 +22,7 @@ public class ParticleCollisionInstance : MonoBehaviour
     void Start()
     {
         part = GetComponent<ParticleSystem>();
+        game = FindObjectOfType<GameServices>();
         Destroy(gameObject, 30f);
     }
 
@@ -30,7 +31,7 @@ public class ParticleCollisionInstance : MonoBehaviour
         Debug.Log($"Particle Collided with {other.name}");
         var health = other.GetComponent<Health>();
         health?.ApplyDamage(Damage);
-        AudioSource.PlayClipAtPoint(HitSoundEffect, Camera.main.transform.position);
+        game.PlaySoundEffect(HitSoundEffect);
 
         int numCollisionEvents = part.GetCollisionEvents(other, collisionEvents);     
         for (int i = 0; i < numCollisionEvents; i++)
