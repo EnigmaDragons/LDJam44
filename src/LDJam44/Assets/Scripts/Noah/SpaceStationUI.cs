@@ -69,7 +69,7 @@ public class SpaceStationUI : MonoBehaviour
 
     public void Done()
     {
-        SceneManager.LoadScene(SceneNames.ShipTravel);
+        SceneManager.LoadScene(SceneNames.Map);
     }
 
     public void GoToUpgrades()
