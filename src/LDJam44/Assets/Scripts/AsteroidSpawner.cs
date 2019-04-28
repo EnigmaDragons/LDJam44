@@ -10,13 +10,12 @@ class AsteroidSpawner : VerboseMonoBehaviour
     public void Init(LevelSettings settings)
     {
         var maxZ = settings.TravelDistance + 50;
-        for (var z = 0f; z < maxZ; z += 20 * (1 / densityFactor))
+        for (var z = 0f; z < maxZ; z += 40 * (1 / densityFactor))
             SpawnAsteroid(z, settings);
     }
 
     private void SpawnAsteroid(float z, LevelSettings settings)
     {
-        Debug.Log($"Spawn Asteroid {z}");
         var selectedAsteroid = Random.Range(0, asteroidPrototypes.Length);
         var shouldBeObstacle = z >= startClearPlayAreaDistance
             && z <= settings.TravelDistance - endClearPlayAreaDistance 

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2701943162495714942}
   - component: {fileID: 2701943162495714937}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Directional Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -100,7 +100,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4889021610351327699}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GameLevel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -137,6 +137,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Spaceship
+      objectReference: {fileID: 0}
+    - target: {fileID: 2689443013312590353, guid: af8362b813a7fdc4da4d0541a2bfcab9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2689443013312590357, guid: af8362b813a7fdc4da4d0541a2bfcab9,
         type: 3}
@@ -219,6 +224,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Game Camera
       objectReference: {fileID: 0}
+    - target: {fileID: 1989689819904063198, guid: 6a6cd02a673f13149a05643861386aa9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1989689819904063187, guid: 6a6cd02a673f13149a05643861386aa9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -294,6 +304,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SpaceParticles
       objectReference: {fileID: 0}
+    - target: {fileID: 8569400226174890392, guid: 9d5821d51e668fa459f63a4a06ac7cc1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7752385120202242372, guid: 9d5821d51e668fa459f63a4a06ac7cc1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -349,6 +364,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1891108732878537742, guid: 9d5821d51e668fa459f63a4a06ac7cc1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1891108731229730624, guid: 9d5821d51e668fa459f63a4a06ac7cc1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d5821d51e668fa459f63a4a06ac7cc1, type: 3}
 --- !u!4 &6113542570606650105 stripped
@@ -368,6 +393,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ScreenBoundaries
+      objectReference: {fileID: 0}
+    - target: {fileID: 9056803159241341067, guid: cd29575b84631cb4493dc9487a21cdf2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 9056803159241341064, guid: cd29575b84631cb4493dc9487a21cdf2,
         type: 3}
@@ -423,6 +453,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1871633046174060732, guid: cd29575b84631cb4493dc9487a21cdf2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 585268508834082950, guid: cd29575b84631cb4493dc9487a21cdf2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 585268508642485091, guid: cd29575b84631cb4493dc9487a21cdf2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 585268510454822925, guid: cd29575b84631cb4493dc9487a21cdf2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd29575b84631cb4493dc9487a21cdf2, type: 3}

@@ -1,17 +1,19 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class ProjectileMover : MonoBehaviour
 {
     public float speed = 15f;
     public float hitOffset = 0f;
+    public float maxTravelDistance = 80;
     public bool UseFirePointRotation;
     public GameObject hit;
     public GameObject flash;
 
+    private float zStart;
+
     void Start ()
     {
+        zStart = transform.position.z;
         if (flash != null)
         {
             var flashInstance = Instantiate(flash, transform.position, Quaternion.identity);
@@ -32,10 +34,11 @@ public class ProjectileMover : MonoBehaviour
     void FixedUpdate ()
     {
 		if (speed != 0)
-        {
-            transform.position += transform.forward * (speed * Time.deltaTime);         
-        }
-	}
+            transform.position += transform.forward * (speed * Time.deltaTime);   
+
+        if (transform.position.z - zStart >= maxTravelDistance)
+            DestroyImmediate(gameObject);
+    }
 
     //https ://docs.unity3d.com/ScriptReference/Rigidbody.OnCollisionEnter.html
     void OnCollisionEnter(Collision collision)

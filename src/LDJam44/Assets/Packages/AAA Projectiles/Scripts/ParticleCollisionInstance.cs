@@ -8,18 +8,28 @@ public class ParticleCollisionInstance : MonoBehaviour
     public GameObject[] EffectsOnCollision;
     public float Offset = 0;
     public float DestroyTimeDelay = 5;
+    public int Damage = 10;
     public bool UseWorldSpacePosition;
     public bool UseFirePointRotation;
     private ParticleSystem part;
     private List<ParticleCollisionEvent> collisionEvents = new List<ParticleCollisionEvent>();
     private ParticleSystem ps;
 
+    private float zStart;
+    private bool isDestroying;
+
     void Start()
     {
         part = GetComponent<ParticleSystem>();
+        Destroy(gameObject, DestroyTimeDelay * 5);
     }
+
     void OnParticleCollision(GameObject other)
-    {      
+    {
+        Debug.Log($"Particle Collided with {other.name}");
+        var health = other.GetComponent<Health>();
+        health?.ApplyDamage(Damage);
+
         int numCollisionEvents = part.GetCollisionEvents(other, collisionEvents);     
         for (int i = 0; i < numCollisionEvents; i++)
         {
@@ -32,6 +42,15 @@ public class ParticleCollisionInstance : MonoBehaviour
                 Destroy(instance, DestroyTimeDelay);
             }
         }
+        Destroy();
+    }
+
+    private void Destroy()
+    {
+        if (isDestroying)
+            return;
+
+        isDestroying = true;
         Destroy(gameObject, DestroyTimeDelay + 0.5f);
     }
 }

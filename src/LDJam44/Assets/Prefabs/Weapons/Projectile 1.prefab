@@ -13422,7 +13422,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     minKillSpeed: 0
-    maxKillSpeed: 10000
+    maxKillSpeed: 0
     radiusScale: 0.0001
     collidesWith:
       serializedVersion: 2
@@ -14405,6 +14405,7 @@ MonoBehaviour:
   - {fileID: 1438542530079480, guid: 21710859533a00746ad2bdd323061a2d, type: 3}
   Offset: 0.1
   DestroyTimeDelay: 1
+  Damage: 10
   UseWorldSpacePosition: 1
   UseFirePointRotation: 0
 --- !u!199 &199555391388218598
