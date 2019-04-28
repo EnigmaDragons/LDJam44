@@ -7,4 +7,5 @@ public static class SceneNames {
     public static string StartingLogoScene = "StartingLogoScene";
     public static string SpaceStationScene = "SpaceStation";
     public static string ShipTravel = "Level";
+    public static string Map = "Map";
 }

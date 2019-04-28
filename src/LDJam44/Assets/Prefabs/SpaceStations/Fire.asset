@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Fire
   m_EditorClassIdentifier: 
   Name: Fire
-  X: 100
-  Y: 100
+  X: 3
+  Y: 3
   CheapProducts:
   - {fileID: 11400000, guid: e37c235bb67579a4cb2f4e913e401e69, type: 2}
   ReasonableProducts:

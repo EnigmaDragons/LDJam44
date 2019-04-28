@@ -13,12 +13,15 @@ MonoBehaviour:
   m_Name: Frost
   m_EditorClassIdentifier: 
   Name: Frost
-  X: 0
-  Y: 0
+  X: -3
+  Y: 1
   CheapProducts:
   - {fileID: 11400000, guid: 5a30fe362b400734b93c1e31781a40a2, type: 2}
   ReasonableProducts:
   - {fileID: 11400000, guid: ed2e09956a993164dacdcdab719fc0df, type: 2}
   ExpensiveProducts:
   - {fileID: 11400000, guid: 4fd0b53e83708314f87b3eeab0f2eb72, type: 2}
-  ProductsForSale: []
+  ProductsForSale:
+  - {fileID: 11400000, guid: 5a30fe362b400734b93c1e31781a40a2, type: 2}
+  - {fileID: 11400000, guid: ed2e09956a993164dacdcdab719fc0df, type: 2}
+  - {fileID: 11400000, guid: 4fd0b53e83708314f87b3eeab0f2eb72, type: 2}
