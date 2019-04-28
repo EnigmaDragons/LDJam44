@@ -2,10 +2,10 @@
 
 static class SpawnBoundaries
 {
-    public const int minX = -30;
-    public const int minY = -22;
-    public const int maxX = 30;
-    public const int maxY = 22;
+    public const int minX = -80;
+    public const int minY = -34;
+    public const int maxX = 80;
+    public const int maxY = 34;
     public const int minScreenX = -10;
     public const int minScreenY = -6;
     public const int maxScreenX = 10;

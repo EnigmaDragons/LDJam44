@@ -21,7 +21,7 @@ public class ParticleCollisionInstance : MonoBehaviour
     void Start()
     {
         part = GetComponent<ParticleSystem>();
-        Destroy(gameObject, DestroyTimeDelay * 5);
+        Destroy(gameObject, 25f);
     }
 
     void OnParticleCollision(GameObject other)
