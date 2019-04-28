@@ -10,12 +10,12 @@ public class Health : VerboseMonoBehaviour
     [SerializeField] GameObject onDeathVfx;
 
     private bool destructionStarted;
-    private SimpleGameEvents gameEvents;
+    private GameServices game;
     private int currentHp;
 
     public void Start()
     {
-        gameEvents = VerboseFindObjectOfType<SimpleGameEvents>();
+        game = VerboseFindObjectOfType<GameServices>();
         currentHp = maxHp;
     }
 
@@ -47,6 +47,8 @@ public class Health : VerboseMonoBehaviour
         var rigidBody = GetComponent<Rigidbody>();
         if (rigidBody != null && explosionRigidBody != null)
             explosionRigidBody.velocity = rigidBody.velocity;
+
+        game.PlaySoundEffect(onDeath);
         AudioSource.PlayClipAtPoint(onDeath, transform.position);
     }
 
@@ -54,7 +56,7 @@ public class Health : VerboseMonoBehaviour
     {
         yield return new WaitForSeconds(0.3f);
         if (role.Equals(Role.Player))
-            gameEvents.OnGameOver();
+            game.OnGameOver();
         Destroy(gameObject);
     }
 }

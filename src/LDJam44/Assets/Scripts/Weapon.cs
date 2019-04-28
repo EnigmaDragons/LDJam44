@@ -9,10 +9,12 @@ class Weapon : ScriptableObject
 
     private double msBeforeFire;
     private GameObject owner;
-
+    private GameServices game;
+    
     public void Equip(GameObject owner)
     {
         this.owner = owner;
+        game = FindObjectOfType<GameServices>();
     }
 
     public void Update()
@@ -28,6 +30,6 @@ class Weapon : ScriptableObject
 
         msBeforeFire = fireInterval;
         Instantiate(projectile, new Vector3(owner.transform.position.x, owner.transform.position.y, owner.transform.position.z + 2f), owner.transform.rotation);
-        AudioSource.PlayClipAtPoint(fireSound, Camera.main.transform.position);
+        game.PlaySoundEffect(fireSound);
     }
 }
