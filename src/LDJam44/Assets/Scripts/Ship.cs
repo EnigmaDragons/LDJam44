@@ -23,7 +23,7 @@ public class Ship : MonoBehaviour
     void Update()
     {
         weapon.Update();
-        if (Input.GetButton("Fire1"))
+        if (Input.GetButton("Fire1") && !stopping)
             weapon.Fire();
     }
 
@@ -69,5 +69,6 @@ public class Ship : MonoBehaviour
     {
         stopping = true;
         Rigidbody.velocity = new Vector3(0, 0, 0);
+        transform.rotation = Quaternion.Euler(0, 0, 180);
     }
 }
