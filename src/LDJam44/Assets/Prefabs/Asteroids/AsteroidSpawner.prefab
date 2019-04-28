@@ -47,6 +47,4 @@ MonoBehaviour:
   - {fileID: 3724147295171507537, guid: 3e6400843727e7b4d90ba31030e8b9ef, type: 3}
   - {fileID: 4058382209153048106, guid: 9eb57fceabc3dea4199fe77a83c3f341, type: 3}
   - {fileID: 7653032299829129697, guid: 2eb32ed03aa16014ab801809b602bf6f, type: 3}
-  densityFactor: 4
-  startClearPlayAreaDistance: 38
-  endClearPlayAreaDistance: 10
+  densityFactor: 0.1
