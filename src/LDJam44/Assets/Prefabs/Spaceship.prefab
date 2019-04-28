@@ -113,9 +113,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   zSpeed: 10
-  hSpeed: 4
-  vSpeed: 4
+  hSpeed: 6
+  vSpeed: 6
   weapon: {fileID: 11400000, guid: fa35a085535344b45bdc2e30fb1bee50, type: 2}
+  acceleration: 0.17
 --- !u!114 &4660932460096110771
 MonoBehaviour:
   m_ObjectHideFlags: 0
