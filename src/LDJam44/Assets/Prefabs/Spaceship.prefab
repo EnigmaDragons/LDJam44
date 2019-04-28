@@ -192,7 +192,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 6ad9f81f75f00454e9e4cd8475474161, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -260,7 +260,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   role: 1
   maxHp: 10
-  currentHp: 10
   onDeath: {fileID: 8300000, guid: 1350ced706204a545b010ee85b4817fd, type: 3}
   onDeathVfx: {fileID: 541646883767013081, guid: a6c2ce95cd676f54c881f3a367a2ac5a,
     type: 3}
@@ -431,11 +430,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2689443013312590357}
     m_Modifications:
-    - target: {fileID: 5345777003621345321, guid: aba699bb45fbc08408f91b0caa953fbb,
-        type: 3}
-      propertyPath: m_Name
-      value: TargettingReticle
-      objectReference: {fileID: 0}
     - target: {fileID: 2562145113794397555, guid: aba699bb45fbc08408f91b0caa953fbb,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -490,6 +484,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5345777003621345321, guid: aba699bb45fbc08408f91b0caa953fbb,
+        type: 3}
+      propertyPath: m_Name
+      value: TargettingReticle
       objectReference: {fileID: 0}
     - target: {fileID: 5568274674395655569, guid: aba699bb45fbc08408f91b0caa953fbb,
         type: 3}
