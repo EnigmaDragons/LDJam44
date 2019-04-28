@@ -207,6 +207,11 @@ PrefabInstance:
       propertyPath: m_ReflectionProbeUsage
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4513927331979135840, guid: 537735e17e4e1ee4c9d76bfd2eff8518,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 537735e17e4e1ee4c9d76bfd2eff8518, type: 3}
 --- !u!4 &6018883499623681825 stripped
