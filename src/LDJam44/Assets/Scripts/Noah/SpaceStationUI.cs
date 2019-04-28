@@ -10,6 +10,7 @@ public class SpaceStationUI : MonoBehaviour
     private MutablePlayer player;
 
     public Text ErrorText;
+    public Text StationName;
     public GameObject MainUI;
     public GameObject UpgradesUI;
     public Text Product0Name;
@@ -27,6 +28,7 @@ public class SpaceStationUI : MonoBehaviour
         var gameState = GameObject.Find("GameState").GetComponent<GameState>();
         spaceStation = gameState.CurrentSpaceStationData;
         player = gameState.PlayerData;
+        StationName.text = spaceStation.Name;
         UpdateProduct(Product0Name, Product0Description, Product0Cost, 0);
         UpdateProduct(Product1Name, Product1Description, Product1Cost, 1);
         UpdateProduct(Product2Name, Product2Description, Product2Cost, 2);
