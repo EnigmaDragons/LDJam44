@@ -46,7 +46,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5102087257348941164}
-  m_Mesh: {fileID: -8169724173148013524, guid: 1fa363f6a7ea7fc4a807155ee8976935, type: 3}
+  m_Mesh: {fileID: -8169724173148013524, guid: 5bc68a5a3807b744c9b1dee48642ac86, type: 3}
 --- !u!23 &2302304693737684274
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -97,7 +97,7 @@ MeshCollider:
   serializedVersion: 3
   m_Convex: 1
   m_CookingOptions: 14
-  m_Mesh: {fileID: -8169724173148013524, guid: 1fa363f6a7ea7fc4a807155ee8976935, type: 3}
+  m_Mesh: {fileID: -8169724173148013524, guid: 5bc68a5a3807b744c9b1dee48642ac86, type: 3}
 --- !u!114 &211726524687890087
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -158,7 +158,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b9c77cc7ed304841960bd7b0e5d7265, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 12
+  speed: 3
   rotSpeed: 2.5
   editorWaypoints: []
   xRotOffset: 180

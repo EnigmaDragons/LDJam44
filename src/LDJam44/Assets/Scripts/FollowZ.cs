@@ -18,6 +18,7 @@ public class FollowZ : MonoBehaviour
         if (toFollow == null)
             return;
 
-        transform.SetPositionAndRotation(new Vector3(transform.position.x, transform.position.y, toFollow.transform.position.z + zDelta), transform.rotation);
+        transform.localPosition = new Vector3(transform.position.x, transform.position.y,
+            toFollow.transform.position.z + zDelta);
     }
 }

@@ -14,7 +14,6 @@ public class EnemyMovement : VerboseMonoBehaviour
     [SerializeField] private float zRotOffset;
 
     private Vector3[] waypoints;
-    private Vector3 rotOffset;
 
     private GameObject playerShip;
     private Rigidbody rigidBody;
@@ -27,8 +26,6 @@ public class EnemyMovement : VerboseMonoBehaviour
 
     void Start()
     {
-        rotOffset = new Vector3(xRotOffset, yRotOffset, zRotOffset);
-        transform.rotation = Quaternion.LookRotation(rotOffset);
         if (waypoints == null)
             waypoints = editorWaypoints.Select(x => x.position).ToArray();
 
@@ -47,7 +44,6 @@ public class EnemyMovement : VerboseMonoBehaviour
         {
             var dest = new Vector3(waypoints[nextWaypoint].x, waypoints[nextWaypoint].y, waypoints[nextWaypoint].z + playerShip.transform.position.z);
             ChangeVelocity(dest);
-            FaceTarget(dest);
             if (WithinXYEpsilon(gameObject.transform.position, dest))
             {
                 Debug.Log($"Arrived at waypoint {nextWaypoint}. Moving toward {nextWaypoint + 1}");
@@ -70,17 +66,7 @@ public class EnemyMovement : VerboseMonoBehaviour
         var zDelta = dest.z - transform.position.z;
         var zVelocity = Mathf.Abs(zDelta) <= epsilon ? 0 : zDelta < 0 ? -speed : speed;
         rigidBody.velocity = new Vector3(xVelocity, yVelocity, zVelocity);
-    }
-
-    void FaceTarget(Vector3 target)
-    {
-        //transform.LookAt(target);
-        //transform.rotation = Quaternion.Euler(transform.rotation.x, transform.rotation.y, transform.rotation.z + zRotOffset);
-
-        var targetDir = target - transform.position;
-        var step = rotSpeed * Time.deltaTime;
-        var newDir = Vector3.RotateTowards(transform.forward, targetDir, step, 0.0f);
-        transform.rotation = Quaternion.LookRotation(newDir + rotOffset);
+        transform.rotation = Quaternion.LookRotation(rigidBody.velocity);
     }
 
     bool WithinXYEpsilon(Vector3 first, Vector3 second)
