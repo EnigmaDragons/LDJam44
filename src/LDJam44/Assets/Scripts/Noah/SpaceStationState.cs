@@ -5,6 +5,7 @@ using UnityEngine;
 public class SpaceStationState : ScriptableObject
 {
     public string Name;
+    public string Skin;
     public int X;
     public int Y;
     public ProductState[] CheapProducts;

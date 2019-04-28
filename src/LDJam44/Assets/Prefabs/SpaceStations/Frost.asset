@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Frost
   m_EditorClassIdentifier: 
   Name: Frost
+  Skin: BlueSkin
   X: -3
   Y: 1
   CheapProducts:

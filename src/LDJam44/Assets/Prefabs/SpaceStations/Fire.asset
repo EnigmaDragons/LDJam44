@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Fire
   m_EditorClassIdentifier: 
   Name: Fire
+  Skin: RedSkin
   X: 3
   Y: 3
   CheapProducts:
@@ -21,4 +22,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 4aa6d188529469649a5342ace6b19913, type: 2}
   ExpensiveProducts:
   - {fileID: 11400000, guid: 52ec701091de6694bac3b36a98ac7af5, type: 2}
-  ProductsForSale: []
+  ProductsForSale:
+  - {fileID: 11400000, guid: e37c235bb67579a4cb2f4e913e401e69, type: 2}
+  - {fileID: 11400000, guid: 4aa6d188529469649a5342ace6b19913, type: 2}
+  - {fileID: 11400000, guid: 52ec701091de6694bac3b36a98ac7af5, type: 2}
