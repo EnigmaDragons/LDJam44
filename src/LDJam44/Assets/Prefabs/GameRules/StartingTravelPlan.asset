@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66fca390067a3f84e89cce1dec6a0b1c, type: 3}
   m_Name: StartingTravelPlan
   m_EditorClassIdentifier: 
-  Distance: 0
-  Difficulty: 0
+  Distance: 150
+  Difficulty: 3
