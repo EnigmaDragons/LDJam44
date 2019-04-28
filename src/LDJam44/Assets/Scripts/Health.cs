@@ -1,17 +1,24 @@
-﻿using Assets.Scripts;
-using System.Collections;
+﻿using System.Collections;
 using UnityEngine;
 
 public class Health : VerboseMonoBehaviour
 {
     [SerializeField] Role role;
-    [SerializeField] int maxHp;
+    public int maxHp;
+    public int currentHp;
     [SerializeField] AudioClip onDeath;
     [SerializeField] GameObject onDeathVfx;
 
+    public float HpPercent => (float)currentHp / (float)maxHp;
+
     private bool destructionStarted;
     private GameServices game;
-    private int currentHp;
+
+    public void Init(int maxHp)
+    {
+        this.maxHp = maxHp;
+        currentHp = maxHp;
+    }
 
     public void Start()
     {

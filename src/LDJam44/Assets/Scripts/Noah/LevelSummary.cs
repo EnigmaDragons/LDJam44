@@ -23,7 +23,10 @@ public class LevelSummary : MonoBehaviour
     void Start()
     {
         var gameState = GameObject.Find("GameState").GetComponent<GameState>();
+        var playerHealth = FindObjectOfType<Ship>().GetComponent<Health>();
         player = gameState.PlayerData;
+        player.LifeForce -= (playerHealth.maxHp - playerHealth.currentHp);
+
         var destinationStation = gameState.GalaxyData.Stations.First(x => x.Name == gameState.TravelPlanData.Destination);
         var shipmentProfit = destinationStation.CurrentBuyPrices[player.Products[0].Name] * player.Counts[0] 
             + destinationStation.CurrentBuyPrices[player.Products[1].Name] * player.Counts[1]

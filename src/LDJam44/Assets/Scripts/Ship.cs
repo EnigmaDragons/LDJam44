@@ -1,9 +1,7 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Ship : MonoBehaviour
 {
-    [SerializeField] int maxHealth = 100;
     [SerializeField] float zSpeed = 10f;
     [SerializeField] float hSpeed = 8f;
     [SerializeField] float vSpeed = 8f;
