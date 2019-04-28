@@ -125,8 +125,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   role: 0
-  maxHp: 10
-  currentHp: 10
+  maxHp: 30
   onDeath: {fileID: 8300000, guid: d3a2576ca3d07af4d9d12550cd973ef7, type: 3}
   onDeathVfx: {fileID: 541646883767013081, guid: a6c2ce95cd676f54c881f3a367a2ac5a,
     type: 3}

@@ -9,6 +9,7 @@ public class ParticleCollisionInstance : MonoBehaviour
     public float Offset = 0;
     public float DestroyTimeDelay = 5;
     public int Damage = 10;
+    public AudioClip HitSoundEffect;
     public bool UseWorldSpacePosition;
     public bool UseFirePointRotation;
     private ParticleSystem part;
@@ -21,7 +22,7 @@ public class ParticleCollisionInstance : MonoBehaviour
     void Start()
     {
         part = GetComponent<ParticleSystem>();
-        Destroy(gameObject, 25f);
+        Destroy(gameObject, 30f);
     }
 
     void OnParticleCollision(GameObject other)
@@ -29,6 +30,7 @@ public class ParticleCollisionInstance : MonoBehaviour
         Debug.Log($"Particle Collided with {other.name}");
         var health = other.GetComponent<Health>();
         health?.ApplyDamage(Damage);
+        AudioSource.PlayClipAtPoint(HitSoundEffect, Camera.main.transform.position);
 
         int numCollisionEvents = part.GetCollisionEvents(other, collisionEvents);     
         for (int i = 0; i < numCollisionEvents; i++)

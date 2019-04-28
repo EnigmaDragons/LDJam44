@@ -6,16 +6,17 @@ public class Health : VerboseMonoBehaviour
 {
     [SerializeField] Role role;
     [SerializeField] int maxHp;
-    [SerializeField] int currentHp;
     [SerializeField] AudioClip onDeath;
     [SerializeField] GameObject onDeathVfx;
 
     private bool destructionStarted;
     private SimpleGameEvents gameEvents;
+    private int currentHp;
 
     public void Start()
     {
         gameEvents = VerboseFindObjectOfType<SimpleGameEvents>();
+        currentHp = maxHp;
     }
 
     public void ApplyDamage(int amount)
@@ -41,6 +42,7 @@ public class Health : VerboseMonoBehaviour
     private void PlayExplosion()
     {
         var explosion = Instantiate(onDeathVfx, transform.position, transform.rotation);
+        explosion.transform.localScale = GetComponent<Renderer>().bounds.size;
         var explosionRigidBody = explosion.GetComponent<Rigidbody>();
         var rigidBody = GetComponent<Rigidbody>();
         if (rigidBody != null && explosionRigidBody != null)
