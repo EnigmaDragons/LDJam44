@@ -138,11 +138,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spaceship
       objectReference: {fileID: 0}
-    - target: {fileID: 2689443013312590353, guid: af8362b813a7fdc4da4d0541a2bfcab9,
-        type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
     - target: {fileID: 2689443013312590357, guid: af8362b813a7fdc4da4d0541a2bfcab9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -160,23 +155,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2689443013312590357, guid: af8362b813a7fdc4da4d0541a2bfcab9,
         type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2689443013312590357, guid: af8362b813a7fdc4da4d0541a2bfcab9,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2689443013312590357, guid: af8362b813a7fdc4da4d0541a2bfcab9,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2689443013312590357, guid: af8362b813a7fdc4da4d0541a2bfcab9,
-        type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2689443013312590357, guid: af8362b813a7fdc4da4d0541a2bfcab9,
         type: 3}
@@ -196,14 +176,8 @@ PrefabInstance:
     - target: {fileID: 2689443013312590357, guid: af8362b813a7fdc4da4d0541a2bfcab9,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: -180
       objectReference: {fileID: 0}
-    - target: {fileID: 2689443013312590356, guid: af8362b813a7fdc4da4d0541a2bfcab9,
-        type: 3}
-      propertyPath: weapon
-      value: 
-      objectReference: {fileID: 11400000, guid: fa35a085535344b45bdc2e30fb1bee50,
-        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af8362b813a7fdc4da4d0541a2bfcab9, type: 3}
 --- !u!4 &12922380045941509 stripped
