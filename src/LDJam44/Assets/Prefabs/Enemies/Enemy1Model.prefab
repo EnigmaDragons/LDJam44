@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8782469926575712128}
   - component: {fileID: 6118314050329329154}
   - component: {fileID: 2302304693737684274}
-  - component: {fileID: 3061283862173789975}
+  - component: {fileID: -3527332709328334197}
   - component: {fileID: 211726524687890087}
   - component: {fileID: 3066295218750092007}
   - component: {fileID: 7324645360325829736}
@@ -19,7 +19,7 @@ GameObject:
   - component: {fileID: 5102087257348941165}
   - component: {fileID: 3330087203042889881}
   m_Layer: 10
-  m_Name: Enemy
+  m_Name: Enemy1Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32,9 +32,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5102087257348941164}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 20}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: -0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 20, y: 20, z: 20}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -46,7 +46,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5102087257348941164}
-  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: -8169724173148013524, guid: 1fa363f6a7ea7fc4a807155ee8976935, type: 3}
 --- !u!23 &2302304693737684274
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -64,7 +64,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: cec4db07cdcd4ae45b0649b7d8adb14a, type: 2}
+  - {fileID: 2100000, guid: 4aa5b621fc699c147b11bcd1e0fcd2aa, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -84,8 +84,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!136 &3061283862173789975
-CapsuleCollider:
+--- !u!64 &-3527332709328334197
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -94,10 +94,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: -8169724173148013524, guid: 1fa363f6a7ea7fc4a807155ee8976935, type: 3}
 --- !u!114 &211726524687890087
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -159,7 +159,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 12
+  rotSpeed: 2.5
   editorWaypoints: []
+  xRotOffset: 180
+  yRotOffset: 180
+  zRotOffset: 0
 --- !u!114 &5102087257348941165
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -46,7 +46,7 @@ class EnemyWaveSpawner : VerboseMonoBehaviour
             waypoints.Add(NextSaneWaypoint(waypoints.Last()));
 
         var endPosition = SpawnBoundaries.RandomOffPlayZone(waypoints.Last().z, 5f);
-        waypoints.Add(endPosition);
+        waypoints.Add(endPosition * 1.5f);
 
         var waveConfig = new WaveConfig
         {

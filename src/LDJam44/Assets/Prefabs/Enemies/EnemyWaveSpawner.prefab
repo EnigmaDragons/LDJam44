@@ -54,3 +54,7 @@ MonoBehaviour:
   minWaypoints: 3
   maxWaypoints: 6
   minWaypointDistance: 15
+  minAheadOfPlayer: 26
+  maxAheadOfPlayer: 50
+  minSecondsBetweenEnemies: 0.5
+  maxSecondsBetweenEnemies: 1.5

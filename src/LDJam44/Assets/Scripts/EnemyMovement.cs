@@ -7,9 +7,14 @@ public class EnemyMovement : VerboseMonoBehaviour
     const float epsilon = 1.0f;
 
     [SerializeField] private float speed = 2.5f;
+    [SerializeField] private float rotSpeed = 2.5f;
     [SerializeField] private Transform[] editorWaypoints = new Transform[0];
+    [SerializeField] private float xRotOffset;
+    [SerializeField] private float yRotOffset;
+    [SerializeField] private float zRotOffset;
 
     private Vector3[] waypoints;
+    private Vector3 rotOffset;
 
     private GameObject playerShip;
     private Rigidbody rigidBody;
@@ -22,6 +27,8 @@ public class EnemyMovement : VerboseMonoBehaviour
 
     void Start()
     {
+        rotOffset = new Vector3(xRotOffset, yRotOffset, zRotOffset);
+        transform.rotation = Quaternion.LookRotation(rotOffset);
         if (waypoints == null)
             waypoints = editorWaypoints.Select(x => x.position).ToArray();
 
@@ -67,7 +74,13 @@ public class EnemyMovement : VerboseMonoBehaviour
 
     void FaceTarget(Vector3 target)
     {
-        transform.LookAt(target);
+        //transform.LookAt(target);
+        //transform.rotation = Quaternion.Euler(transform.rotation.x, transform.rotation.y, transform.rotation.z + zRotOffset);
+
+        var targetDir = target - transform.position;
+        var step = rotSpeed * Time.deltaTime;
+        var newDir = Vector3.RotateTowards(transform.forward, targetDir, step, 0.0f);
+        transform.rotation = Quaternion.LookRotation(newDir + rotOffset);
     }
 
     bool WithinXYEpsilon(Vector3 first, Vector3 second)
