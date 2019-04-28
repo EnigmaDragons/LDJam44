@@ -25,7 +25,7 @@ public class ParticleCollisionInstance : MonoBehaviour
         Destroy(gameObject, 30f);
     }
 
-    private void Update()
+    void Update()
     {
         Debug.Log($"Shot Z {transform.position.z}");
     }
