@@ -262,11 +262,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: SpaceParticles
       objectReference: {fileID: 0}
-    - target: {fileID: 8569400226174890392, guid: 9d5821d51e668fa459f63a4a06ac7cc1,
-        type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
     - target: {fileID: 7752385120202242372, guid: 9d5821d51e668fa459f63a4a06ac7cc1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -280,7 +275,7 @@ PrefabInstance:
     - target: {fileID: 7752385120202242372, guid: 9d5821d51e668fa459f63a4a06ac7cc1,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 30
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 7752385120202242372, guid: 9d5821d51e668fa459f63a4a06ac7cc1,
         type: 3}
@@ -321,16 +316,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1891108732878537742, guid: 9d5821d51e668fa459f63a4a06ac7cc1,
-        type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 1891108731229730624, guid: 9d5821d51e668fa459f63a4a06ac7cc1,
-        type: 3}
-      propertyPath: m_Layer
-      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d5821d51e668fa459f63a4a06ac7cc1, type: 3}
