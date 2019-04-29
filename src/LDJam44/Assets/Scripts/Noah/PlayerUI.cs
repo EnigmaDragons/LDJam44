@@ -19,7 +19,7 @@ public class PlayerUI : MonoBehaviour
 
     public void Update()
     {
-        LifeForce.text = player.LifeForce + " Life Force";
+        LifeForce.text = $"Life Force: {player.LifeForce}";
         CheapProduct.text = $"{player.Products[0].Name}: {player.Counts[0]}";
         ReasonableProduct.text = $"{player.Products[1].Name}: {player.Counts[1]}";
         ExpensiveProduct.text = $"{player.Products[2].Name}: {player.Counts[2]}";

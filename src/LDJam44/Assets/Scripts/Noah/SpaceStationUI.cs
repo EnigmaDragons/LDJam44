@@ -39,7 +39,7 @@ public class SpaceStationUI : MonoBehaviour
         var name = spaceStation.ProductsForSale[product].Name;
         productName.text = name;
         productDescription.text = spaceStation.ProductsForSale[product].Description;
-        productCost.text = spaceStation.CurrentSellPrices[name].ToString();
+        productCost.text = spaceStation.CurrentSellPrices[name].ToString() + " LF";
     }
 
     public void BuyProduct0()
