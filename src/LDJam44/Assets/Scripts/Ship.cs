@@ -12,6 +12,8 @@ public class Ship : VerboseMonoBehaviour
     private Rigidbody Rigidbody;
     private Health health;
 
+    public bool Stopped => stopping;
+
     void Start()
     {
         health = VerboseGetComponent<Health>();
