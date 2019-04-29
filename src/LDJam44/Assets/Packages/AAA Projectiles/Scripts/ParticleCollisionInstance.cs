@@ -20,6 +20,7 @@ public class ParticleCollisionInstance : VerboseMonoBehaviour
     private float zStart;
     private bool isDestroying;
     private float damageFactor = 1.0f;
+    private Role ownedBy = Role.All;
 
     void Start()
     {
@@ -32,6 +33,9 @@ public class ParticleCollisionInstance : VerboseMonoBehaviour
     {
         Debug.Log($"Particle Collided with {other.name}");
         var health = other.GetComponent<Health>();
+        if (health != null && health.role.Equals(ownedBy))
+            return;
+
         health?.ApplyDamage(Convert.ToInt32(Damage * damageFactor));
         game.PlaySoundEffect(HitSoundEffect);
 
@@ -53,6 +57,11 @@ public class ParticleCollisionInstance : VerboseMonoBehaviour
     public void AmplifyDamage(float damageFactor)
     {
         this.damageFactor = damageFactor;
+    }
+
+    public void SetRole(Role weaponRole)
+    {
+        ownedBy = weaponRole;
     }
 
     private void Destroy()

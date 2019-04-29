@@ -10,12 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7ca41d8fec3e8d74ab72764b76a82203, type: 3}
-  m_Name: P-GreenRailBlaster
+  m_Name: E-LaserBurstBlaster
   m_EditorClassIdentifier: 
-  projectile: {fileID: 1168065043843762, guid: 70cd80e6e8517904da249485ffde005f, type: 3}
-  fireInterval: 0.5
-  fireSound: {fileID: 8300000, guid: 57ec7b57263e6514d9c2b84e040adc0a, type: 3}
+  projectile: {fileID: 1699459221867030, guid: 64665cf4e8e583742a3fa9772781d147, type: 3}
+  fireInterval: 1.2
+  fireSound: {fileID: 8300000, guid: cc6a55b64045510498ac8eb4fecca164, type: 3}
   forwardOffset: 2
-  numProjectiles: 1
-  delayBetweenShots: 0.18
-  weaponRole: 1
+  numProjectiles: 3

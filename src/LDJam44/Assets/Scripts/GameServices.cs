@@ -29,4 +29,8 @@ public class GameServices : MonoBehaviour
         SceneManager.LoadScene(sceneName);
     }
 
+    public void StartInBackround(IEnumerator coroutine)
+    {
+        StartCoroutine(coroutine);
+    }
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Health : VerboseMonoBehaviour
 {
-    [SerializeField] Role role;
+    public Role role;
     public int maxHp;
     public int currentHp;
     public int loot = 0;
