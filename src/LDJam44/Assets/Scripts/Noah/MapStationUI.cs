@@ -21,7 +21,7 @@ public class MapStationUI : MonoBehaviour
     {
         gameObject.GetComponent<RectTransform>().localPosition = new Vector3(SpaceStation.X * 78, SpaceStation.Y * 78, 0);
         Name.text = SpaceStation.Name;
-        distance = 50 * (int)Math.Ceiling(Vector2.Distance(new Vector2(SpaceStation.X, SpaceStation.Y), new Vector2(GameState.CurrentSpaceStationData.X, GameState.CurrentSpaceStationData.Y)));
+        distance = 100 * (int)Math.Ceiling(Vector2.Distance(new Vector2(SpaceStation.X, SpaceStation.Y), new Vector2(GameState.CurrentSpaceStationData.X, GameState.CurrentSpaceStationData.Y)));
         if (SpaceStation != GameState.CurrentSpaceStationData)
         {
             Distance.text = $"Distance: {distance}";
