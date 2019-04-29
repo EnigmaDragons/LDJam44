@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Looting
   m_EditorClassIdentifier: 
   Name: Looting
-  Description: 
+  Description: Gains Life Force from enemies when they are destroyed
   Costs: b80b00001027000050c30000
   Effects:
   - 0

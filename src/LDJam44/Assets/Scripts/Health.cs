@@ -38,6 +38,7 @@ public class Health : VerboseMonoBehaviour
     public void Start()
     {
         game = VerboseFindObjectOfType<GameServices>();
+        state = GameObject.Find("GameState").GetComponent<GameState>();
         currentHp = maxHp;
     }
 
