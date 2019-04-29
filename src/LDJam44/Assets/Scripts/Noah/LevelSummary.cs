@@ -44,7 +44,6 @@ public class LevelSummary : MonoBehaviour
         player.Loot = 0;
         player.LifeForce = total;
         player.StationName = gameState.TravelPlanData.Destination;
-        player.RecaluclateHealth();
     }
 
     public void Done()

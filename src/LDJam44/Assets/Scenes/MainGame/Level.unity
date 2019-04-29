@@ -150,7 +150,7 @@ AudioSource:
     type: 2}
   m_audioClip: {fileID: 8300000, guid: 25313e8d3e5c19c48969578c78e27eda, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.88
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -266,6 +266,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameLevel
       objectReference: {fileID: 0}
+    - target: {fileID: 2701943162773872211, guid: 6f4b2a8733ae5bf4bb2cc6e6116fc826,
+        type: 3}
+      propertyPath: field of view
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 4889021610351327699, guid: 6f4b2a8733ae5bf4bb2cc6e6116fc826,
         type: 3}
       propertyPath: m_RootOrder
@@ -325,11 +330,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AreaSize.y
       value: 150
-      objectReference: {fileID: 0}
-    - target: {fileID: 2701943162773872211, guid: 6f4b2a8733ae5bf4bb2cc6e6116fc826,
-        type: 3}
-      propertyPath: field of view
-      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 5847889786036476862, guid: 6f4b2a8733ae5bf4bb2cc6e6116fc826,
         type: 3}
