@@ -1724,6 +1724,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be342d9d5aafc704aacaaea7f1900436, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ButtonSound: {fileID: 8300000, guid: 34f93ff47ac732e44b518dabc1199808, type: 3}
   ErrorText: {fileID: 2979530285936129231}
   StationName: {fileID: 2705003363755711635}
   MainUI: {fileID: 5705172593382404663}
