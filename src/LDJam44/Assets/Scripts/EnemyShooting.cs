@@ -4,6 +4,7 @@ public class EnemyShooting : VerboseMonoBehaviour
 {
     [SerializeField] private Weapon weapon;
     [SerializeField] private float varianceAmount = 2.5f;
+    [SerializeField] private float difficultyDamageScaling = 1.25f;
 
     private Weapon cachedWeapon;
     private Ship target;
@@ -12,7 +13,7 @@ public class EnemyShooting : VerboseMonoBehaviour
     {
         target = VerboseFindObjectOfType<Ship>();
         cachedWeapon = Instantiate(weapon, gameObject.transform);
-        cachedWeapon.Equip(gameObject);
+        cachedWeapon.Equip(gameObject, Mathf.Pow(difficultyDamageScaling, GameObject.Find("GameState").GetComponent<GameState>().TravelPlanData.Difficulty) );
     }
 
     private void Update()
