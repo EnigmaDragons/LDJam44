@@ -21,4 +21,12 @@ public class GameServices : MonoBehaviour
     {
         SFX.PlayOneShot(clip);
     }
+
+    public void NavigateToScene(string sceneName) => StartCoroutine(NavigateAfterDelay(sceneName));
+    private IEnumerator NavigateAfterDelay(string sceneName)
+    {
+        yield return new WaitForSeconds(0.2f);
+        SceneManager.LoadScene(sceneName);
+    }
+
 }

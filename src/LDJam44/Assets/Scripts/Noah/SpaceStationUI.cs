@@ -1,14 +1,14 @@
-﻿using Assets.Scripts;
-using Assets.Scripts.Noah;
+﻿using Assets.Scripts.Noah;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class SpaceStationUI : MonoBehaviour
+public class SpaceStationUI : VerboseMonoBehaviour
 {
     private MutableSpaceStation spaceStation;
     private MutablePlayer player;
+    private GameServices game;
 
+    public AudioClip ButtonSound;
     public Text ErrorText;
     public Text StationName;
     public GameObject MainUI;
@@ -25,6 +25,7 @@ public class SpaceStationUI : MonoBehaviour
 
     void Start()
     {
+        game = VerboseFindObjectOfType<GameServices>();
         var gameState = GameObject.Find("GameState").GetComponent<GameState>();
         spaceStation = gameState.CurrentSpaceStationData;
         player = gameState.PlayerData;
@@ -71,7 +72,8 @@ public class SpaceStationUI : MonoBehaviour
 
     public void Done()
     {
-        SceneManager.LoadScene(SceneNames.Map);
+        game.PlaySoundEffect(ButtonSound);
+        game.NavigateToScene(SceneNames.Map);
     }
 
     public void GoToUpgrades()
