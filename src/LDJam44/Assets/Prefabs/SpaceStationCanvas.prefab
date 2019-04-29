@@ -112,6 +112,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be342d9d5aafc704aacaaea7f1900436, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ErrorFadeOut: {fileID: 0}
   ButtonSound: {fileID: 8300000, guid: 34f93ff47ac732e44b518dabc1199808, type: 3}
   ErrorText: {fileID: 2979530285936129231}
   StationName: {fileID: 2705003363755711635}
@@ -204,7 +205,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Insufficient Life Force
+  m_Text: 
 --- !u!1 &3360722716246680882
 GameObject:
   m_ObjectHideFlags: 0
@@ -794,11 +795,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5705172593382404662}
     m_Modifications:
-    - target: {fileID: 694609223472037317, guid: 834295d226563b94780f800ad1303fad,
-        type: 3}
-      propertyPath: m_Name
-      value: ReasonableMarketItem
-      objectReference: {fileID: 0}
     - target: {fileID: 694609223472037316, guid: 834295d226563b94780f800ad1303fad,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -904,6 +900,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 694609223472037317, guid: 834295d226563b94780f800ad1303fad,
+        type: 3}
+      propertyPath: m_Name
+      value: ReasonableMarketItem
+      objectReference: {fileID: 0}
     - target: {fileID: 694609224735050550, guid: 834295d226563b94780f800ad1303fad,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -985,11 +986,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5705172593382404662}
     m_Modifications:
-    - target: {fileID: 694609223472037317, guid: 834295d226563b94780f800ad1303fad,
-        type: 3}
-      propertyPath: m_Name
-      value: ExpensiveMarketItem
-      objectReference: {fileID: 0}
     - target: {fileID: 694609223472037316, guid: 834295d226563b94780f800ad1303fad,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1095,6 +1091,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 694609223472037317, guid: 834295d226563b94780f800ad1303fad,
+        type: 3}
+      propertyPath: m_Name
+      value: ExpensiveMarketItem
+      objectReference: {fileID: 0}
     - target: {fileID: 694609224735050550, guid: 834295d226563b94780f800ad1303fad,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -1186,11 +1187,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5705172593382404662}
     m_Modifications:
-    - target: {fileID: 694609223472037317, guid: 834295d226563b94780f800ad1303fad,
-        type: 3}
-      propertyPath: m_Name
-      value: CheapMarketItem
-      objectReference: {fileID: 0}
     - target: {fileID: 694609223472037316, guid: 834295d226563b94780f800ad1303fad,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1295,6 +1291,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 694609223472037317, guid: 834295d226563b94780f800ad1303fad,
+        type: 3}
+      propertyPath: m_Name
+      value: CheapMarketItem
       objectReference: {fileID: 0}
     - target: {fileID: 694609224735050550, guid: 834295d226563b94780f800ad1303fad,
         type: 3}
