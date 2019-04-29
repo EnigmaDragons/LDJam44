@@ -25,7 +25,6 @@ public class LevelGenerator : VerboseMonoBehaviour
     private void Start()
     {
         var s = Find("GameState").GetComponent<GameState>();
-        s.PlayerData.RecaluclateHealth();
         Debug.Log($"Player Health is {s.PlayerData.Health}");
         Find("Spaceship").GetComponent<Health>().Init(s.PlayerData.Health);
 

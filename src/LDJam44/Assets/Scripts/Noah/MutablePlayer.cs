@@ -6,7 +6,20 @@ namespace Assets.Scripts.Noah
 {
     public class MutablePlayer
     {
-        public int LifeForce;
+        public int LifeForce
+        {
+            get
+            {
+                return lifeForce;
+            }
+            set
+            {
+                lifeForce = value;
+                RecaluclateHealth();
+            }
+        }
+
+        private int lifeForce = 0;
         public ProductState[] Products;
         public int[] Counts;
         public string StationName;
@@ -20,18 +33,18 @@ namespace Assets.Scripts.Noah
 
         public MutablePlayer(PlayerState player, GalaxyState galaxy)
         {
-            LifeForce = player.LifeForce;
             Products = new ProductState[0];
             Counts = new[] {0, 0, 0};
             StationName = player.StationName;
             HealthScalingCost = player.HealthScalingCost;
             galaxy.Upgrades.ToList().ForEach(x => Upgrades[x.name] = 0);
+            LifeForce = player.LifeForce;
         }
 
-        public void RecaluclateHealth()
+        private void RecaluclateHealth()
         {
             var health = 0;
-            var tempLifeForce = LifeForce;
+            var tempLifeForce = lifeForce;
             var nextHitPointCost = 1;
             while (tempLifeForce > nextHitPointCost)
             {
