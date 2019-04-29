@@ -266,6 +266,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameLevel
       objectReference: {fileID: 0}
+    - target: {fileID: 2701943162773872211, guid: 6f4b2a8733ae5bf4bb2cc6e6116fc826,
+        type: 3}
+      propertyPath: field of view
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 4889021610351327699, guid: 6f4b2a8733ae5bf4bb2cc6e6116fc826,
         type: 3}
       propertyPath: m_RootOrder
@@ -325,11 +330,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AreaSize.y
       value: 150
-      objectReference: {fileID: 0}
-    - target: {fileID: 2701943162773872211, guid: 6f4b2a8733ae5bf4bb2cc6e6116fc826,
-        type: 3}
-      propertyPath: field of view
-      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 5847889786036476862, guid: 6f4b2a8733ae5bf4bb2cc6e6116fc826,
         type: 3}
