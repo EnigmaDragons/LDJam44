@@ -385,40 +385,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 7982294992848616213, guid: aba699bb45fbc08408f91b0caa953fbb,
-        type: 3}
-      propertyPath: outlineColor.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7982294992848616213, guid: aba699bb45fbc08408f91b0caa953fbb,
-        type: 3}
-      propertyPath: outlineColor.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7982294992848616213, guid: aba699bb45fbc08408f91b0caa953fbb,
-        type: 3}
-      propertyPath: outlineColor.b
-      value: 0.010785103
-      objectReference: {fileID: 0}
     - target: {fileID: 6809680651058428673, guid: aba699bb45fbc08408f91b0caa953fbb,
         type: 3}
       propertyPath: m_Enabled
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4054877288367766747, guid: aba699bb45fbc08408f91b0caa953fbb,
-        type: 3}
-      propertyPath: outlineColor.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4054877288367766747, guid: aba699bb45fbc08408f91b0caa953fbb,
-        type: 3}
-      propertyPath: outlineColor.g
-      value: 0.21543354
-      objectReference: {fileID: 0}
-    - target: {fileID: 4054877288367766747, guid: aba699bb45fbc08408f91b0caa953fbb,
-        type: 3}
-      propertyPath: outlineColor.b
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aba699bb45fbc08408f91b0caa953fbb, type: 3}

@@ -7,7 +7,8 @@ public class WaveConfig
     public Vector3[] Path { get; set; }
     public int NumEnemies { get; set; }
     public float SecondsBetweenEnemies { get; set; }
-    public float ZTriggerThreshold {get; set;}
+    public float ZTriggerThreshold { get; set; }
+    public float MaxZAllowed { get; set; }
 }
 
 public class Wave : VerboseMonoBehaviour
@@ -40,15 +41,13 @@ public class Wave : VerboseMonoBehaviour
 
     public IEnumerator Spawn()
     {
-        Debug.Log($"Starting Spawning. Triggered at {zTrigger}");
         var waypoints = config.Path;
         for (var i = 0; i < config.NumEnemies; i++)
         {
             var position = waypoints[0];
             var e = Instantiate(config.EnemyProtoype, new Vector3(position.x, position.y, -3), Quaternion.identity);
             e.gameObject.SetActive(false);
-            Debug.Log($"Added {waypoints.Length} waypoints for {e.name}");
-            e.GetComponent<EnemyMovement>().Init(waypoints);
+            e.GetComponent<EnemyMovement>().Init(waypoints, config.MaxZAllowed);
             e.gameObject.SetActive(true);
             yield return new WaitForSeconds(config.SecondsBetweenEnemies);
         }

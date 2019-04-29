@@ -12,7 +12,7 @@ static class SpawnBoundaries
     public const int maxScreenY = 6;
     public const int yOffset = 2;
     public const float startClearPlayAreaDistance = 38f;
-    public const float endClearPlayAreaDistance = 10f;
+    public const float endClearPlayAreaDistance = 30f;
     public const float playZoneFactor = 1.2f;
 
     public static Vector3 RandomOffPlayZone(float z, float zVariance = 0)

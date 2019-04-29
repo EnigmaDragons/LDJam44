@@ -11,14 +11,17 @@ public class EnemyMovement : VerboseMonoBehaviour
     [SerializeField] private Transform[] editorWaypoints = new Transform[0];
 
     private Vector3[] waypoints;
+    private float maxZAllowed;
 
     private GameObject playerShip;
     private Rigidbody rigidBody;
     private int nextWaypoint = 0;
+    private bool isLeaving;
 
-    public void Init(Vector3[] waypoints)
+    public void Init(Vector3[] waypoints, float maxZAllowed)
     {
         this.waypoints = waypoints;
+        this.maxZAllowed = maxZAllowed;
     }
 
     void Start()
@@ -37,6 +40,14 @@ public class EnemyMovement : VerboseMonoBehaviour
     void FixedUpdate()
     {
         var pos = gameObject.transform.position;
+        if (!isLeaving && pos.z >= maxZAllowed)
+        {
+            Debug.Log($"Reached Max Z Allowed, Heading to Exit Point at increased speed");
+            isLeaving = true;
+            speed = speed * 2;
+            nextWaypoint = waypoints.Length - 1;
+        }
+
         if (nextWaypoint < waypoints.Length)
         {
             var dest = new Vector3(waypoints[nextWaypoint].x, waypoints[nextWaypoint].y, waypoints[nextWaypoint].z + playerShip.transform.position.z);
