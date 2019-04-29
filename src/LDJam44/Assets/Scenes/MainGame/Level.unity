@@ -248,6 +248,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!20 &1001824186 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 2701943162773872211, guid: 6f4b2a8733ae5bf4bb2cc6e6116fc826,
+    type: 3}
+  m_PrefabInstance: {fileID: 1511649229}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1511649229
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -324,11 +330,6 @@ PrefabInstance:
         type: 3}
       propertyPath: field of view
       value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 2701943162773872211, guid: 6f4b2a8733ae5bf4bb2cc6e6116fc826,
-        type: 3}
-      propertyPath: far clip plane
-      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 5847889786036476862, guid: 6f4b2a8733ae5bf4bb2cc6e6116fc826,
         type: 3}
@@ -413,6 +414,11 @@ PrefabInstance:
       propertyPath: InitialModule.startColor.maxColor.b
       value: 0.97537726
       objectReference: {fileID: 0}
+    - target: {fileID: 4944817822481394390, guid: 6f4b2a8733ae5bf4bb2cc6e6116fc826,
+        type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1001824186}
     - target: {fileID: 335848229322110283, guid: 6f4b2a8733ae5bf4bb2cc6e6116fc826,
         type: 3}
       propertyPath: m_LocalScale.x
