@@ -17,7 +17,7 @@ static class SpawnBoundaries
     public const int yOffset = 2;
     public const float startClearPlayAreaDistance = 38f;
     public const float endClearPlayAreaDistance = 30f;
-    public const float playZoneFactor = 1.2f;
+    public const float playZoneFactor = 1.5f;
 
     public static Vector3 RandomDecorZone(float z, float zVariance = 0)
     {
@@ -47,7 +47,7 @@ static class SpawnBoundaries
     {
         return new Vector3(
             Random.Range(minScreenX * playZoneFactor, maxScreenX * playZoneFactor), 
-            Random.Range(minScreenY * playZoneFactor * playZoneFactor, maxScreenY * playZoneFactor * playZoneFactor) + yOffset, 
+            Random.Range(minScreenY * playZoneFactor * playZoneFactor * playZoneFactor, maxScreenY * playZoneFactor * playZoneFactor * playZoneFactor) + yOffset, 
             VariedZ(z, zVariance));
     }
 
