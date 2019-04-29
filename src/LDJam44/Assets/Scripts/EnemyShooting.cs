@@ -1,13 +1,15 @@
 using UnityEngine;
 
-public class EnemyShooting : MonoBehaviour
+public class EnemyShooting : VerboseMonoBehaviour
 {
     [SerializeField] private Weapon weapon;
 
     private Weapon cachedWeapon;
+    private Ship target;
     
     private void Start()
     {
+        target = VerboseFindObjectOfType<Ship>();
         cachedWeapon = Instantiate(weapon, gameObject.transform);
         cachedWeapon.Equip(gameObject);
     }
@@ -15,6 +17,7 @@ public class EnemyShooting : MonoBehaviour
     private void Update()
     {
         cachedWeapon.Update();
-        cachedWeapon.Fire();
+        if (SpawnBoundaries.IsInEnemyPlayArea(transform.position, target.transform.position))
+            cachedWeapon.FireTowards(target.transform.position);
     }
 }
