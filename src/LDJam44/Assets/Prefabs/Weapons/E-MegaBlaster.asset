@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7ca41d8fec3e8d74ab72764b76a82203, type: 3}
-  m_Name: P-GreenRailBlaster
+  m_Name: E-MegaBlaster
   m_EditorClassIdentifier: 
-  projectilePrototype: {fileID: 1168065043843762, guid: 70cd80e6e8517904da249485ffde005f,
+  projectilePrototype: {fileID: 1311559214229084, guid: 2c46ddebb254a1f47803be05e38476c4,
     type: 3}
-  fireInterval: 0.5
-  fireSound: {fileID: 8300000, guid: 57ec7b57263e6514d9c2b84e040adc0a, type: 3}
+  fireInterval: 0.6
+  fireSound: {fileID: 8300000, guid: 05de6fba68592e9438d0ff502aeaeaa2, type: 3}
   forwardOffset: 2
   numProjectiles: 1
-  delayBetweenShots: 0.18
-  weaponRole: 1
-  accuracy: 1
-  damageAmount: 10
+  delayBetweenShots: 1.5
+  weaponRole: 2
+  accuracy: 0.92
+  damageAmount: 25

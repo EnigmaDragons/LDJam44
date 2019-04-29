@@ -12,7 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ca41d8fec3e8d74ab72764b76a82203, type: 3}
   m_Name: E-FireballLauncher
   m_EditorClassIdentifier: 
-  projectile: {fileID: 1294834399362254, guid: 4d46a88382f3c124c93b73ffeb016270, type: 3}
+  projectilePrototype: {fileID: 1294834399362254, guid: 4d46a88382f3c124c93b73ffeb016270,
+    type: 3}
   fireInterval: 1
   fireSound: {fileID: 8300000, guid: cc6a55b64045510498ac8eb4fecca164, type: 3}
   forwardOffset: 2
+  numProjectiles: 1
+  delayBetweenShots: 0.18
+  weaponRole: 2
+  accuracy: 1
+  damageAmount: 10
