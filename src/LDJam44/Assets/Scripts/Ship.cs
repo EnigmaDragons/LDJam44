@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class Ship : MonoBehaviour
+public class Ship : VerboseMonoBehaviour
 {
     [SerializeField] float zSpeed = 10f;
     [SerializeField] float hSpeed = 8f;
@@ -10,12 +10,14 @@ public class Ship : MonoBehaviour
 
     private bool stopping = false;
     private Rigidbody Rigidbody;
+    private Health health;
 
     void Start()
     {
-        Rigidbody = GetComponent<Rigidbody>();
-        if (Rigidbody == null || weapon == null)
-            Debug.LogError("Ship is missing its Rigidbody or Weapon");
+        health = VerboseGetComponent<Health>();
+        Rigidbody = VerboseGetComponent<Rigidbody>();
+        if (weapon == null)
+            Debug.LogError("Ship is missing its Weapon");
         weapon.Equip(gameObject);
 
         var gameState = GameObject.Find("GameState").GetComponent<GameState>();
@@ -75,5 +77,6 @@ public class Ship : MonoBehaviour
         stopping = true;
         Rigidbody.velocity = new Vector3(0, 0, 0);
         transform.rotation = Quaternion.Euler(0, 0, 180);
+        health.ActivateInvincible();
     }
 }

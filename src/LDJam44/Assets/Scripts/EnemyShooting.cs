@@ -3,6 +3,7 @@ using UnityEngine;
 public class EnemyShooting : VerboseMonoBehaviour
 {
     [SerializeField] private Weapon weapon;
+    [SerializeField] private float varianceAmount = 2.5f;
 
     private Weapon cachedWeapon;
     private Ship target;
@@ -18,6 +19,8 @@ public class EnemyShooting : VerboseMonoBehaviour
     {
         cachedWeapon.Update();
         if (SpawnBoundaries.IsInEnemyPlayArea(transform.position, target.transform.position))
-            cachedWeapon.FireTowards(target.transform.position);
+            cachedWeapon.FireTowards(target.transform.position + VarianceAmount());
     }
+
+    private Vector3 VarianceAmount() => new Vector3(Random.Range(-varianceAmount, varianceAmount), Random.Range(-varianceAmount, varianceAmount), 0);
 }

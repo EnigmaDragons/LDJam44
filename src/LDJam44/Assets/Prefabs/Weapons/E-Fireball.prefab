@@ -4766,7 +4766,7 @@ GameObject:
   - component: {fileID: 199541557569965598}
   - component: {fileID: 108468018855002760}
   m_Layer: 11
-  m_Name: Projectile 3
+  m_Name: E-Fireball
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4875,7 +4875,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 2
+      scalar: 6
       minScalar: 0.8
       maxCurve:
         serializedVersion: 2
@@ -9625,7 +9625,7 @@ Light:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1294834399362254}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 9
   m_Type: 2
   m_Color: {r: 1, g: 0.45882353, b: 0.09803922, a: 1}
