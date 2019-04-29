@@ -8,6 +8,7 @@ public class SpaceStationUI : VerboseMonoBehaviour
     private MutableSpaceStation spaceStation;
     private MutablePlayer player;
     private GameServices game;
+    private GameState gameState;
 
     public AudioClip ButtonSound;
     public AudioClip BackButtonSound;
@@ -16,6 +17,7 @@ public class SpaceStationUI : VerboseMonoBehaviour
     public Text StationName;
     public GameObject MainUI;
     public GameObject UpgradesUI;
+    public GameObject Tutorial;
     public Text Product0Name;
     public Text Product0Description;
     public Text Product0Cost;
@@ -31,13 +33,26 @@ public class SpaceStationUI : VerboseMonoBehaviour
     void Start()
     {
         game = VerboseFindObjectOfType<GameServices>();
-        var gameState = GameObject.Find("GameState").GetComponent<GameState>();
+        gameState = GameObject.Find("GameState").GetComponent<GameState>();
         spaceStation = gameState.CurrentSpaceStationData;
         player = gameState.PlayerData;
         StationName.text = spaceStation.Name;
         UpdateProduct(Product0Name, Product0Description, Product0Cost, 0);
         UpdateProduct(Product1Name, Product1Description, Product1Cost, 1);
         UpdateProduct(Product2Name, Product2Description, Product2Cost, 2);
+
+        if (gameState.SpaceStationTutorialShown)
+        {
+            Tutorial.SetActive(false);
+            MainUI.SetActive(true);
+            UpgradesUI.SetActive(false);
+        }
+        else
+        {
+            Tutorial.SetActive(true);
+            MainUI.SetActive(false);
+            UpgradesUI.SetActive(false);
+        }
     }
 
     private void UpdateProduct(Text productName, Text productDescription, Text productCost, int product)
@@ -90,6 +105,13 @@ public class SpaceStationUI : VerboseMonoBehaviour
                                                                                            + spaceStation.CurrentBuyPrices[player.Products[2].Name] * player.Counts[2]).ToString().Length; ;
         game.PlaySoundEffect(ButtonSound);
         game.NavigateToScene(SceneNames.Map);
+    }
+
+    public void DismissTutorial()
+    {
+        gameState.SpaceStationTutorialShown = true;
+        Tutorial.SetActive(false);
+        MainUI.SetActive(true);
     }
 
     public void GoToUpgrades()
