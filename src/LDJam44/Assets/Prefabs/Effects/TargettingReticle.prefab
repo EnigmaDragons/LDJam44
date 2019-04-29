@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2562145113794397555}
   m_Layer: 0
-  m_Name: Targetting Reticle 1 1
+  m_Name: TargettingReticle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 5345777003621345321}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 25}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 35}
   m_Children:
   - {fileID: 747035392164198630}
   - {fileID: 3678105610835143151}
@@ -123,7 +123,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   outlineMode: 0
-  outlineColor: {r: 0, g: 1, b: 1, a: 0.21568628}
+  outlineColor: {r: 0, g: 1, b: 0.990005, a: 0.21568628}
   outlineWidth: 1.22
   precomputeOutline: 0
   bakeKeys: []
@@ -219,7 +219,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   outlineMode: 0
-  outlineColor: {r: 0, g: 1, b: 1, a: 0.21568628}
+  outlineColor: {r: 0, g: 0.9905014, b: 1, a: 0.21568628}
   outlineWidth: 1.22
   precomputeOutline: 0
   bakeKeys: []

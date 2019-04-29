@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ea93f82c863086489de7dbbccf2a099, type: 3}
+  m_Name: Alien Haven
+  m_EditorClassIdentifier: 
+  Name: Alien Haven
+  Skin: GreenSkin
+  X: 7
+  Y: -3
+  CheapProducts:
+  - {fileID: 11400000, guid: 78772ee3b3d68a44c84f6e00cf48c608, type: 2}
+  - {fileID: 11400000, guid: bc8b6650a598866499f9fe3869a951cc, type: 2}
+  ReasonableProducts:
+  - {fileID: 11400000, guid: fe202dbe8b3661c49bc1843d7ce30bdc, type: 2}
+  - {fileID: 11400000, guid: 5a30fe362b400734b93c1e31781a40a2, type: 2}
+  ExpensiveProducts:
+  - {fileID: 11400000, guid: f8b9e61b39254ef41a5951b84e31bfa3, type: 2}
+  - {fileID: 11400000, guid: ed2e09956a993164dacdcdab719fc0df, type: 2}

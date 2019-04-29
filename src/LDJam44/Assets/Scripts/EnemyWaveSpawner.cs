@@ -55,6 +55,7 @@ class EnemyWaveSpawner : VerboseMonoBehaviour
             NumEnemies = Random.Range(minEnemiesPerWave, maxEnemiesPerWave),
             SecondsBetweenEnemies = Random.Range(minSecondsBetweenEnemies, maxSecondsBetweenEnemies),
             ZTriggerThreshold = z,
+            MaxZAllowed = maxZ
         };
 
         var w = Instantiate(wavePrototype, startPosition, Quaternion.identity);

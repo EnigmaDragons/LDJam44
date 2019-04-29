@@ -13,13 +13,11 @@ MonoBehaviour:
   m_Name: Galaxy
   m_EditorClassIdentifier: 
   Stations:
-  - {fileID: 11400000, guid: dd28f4c0534a8774a928997512e0584f, type: 2}
-  - {fileID: 11400000, guid: 6df3dfae0db38e548a3ad7e5455b069d, type: 2}
-  ThrusterCosts: 
-  StabilizerCosts: 
-  TradingCosts: 
-  LootingCosts: 
-  DroneCosts: 
-  AmpCosts: 
-  ShieldCosts: 
-  DrainCosts: 
+  - {fileID: 11400000, guid: 7a42fba4dc0667741ad8ff90c6555d78, type: 2}
+  - {fileID: 11400000, guid: 6096cb47912c47f42968c017ea9b931f, type: 2}
+  - {fileID: 11400000, guid: c254cba5406b4084e91f3613fb3969fd, type: 2}
+  - {fileID: 11400000, guid: bcb7c16c768b04846b528163a0e4a4c2, type: 2}
+  Upgrades:
+  - {fileID: 11400000, guid: 3795c9844f30b5c48bd025e387262c3d, type: 2}
+  - {fileID: 11400000, guid: 8ef204d6d9f36014a8c26b399698d690, type: 2}
+  - {fileID: 11400000, guid: 0e6157a75e11fc2448774d572e78c3c4, type: 2}

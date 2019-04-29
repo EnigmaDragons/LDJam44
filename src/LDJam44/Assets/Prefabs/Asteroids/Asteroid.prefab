@@ -109,7 +109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6bacb28e6ef4444494b54f073ff87ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageAmount: 10
+  damageAmount: 50
   appliesTo: 1
   soundEffect: {fileID: 8300000, guid: d3a2576ca3d07af4d9d12550cd973ef7, type: 3}
 --- !u!114 &3724147295171507536
@@ -126,7 +126,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   role: 0
   maxHp: 30
+  currentHp: 0
   onDeath: {fileID: 8300000, guid: d3a2576ca3d07af4d9d12550cd973ef7, type: 3}
+  onDamageSound: {fileID: 0}
   onDeathVfx: {fileID: 541646883767013081, guid: a6c2ce95cd676f54c881f3a367a2ac5a,
     type: 3}
 --- !u!54 &3724147295171507566

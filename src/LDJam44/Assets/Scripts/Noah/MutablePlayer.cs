@@ -1,4 +1,8 @@
-﻿namespace Assets.Scripts.Noah
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace Assets.Scripts.Noah
 {
     public class MutablePlayer
     {
@@ -6,30 +10,36 @@
         public ProductState[] Products;
         public int[] Counts;
         public string StationName;
+        public float HealthScalingCost;
+        public Dictionary<string, int> Upgrades = new Dictionary<string, int>();
 
-        public int Thrusters;
-        public int Stabilizers;
-        public int Trading;
-        public int Looting;
-        public int Drones;
-        public int Amp;
-        public int Shields;
-        public int Drain;
+        public int Health;
 
-        public MutablePlayer(PlayerState player)
+        public int UpgradeLevel(string name) => Upgrades[name];
+
+        public MutablePlayer(PlayerState player, GalaxyState galaxy)
         {
             LifeForce = player.LifeForce;
             Products = new ProductState[0];
             Counts = new[] {0, 0, 0};
             StationName = player.StationName;
-            Thrusters = player.Thrusters;
-            Stabilizers = player.Stabilizers;
-            Trading = player.Trading;
-            Looting = player.Looting;
-            Drones = player.Drones;
-            Amp = player.Amp;
-            Shields = player.Shields;
-            Drain = player.Drain;
+            HealthScalingCost = player.HealthScalingCost;
+            galaxy.Upgrades.ToList().ForEach(x => Upgrades[x.Name] = 0);
+        }
+
+        public void RecaluclateHealth()
+        {
+            var health = 0;
+            var tempLifeForce = LifeForce;
+            var nextHitPointCost = 1;
+            while (tempLifeForce > nextHitPointCost)
+            {
+                health++;
+                tempLifeForce -= nextHitPointCost;
+                nextHitPointCost = (int)Math.Ceiling(nextHitPointCost * HealthScalingCost);
+            }
+            health++;
+            Health = health;
         }
     }
 }

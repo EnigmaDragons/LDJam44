@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Linq;
 using Assets.Scripts;
 using Assets.Scripts.Noah;
@@ -25,7 +26,7 @@ public class LevelSummary : MonoBehaviour
         var gameState = GameObject.Find("GameState").GetComponent<GameState>();
         var playerHealth = FindObjectOfType<Ship>().GetComponent<Health>();
         player = gameState.PlayerData;
-        player.LifeForce -= (playerHealth.maxHp - playerHealth.currentHp);
+        player.LifeForce = (int)Math.Ceiling((double)player.LifeForce * playerHealth.currentHp / playerHealth.maxHp);
 
         var destinationStation = gameState.GalaxyData.Stations.First(x => x.Name == gameState.TravelPlanData.Destination);
         var shipmentProfit = destinationStation.CurrentBuyPrices[player.Products[0].Name] * player.Counts[0] 
@@ -40,6 +41,7 @@ public class LevelSummary : MonoBehaviour
 
         player.LifeForce = total;
         player.StationName = gameState.TravelPlanData.Destination;
+        player.RecaluclateHealth();
     }
 
     public void Done()
