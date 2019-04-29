@@ -16,6 +16,6 @@ MonoBehaviour:
   Description: Increases side to side movement
   Costs: d007000010270000
   Effects:
-  - 8
-  - 10
-  - 13
+  - 7
+  - 9
+  - 12
