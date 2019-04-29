@@ -7,12 +7,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: -3527332709328334197, guid: 5d7d7a03d0fe7f84ab54ac420418a1dd,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 1110078864755139256, guid: 25398ba78dee99a458cca06883a489f6,
-        type: 3}
     - target: {fileID: 5102087257348941164, guid: 5d7d7a03d0fe7f84ab54ac420418a1dd,
         type: 3}
       propertyPath: m_Name
@@ -73,16 +67,33 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8837146078604321584, guid: 5d7d7a03d0fe7f84ab54ac420418a1dd,
-        type: 3}
-      propertyPath: speed
-      value: 6
-      objectReference: {fileID: 0}
     - target: {fileID: 6118314050329329154, guid: 5d7d7a03d0fe7f84ab54ac420418a1dd,
         type: 3}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1110078864755139256, guid: 25398ba78dee99a458cca06883a489f6,
         type: 3}
+    - target: {fileID: -3527332709328334197, guid: 5d7d7a03d0fe7f84ab54ac420418a1dd,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 1110078864755139256, guid: 25398ba78dee99a458cca06883a489f6,
+        type: 3}
+    - target: {fileID: 8837146078604321584, guid: 5d7d7a03d0fe7f84ab54ac420418a1dd,
+        type: 3}
+      propertyPath: speed
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3358885140708833890, guid: 5d7d7a03d0fe7f84ab54ac420418a1dd,
+        type: 3}
+      propertyPath: weapon
+      value: 
+      objectReference: {fileID: 11400000, guid: ab7c4c1080adc5844bd56937efbcee60,
+        type: 2}
+    - target: {fileID: 3358885140708833890, guid: 5d7d7a03d0fe7f84ab54ac420418a1dd,
+        type: 3}
+      propertyPath: varianceAmount
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d7d7a03d0fe7f84ab54ac420418a1dd, type: 3}
