@@ -105,10 +105,11 @@ class EnemyWaveSpawner : VerboseMonoBehaviour
 
     private Vector3 NextSaneWaypoint(Vector3 lastWaypoint)
     {
-        var result = SpawnBoundaries.RandomInPlayZone(lastWaypoint.z, 20f);
+        var zVariance = 40;
+        var result = SpawnBoundaries.RandomInPlayZone(lastWaypoint.z, zVariance);
         var maxTries = 20;
         for(var i = 0; Mathf.Abs(Vector3.Distance(lastWaypoint, result)) < minWaypointDistance || i > maxTries; i++)
-            result = SpawnBoundaries.RandomInPlayZone(lastWaypoint.z, 20f);
+            result = SpawnBoundaries.RandomInPlayZone(lastWaypoint.z, zVariance);
         return result;
     }
 }

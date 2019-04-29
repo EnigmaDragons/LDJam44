@@ -59,7 +59,7 @@ public class SpaceStationUI : VerboseMonoBehaviour
     {
         var name = spaceStation.ProductsForSale[product].Name;
         productName.text = name;
-        productDescription.text = spaceStation.ProductsForSale[product].Description;
+        productDescription.text = spaceStation.ProductsForSale[product].Description.Replace(". ", ". \n");
         productCost.text = spaceStation.CurrentSellPrices[name].ToString() + " LF";
     }
 
