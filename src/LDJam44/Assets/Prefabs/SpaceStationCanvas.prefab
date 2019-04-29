@@ -983,6 +983,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09086aa7127e3994e9c0c3ca2dad4b46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  UpgradeSound: {fileID: 0}
   Upgrade: {fileID: 11400000, guid: 782e3391563fc044fbfe92c0ad0a2300, type: 2}
   Level: {fileID: 4347171443230843418}
   Name: {fileID: 6894354006613326895}
@@ -1446,6 +1447,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09086aa7127e3994e9c0c3ca2dad4b46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  UpgradeSound: {fileID: 0}
   Upgrade: {fileID: 11400000, guid: 0e6157a75e11fc2448774d572e78c3c4, type: 2}
   Level: {fileID: 6886717175047496982}
   Name: {fileID: 1108927667286073039}
@@ -3433,6 +3435,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09086aa7127e3994e9c0c3ca2dad4b46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  UpgradeSound: {fileID: 0}
   Upgrade: {fileID: 11400000, guid: c08aa8895b7bbaa498f74566953051b6, type: 2}
   Level: {fileID: 8001909784480594389}
   Name: {fileID: 8929329420354228945}
@@ -3786,6 +3789,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ButtonSound: {fileID: 8300000, guid: 34f93ff47ac732e44b518dabc1199808, type: 3}
   BackButtonSound: {fileID: 8300000, guid: 4fa561ce8810ebd4fb281669cbe555ff, type: 3}
+  BuySound: {fileID: 8300000, guid: d257cf96051b94244a8886c684ed16c5, type: 3}
   ErrorText: {fileID: 8129451328397186895}
   StationName: {fileID: 1629888956030493696}
   MainUI: {fileID: 8921090737726325136}
@@ -7461,6 +7465,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09086aa7127e3994e9c0c3ca2dad4b46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  UpgradeSound: {fileID: 0}
   Upgrade: {fileID: 11400000, guid: 2a89df5ad8bce334d8240ea3270ec6dc, type: 2}
   Level: {fileID: 2153017432553891023}
   Name: {fileID: 5733160391687927992}
@@ -7813,6 +7818,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09086aa7127e3994e9c0c3ca2dad4b46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  UpgradeSound: {fileID: 0}
   Upgrade: {fileID: 11400000, guid: 3795c9844f30b5c48bd025e387262c3d, type: 2}
   Level: {fileID: 8256189799713996480}
   Name: {fileID: 8366949347620549272}
@@ -8203,6 +8209,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09086aa7127e3994e9c0c3ca2dad4b46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  UpgradeSound: {fileID: 0}
   Upgrade: {fileID: 11400000, guid: 39a5d4b1dcb3945408b90ade7dd729f9, type: 2}
   Level: {fileID: 1449126601365189862}
   Name: {fileID: 3055611868972963414}
@@ -8893,6 +8900,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09086aa7127e3994e9c0c3ca2dad4b46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  UpgradeSound: {fileID: 0}
   Upgrade: {fileID: 11400000, guid: 8ef204d6d9f36014a8c26b399698d690, type: 2}
   Level: {fileID: 2791165593077930921}
   Name: {fileID: 4398601106201722907}

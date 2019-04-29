@@ -12,6 +12,7 @@ public class SpaceStationUI : VerboseMonoBehaviour
 
     public AudioClip ButtonSound;
     public AudioClip BackButtonSound;
+    public AudioClip BuySound;
     public Text ErrorText;
     public Text StationName;
     public GameObject MainUI;
@@ -79,6 +80,7 @@ public class SpaceStationUI : VerboseMonoBehaviour
 
     public void BuyProduct(int productNum)
     {
+        game.PlaySoundEffect(BuySound);
         var price = spaceStation.CurrentSellPrices[spaceStation.ProductsForSale[productNum].Name];
         if (player.LifeForce <= price)
             StartCoroutine(ShowErrorMessage());
