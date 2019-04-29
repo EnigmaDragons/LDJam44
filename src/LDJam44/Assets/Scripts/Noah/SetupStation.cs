@@ -1,5 +1,7 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class SetupStation : MonoBehaviour
 {
@@ -23,7 +25,7 @@ public class SetupStation : MonoBehaviour
             spaceStation.CurrentSellPrices[product.Name] = Random.Range(product.MinSellPrice, product.MaxSellPrice);
             gameState.GalaxyData.Stations.ToList().ForEach(station =>
             {
-                station.CurrentBuyPrices[product.Name] = Random.Range(product.MinBuyPrice, product.MaxBuyPrice);
+                station.CurrentBuyPrices[product.Name] = (int)Math.Ceiling(Random.Range(product.MinBuyPrice, product.MaxBuyPrice) * gameState.UpgradeEffect("Trading"));
             });
         });
         Instantiate(SpaceStationCanvas);
