@@ -13,6 +13,7 @@ public class Health : VerboseMonoBehaviour
 
     public float HpPercent => (float)currentHp / (float)maxHp;
 
+    private bool isInvincible;
     private bool destructionStarted;
     private GameServices game;
     private Action onDamage = () => {};
@@ -22,6 +23,9 @@ public class Health : VerboseMonoBehaviour
         this.maxHp = maxHp;
         currentHp = maxHp;
     }
+
+    public void ActivateInvincible() => isInvincible = true;
+    public void DeactivateInvincible() => isInvincible = false;
 
     public void OnDamage(Action a)
     {
@@ -36,7 +40,7 @@ public class Health : VerboseMonoBehaviour
 
     public void ApplyDamage(int amount)
     {
-        if (destructionStarted)
+        if (destructionStarted || isInvincible)
             return;
 
         if (onDamageSound != null)
