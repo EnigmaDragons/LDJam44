@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectile: {fileID: 1168065043843762, guid: 70cd80e6e8517904da249485ffde005f, type: 3}
   fireInterval: 0.5
-  fireSound: {fileID: 8300000, guid: 7b04ea3fffb7f7943b6290d8d92d629c, type: 3}
+  fireSound: {fileID: 8300000, guid: 57ec7b57263e6514d9c2b84e040adc0a, type: 3}
+  forwardOffset: 2
