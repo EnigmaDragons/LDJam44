@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Hull Plating
   Description: Increase your resistance to energy and kinetic weapons
-  Costs: 88130000983a000030750000
+  Costs: 88130000204e000050c30000
   Effects:
   - 0
   - 5
   - 10
-  - 18
+  - 20

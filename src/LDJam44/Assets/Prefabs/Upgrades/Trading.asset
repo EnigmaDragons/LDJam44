@@ -12,7 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd3227da2a06246469a1f4187129530f, type: 3}
   m_Name: Trading
   m_EditorClassIdentifier: 
-  Name: 
-  Description: 
-  Costs: 
-  Effects: []
+  Name: Trading
+  Description: Increase the amount of Life Force you can sell your contraband
+  Costs: c4090000983a000060ea0000
+  Effects:
+  - 1
+  - 1.3
+  - 1.6
+  - 2

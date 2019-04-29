@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Weapon Power
   Description: Increases the power of your weapons
-  Costs: b80b00001027000050c30000
+  Costs: b80b0000e02e000050c30000
   Effects:
   - 1
   - 1.5
-  - 2.4
+  - 2.5
   - 4

@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Thrusters
   Description: Increases side to side movement
-  Costs: e803000010270000
+  Costs: d007000010270000
   Effects:
   - 8
   - 10
-  - 12
+  - 13

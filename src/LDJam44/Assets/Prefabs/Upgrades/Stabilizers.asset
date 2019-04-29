@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Stabilizers
   Description: Reduces drift
-  Costs: e803000010270000
+  Costs: d007000010270000
   Effects:
   - 0.2
   - 0.4
-  - 0.6
+  - 0.7

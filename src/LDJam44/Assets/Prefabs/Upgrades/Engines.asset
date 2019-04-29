@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Engines
   Description: Allows you to travel faster forward getting to your destination sooner
-  Costs: d007000010270000
+  Costs: b80b0000e02e0000
   Effects:
   - 12
   - 18
