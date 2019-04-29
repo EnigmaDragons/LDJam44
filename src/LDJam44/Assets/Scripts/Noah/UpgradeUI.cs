@@ -4,10 +4,13 @@ using UnityEngine.UI;
 
 public class UpgradeUI : MonoBehaviour
 {
+    private GameServices game;
+
     private MutablePlayer player;
     private bool isMaxed;
     private int cost;
 
+    public AudioClip UpgradeSound;
     public UpgradeRules Upgrade;
     public Text Level;
     public Text Name;
@@ -17,6 +20,7 @@ public class UpgradeUI : MonoBehaviour
     
     void Start()
     {
+        game = FindObjectOfType<GameServices>();
         player = GameObject.Find("GameState").GetComponent<GameState>().PlayerData;
         isMaxed = player.UpgradeLevel(Upgrade.name) == Upgrade.Costs.Length;
         cost = isMaxed ? 0 : Upgrade.Costs[player.UpgradeLevel(Upgrade.name)];
@@ -35,6 +39,7 @@ public class UpgradeUI : MonoBehaviour
 
     public void Buy()
     {
+        game.PlaySoundEffect(UpgradeSound);
         player.LifeForce -= cost;
         player.Upgrades[Upgrade.name]++;
         Start();

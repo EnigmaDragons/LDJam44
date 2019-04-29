@@ -989,6 +989,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ButtonSound: {fileID: 8300000, guid: 34f93ff47ac732e44b518dabc1199808, type: 3}
   BackButtonSound: {fileID: 8300000, guid: 4fa561ce8810ebd4fb281669cbe555ff, type: 3}
+  BuySound: {fileID: 8300000, guid: d257cf96051b94244a8886c684ed16c5, type: 3}
   ErrorText: {fileID: 5856036270339892294}
   StationName: {fileID: 3966486281463994121}
   MainUI: {fileID: 6510896495467442841}

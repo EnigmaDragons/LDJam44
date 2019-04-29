@@ -19,7 +19,8 @@ public class GameServices : MonoBehaviour
 
     public void PlaySoundEffect(AudioClip clip)
     {
-        SFX.PlayOneShot(clip);
+        if (clip != null)
+            SFX.PlayOneShot(clip);
     }
 
     public void NavigateToScene(string sceneName) => StartCoroutine(NavigateAfterDelay(sceneName));

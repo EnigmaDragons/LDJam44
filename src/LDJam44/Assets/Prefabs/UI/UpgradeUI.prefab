@@ -250,6 +250,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09086aa7127e3994e9c0c3ca2dad4b46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  UpgradeSound: {fileID: 8300000, guid: 793d0b5a1648a2a4e9f6fce3e616ef83, type: 3}
   Upgrade: {fileID: 0}
   Level: {fileID: 2893524005941824418}
   Name: {fileID: 5216136029990018589}
