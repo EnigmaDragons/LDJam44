@@ -13,6 +13,7 @@ public class Health : VerboseMonoBehaviour
 
     public float HpPercent => (float)currentHp / (float)maxHp;
 
+    private int damageReductionAmount = 0;
     private bool isInvincible;
     private bool destructionStarted;
     private GameServices game;
@@ -45,9 +46,14 @@ public class Health : VerboseMonoBehaviour
 
         if (onDamageSound != null)
             game.PlaySoundEffect(onDamageSound);
-        currentHp -= amount;
+        currentHp -= amount - damageReductionAmount;
         ProcessDestruction();
         onDamage();
+    }
+
+    public void SetDamageReduction(float v)
+    {
+        damageReductionAmount = Convert.ToInt32(v);
     }
 
     private void ProcessDestruction()
