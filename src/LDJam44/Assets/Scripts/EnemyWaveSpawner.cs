@@ -5,6 +5,7 @@ using UnityEngine;
 class EnemyWaveSpawner : VerboseMonoBehaviour
 {
     [SerializeField] GameObject[] enemyPrototypes = new GameObject[0];
+    [SerializeField] private GameObject Mothership;
     [SerializeField] Wave wavePrototype;
     [SerializeField] float densityFactor = 3f;
     [SerializeField] float forwardBias = 1.0f;
@@ -27,6 +28,8 @@ class EnemyWaveSpawner : VerboseMonoBehaviour
 
         var maxZ = settings.TravelDistance - SpawnBoundaries.endClearPlayAreaDistance;
         var density = 1000 * (1 / computedDensityFactor);
+        if (settings.Difficulty > 5)
+            SpawnBoss(maxZ + 50, 100);
         for (var z = SpawnBoundaries.startClearPlayAreaDistance; z < maxZ; z += density)
             SpawnWave(maxZ, z, settings);
     }
@@ -60,6 +63,38 @@ class EnemyWaveSpawner : VerboseMonoBehaviour
             Path = waypoints.ToArray(),
             NumEnemies = Random.Range(minEnemiesPerWave, maxEnemiesPerWave),
             SecondsBetweenEnemies = Random.Range(minSecondsBetweenEnemies, maxSecondsBetweenEnemies),
+            ZTriggerThreshold = z,
+            MaxZAllowed = maxZ
+        };
+
+        var w = Instantiate(wavePrototype, startPosition, Quaternion.identity);
+        w.Init(waveConfig);
+    }
+
+    private void SpawnBoss(float maxZ, float z)
+    {
+        var shouldStartForward = Random.Range(0f, 1f) <= forwardBias;
+        var startZ = z + maxAheadOfPlayer + 50;
+
+        var startPosition = SpawnBoundaries.RandomOffPlayZone(startZ);
+        var firstWaypoint = new Vector3(startPosition.x, startPosition.y, startZ - z);
+
+        var waypoints = new List<Vector3>();
+        waypoints.Add(firstWaypoint);
+
+        var numMidWaypoints = 99;
+        for (var i = 0; i < numMidWaypoints; i++)
+            waypoints.Add(NextSaneWaypoint(waypoints.Last()));
+
+        var endPosition = SpawnBoundaries.RandomOffPlayZone(waypoints.Last().z, 5f);
+        waypoints.Add(endPosition * 1.5f);
+
+        var waveConfig = new WaveConfig
+        {
+            EnemyProtoype = Mothership,
+            Path = waypoints.ToArray(),
+            NumEnemies = 1,
+            SecondsBetweenEnemies = 1,
             ZTriggerThreshold = z,
             MaxZAllowed = maxZ
         };
