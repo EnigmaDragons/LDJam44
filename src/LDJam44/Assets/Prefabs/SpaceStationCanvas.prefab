@@ -8821,6 +8821,7 @@ GameObject:
   - component: {fileID: 8397060580792880338}
   - component: {fileID: 8397060580792880339}
   - component: {fileID: 8397060580792880336}
+  - component: {fileID: 4177365896348992358}
   m_Layer: 5
   m_Name: Launch
   m_TagString: Untagged
@@ -8902,7 +8903,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 3
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.8745098, g: 0.8745098, b: 0.8745098, a: 1}
@@ -8940,6 +8941,25 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!95 &4177365896348992358
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8397060580792880350}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0e57ceed51245494da11c80897252616, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &8397060581036744765
 GameObject:
   m_ObjectHideFlags: 0
@@ -9806,11 +9826,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3361672574351321136}
     m_Modifications:
-    - target: {fileID: 2263949297096585390, guid: c6996d2b92fc21648806fb455907ea9b,
-        type: 3}
-      propertyPath: m_Name
-      value: Mobility
-      objectReference: {fileID: 0}
     - target: {fileID: 2263949297096585391, guid: c6996d2b92fc21648806fb455907ea9b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9916,6 +9931,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 2263949297096585390, guid: c6996d2b92fc21648806fb455907ea9b,
+        type: 3}
+      propertyPath: m_Name
+      value: Mobility
+      objectReference: {fileID: 0}
     - target: {fileID: 2263949297096585388, guid: c6996d2b92fc21648806fb455907ea9b,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -9966,11 +9986,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3361672574351321136}
     m_Modifications:
-    - target: {fileID: 2263949297096585390, guid: c6996d2b92fc21648806fb455907ea9b,
-        type: 3}
-      propertyPath: m_Name
-      value: Economy
-      objectReference: {fileID: 0}
     - target: {fileID: 2263949297096585391, guid: c6996d2b92fc21648806fb455907ea9b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10076,6 +10091,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 2263949297096585390, guid: c6996d2b92fc21648806fb455907ea9b,
+        type: 3}
+      propertyPath: m_Name
+      value: Economy
+      objectReference: {fileID: 0}
     - target: {fileID: 2263949297096585388, guid: c6996d2b92fc21648806fb455907ea9b,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -10126,11 +10146,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3361672574351321136}
     m_Modifications:
-    - target: {fileID: 2263949297096585390, guid: c6996d2b92fc21648806fb455907ea9b,
-        type: 3}
-      propertyPath: m_Name
-      value: Combat
-      objectReference: {fileID: 0}
     - target: {fileID: 2263949297096585391, guid: c6996d2b92fc21648806fb455907ea9b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10235,6 +10250,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2263949297096585390, guid: c6996d2b92fc21648806fb455907ea9b,
+        type: 3}
+      propertyPath: m_Name
+      value: Combat
       objectReference: {fileID: 0}
     - target: {fileID: 2263949297096585388, guid: c6996d2b92fc21648806fb455907ea9b,
         type: 3}
