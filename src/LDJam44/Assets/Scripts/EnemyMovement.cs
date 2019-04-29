@@ -1,5 +1,4 @@
-﻿using System;
-using System.Linq;
+﻿using System.Linq;
 using UnityEngine;
 
 public class EnemyMovement : VerboseMonoBehaviour
@@ -8,6 +7,7 @@ public class EnemyMovement : VerboseMonoBehaviour
 
     [SerializeField] private float speed = 2.5f;
     [SerializeField] private float rotSpeed = 2.5f;
+    [SerializeField] private float flyingVariance = 6f;
     [SerializeField] private Transform[] editorWaypoints = new Transform[0];
 
     private Vector3[] waypoints;
@@ -16,6 +16,7 @@ public class EnemyMovement : VerboseMonoBehaviour
     private GameObject playerShip;
     private Rigidbody rigidBody;
     private int nextWaypoint = 0;
+    private Vector3 currentWaypoint;
     private bool isLeaving;
 
     public void Init(Vector3[] waypoints, float maxZAllowed)
@@ -27,7 +28,10 @@ public class EnemyMovement : VerboseMonoBehaviour
     void Start()
     {
         if (waypoints == null)
+        {
             waypoints = editorWaypoints.Select(x => x.position).ToArray();
+            InitWaypoint(0);
+        }
 
         rigidBody = VerboseGetComponent<Rigidbody>();
         playerShip = Find("Spaceship");
@@ -50,7 +54,7 @@ public class EnemyMovement : VerboseMonoBehaviour
 
         if (nextWaypoint < waypoints.Length)
         {
-            var dest = new Vector3(waypoints[nextWaypoint].x, waypoints[nextWaypoint].y, waypoints[nextWaypoint].z + playerShip.transform.position.z);
+            var dest = new Vector3(currentWaypoint.x, waypoints[nextWaypoint].y, waypoints[nextWaypoint].z + playerShip.transform.position.z);
             FaceTarget(dest);
             ChangeVelocity(dest);
 
@@ -58,6 +62,8 @@ public class EnemyMovement : VerboseMonoBehaviour
             {
                 Debug.Log($"Arrived at waypoint {nextWaypoint}. Moving toward {nextWaypoint + 1}");
                 nextWaypoint++;
+                if (nextWaypoint < waypoints.Length)
+                    InitWaypoint(nextWaypoint);
             }
         }
         else
@@ -65,6 +71,14 @@ public class EnemyMovement : VerboseMonoBehaviour
             Debug.Log($"{name} arrived at final destination. {waypoints.Last().x}, {waypoints.Last().y}");
             DestroyImmediate(gameObject);
         }
+    }
+
+    private void InitWaypoint(int nextWaypoint)
+    {
+        currentWaypoint = waypoints[nextWaypoint] + new Vector3(
+                               Random.Range(-flyingVariance, flyingVariance),
+                               Random.Range(-flyingVariance, flyingVariance),
+                               0);
     }
 
     private void ChangeVelocity(Vector3 dest)
@@ -81,7 +95,7 @@ public class EnemyMovement : VerboseMonoBehaviour
     void FaceTarget(Vector3 target)
     {
         var targetDir = target - transform.position;
-        var step = rotSpeed * Time.deltaTime;
+        var step = rotSpeed * 0.4f * Time.deltaTime;
         var newDir = Vector3.RotateTowards(transform.forward, targetDir, step, 0.0f);
         transform.rotation = Quaternion.LookRotation(newDir);
     }

@@ -63,10 +63,14 @@ static class SpawnBoundaries
 
     private static float VariedZ(float z, float zVariance) => z + Random.Range(-zVariance, zVariance);
 
-    public static bool IsInEnemyPlayArea(Vector3 position, Vector3 playerPosition)
+    public static bool IsInPlayArea(Vector3 position)
     {
         return (position.x >= minScreenX * playZoneFactor && position.x <= maxScreenX * playZoneFactor)
-            && (position.y >= minScreenY * playZoneFactor && position.y <= maxScreenY * playZoneFactor)
-            && position.z > playerPosition.z + 8f;
+            && (position.y >= minScreenY * playZoneFactor * playZoneFactor && position.y <= maxScreenY * playZoneFactor * playZoneFactor);
+    }
+
+    public static bool IsInEnemyPlayArea(Vector3 position, Vector3 playerPosition)
+    {
+        return IsInPlayArea(position) && position.z > playerPosition.z + 8f;
     }
 }
