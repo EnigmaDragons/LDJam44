@@ -7,6 +7,7 @@ public class Health : VerboseMonoBehaviour
     [SerializeField] Role role;
     public int maxHp;
     public int currentHp;
+    public int loot = 0;
     [SerializeField] AudioClip onDeath;
     [SerializeField] AudioClip onDamageSound;
     [SerializeField] GameObject onDeathVfx;
@@ -17,6 +18,7 @@ public class Health : VerboseMonoBehaviour
     private bool isInvincible;
     private bool destructionStarted;
     private GameServices game;
+    private GameState state;
     private Action onDamage = () => {};
 
     public void Init(int maxHp)
@@ -84,6 +86,8 @@ public class Health : VerboseMonoBehaviour
         yield return new WaitForSeconds(0.3f);
         if (role.Equals(Role.Player))
             game.OnGameOver();
+        if (role.Equals(Role.Enemy))
+            state.PlayerData.Loot += (int)Math.Ceiling(loot * state.UpgradeEffect("Looting"));
         Destroy(gameObject);
     }
 }

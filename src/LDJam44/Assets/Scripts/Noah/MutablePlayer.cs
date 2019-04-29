@@ -11,6 +11,7 @@ namespace Assets.Scripts.Noah
         public int[] Counts;
         public string StationName;
         public float HealthScalingCost;
+        public int Loot;
         public Dictionary<string, int> Upgrades = new Dictionary<string, int>();
 
         public int Health;
@@ -24,7 +25,7 @@ namespace Assets.Scripts.Noah
             Counts = new[] {0, 0, 0};
             StationName = player.StationName;
             HealthScalingCost = player.HealthScalingCost;
-            galaxy.Upgrades.ToList().ForEach(x => Upgrades[x.Name] = 0);
+            galaxy.Upgrades.ToList().ForEach(x => Upgrades[x.name] = 0);
         }
 
         public void RecaluclateHealth()
