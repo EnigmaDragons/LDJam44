@@ -9,9 +9,6 @@ public class EnemyMovement : VerboseMonoBehaviour
     [SerializeField] private float speed = 2.5f;
     [SerializeField] private float rotSpeed = 2.5f;
     [SerializeField] private Transform[] editorWaypoints = new Transform[0];
-    [SerializeField] private float xRotOffset;
-    [SerializeField] private float yRotOffset;
-    [SerializeField] private float zRotOffset;
 
     private Vector3[] waypoints;
 
@@ -43,7 +40,9 @@ public class EnemyMovement : VerboseMonoBehaviour
         if (nextWaypoint < waypoints.Length)
         {
             var dest = new Vector3(waypoints[nextWaypoint].x, waypoints[nextWaypoint].y, waypoints[nextWaypoint].z + playerShip.transform.position.z);
+            FaceTarget(dest);
             ChangeVelocity(dest);
+
             if (WithinXYEpsilon(gameObject.transform.position, dest))
             {
                 Debug.Log($"Arrived at waypoint {nextWaypoint}. Moving toward {nextWaypoint + 1}");
@@ -66,7 +65,14 @@ public class EnemyMovement : VerboseMonoBehaviour
         var zDelta = dest.z - transform.position.z;
         var zVelocity = Mathf.Abs(zDelta) <= epsilon ? 0 : zDelta < 0 ? -speed : speed;
         rigidBody.velocity = new Vector3(xVelocity, yVelocity, zVelocity);
-        transform.rotation = Quaternion.LookRotation(rigidBody.velocity);
+    }
+
+    void FaceTarget(Vector3 target)
+    {
+        var targetDir = target - transform.position;
+        var step = rotSpeed * Time.deltaTime;
+        var newDir = Vector3.RotateTowards(transform.forward, targetDir, step, 0.0f);
+        transform.rotation = Quaternion.LookRotation(newDir );
     }
 
     bool WithinXYEpsilon(Vector3 first, Vector3 second)
