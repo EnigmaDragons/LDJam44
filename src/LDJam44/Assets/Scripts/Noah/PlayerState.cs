@@ -5,6 +5,7 @@ public class PlayerState : ScriptableObject
 {
     public int LifeForce;
     public string StationName;
+    public float HealthScalingCost;
 
     public int Thrusters;
     public int Stabilizers;

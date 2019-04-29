@@ -5,9 +5,9 @@ using Random = UnityEngine.Random;
 
 public class GameState : Singleton<GameState>
 {
-    [SerializeField] public PlayerState PlayerState;
-    [SerializeField] public TravelPlanState TravelPlanState;
-    [SerializeField] public GalaxyState GalaxyState;
+    [SerializeField] private PlayerState PlayerState;
+    [SerializeField] private TravelPlanState TravelPlanState;
+    [SerializeField] private GalaxyState GalaxyState;
 
     public MutablePlayer PlayerData;
     public MutableTravelPlan TravelPlanData;
