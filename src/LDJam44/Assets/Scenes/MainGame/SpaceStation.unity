@@ -275,7 +275,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &333493180
 PrefabInstance:
@@ -327,7 +327,7 @@ PrefabInstance:
     - target: {fileID: 8188663200501859457, guid: be1eea3f4d18ffb4faa896a731dc36cc,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8188663200501859457, guid: be1eea3f4d18ffb4faa896a731dc36cc,
         type: 3}
@@ -346,125 +346,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: be1eea3f4d18ffb4faa896a731dc36cc, type: 3}
---- !u!1001 &444926884
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1980895178819785170, guid: 2c9c90f66ac5e854c8c7e01f44e2e7d1,
-        type: 3}
-      propertyPath: m_Name
-      value: SpaceStationCanvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 1980895178819785173, guid: 2c9c90f66ac5e854c8c7e01f44e2e7d1,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1980895178819785173, guid: 2c9c90f66ac5e854c8c7e01f44e2e7d1,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1980895178819785173, guid: 2c9c90f66ac5e854c8c7e01f44e2e7d1,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1980895178819785173, guid: 2c9c90f66ac5e854c8c7e01f44e2e7d1,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1980895178819785173, guid: 2c9c90f66ac5e854c8c7e01f44e2e7d1,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1980895178819785173, guid: 2c9c90f66ac5e854c8c7e01f44e2e7d1,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1980895178819785173, guid: 2c9c90f66ac5e854c8c7e01f44e2e7d1,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1980895178819785173, guid: 2c9c90f66ac5e854c8c7e01f44e2e7d1,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 1980895178819785173, guid: 2c9c90f66ac5e854c8c7e01f44e2e7d1,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1980895178819785173, guid: 2c9c90f66ac5e854c8c7e01f44e2e7d1,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1980895178819785173, guid: 2c9c90f66ac5e854c8c7e01f44e2e7d1,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1980895178819785173, guid: 2c9c90f66ac5e854c8c7e01f44e2e7d1,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1980895178819785173, guid: 2c9c90f66ac5e854c8c7e01f44e2e7d1,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1980895178819785173, guid: 2c9c90f66ac5e854c8c7e01f44e2e7d1,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1980895178819785173, guid: 2c9c90f66ac5e854c8c7e01f44e2e7d1,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1980895178819785173, guid: 2c9c90f66ac5e854c8c7e01f44e2e7d1,
-        type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1980895178819785173, guid: 2c9c90f66ac5e854c8c7e01f44e2e7d1,
-        type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1980895178819785173, guid: 2c9c90f66ac5e854c8c7e01f44e2e7d1,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1980895178819785173, guid: 2c9c90f66ac5e854c8c7e01f44e2e7d1,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1980895178819785173, guid: 2c9c90f66ac5e854c8c7e01f44e2e7d1,
-        type: 3}
-      propertyPath: m_Pivot.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1980895178819785173, guid: 2c9c90f66ac5e854c8c7e01f44e2e7d1,
-        type: 3}
-      propertyPath: m_Pivot.y
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 2c9c90f66ac5e854c8c7e01f44e2e7d1, type: 3}
 --- !u!1001 &837623750
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -515,7 +396,7 @@ PrefabInstance:
     - target: {fileID: 4129260063309618043, guid: ae4bff3563af6354eb86f952370a1f81,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4129260063309618043, guid: ae4bff3563af6354eb86f952370a1f81,
         type: 3}
@@ -660,7 +541,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1550475561
 GameObject:
@@ -691,7 +572,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59ac7844233f78a4d8b7470670aeeef4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpaceStationCanvas: {fileID: 1980895178819785170, guid: 2c9c90f66ac5e854c8c7e01f44e2e7d1,
+  SpaceStationCanvas: {fileID: 2621609914636663352, guid: 2c9c90f66ac5e854c8c7e01f44e2e7d1,
     type: 3}
   SpaceStation: {fileID: 476798139245061965, guid: e6cf1d64f20e6da4f899e343fa8d246d,
     type: 3}

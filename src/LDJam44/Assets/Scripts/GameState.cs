@@ -9,6 +9,9 @@ public class GameState : Singleton<GameState>
     [SerializeField] private TravelPlanState TravelPlanState;
     [SerializeField] private GalaxyState GalaxyState;
 
+    public bool SpaceStationTutorialShown = false;
+    public bool MapTutorialShown = false;
+
     public MutablePlayer PlayerData;
     public MutableTravelPlan TravelPlanData;
     public MutableGalaxy GalaxyData;
