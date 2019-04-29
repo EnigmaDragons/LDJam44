@@ -712,11 +712,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 648598099}
     m_Modifications:
-    - target: {fileID: 2263949297096585390, guid: c6996d2b92fc21648806fb455907ea9b,
-        type: 3}
-      propertyPath: m_Name
-      value: MenuButton
-      objectReference: {fileID: 0}
     - target: {fileID: 2263949297096585391, guid: c6996d2b92fc21648806fb455907ea9b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -836,6 +831,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2263949297096585390, guid: c6996d2b92fc21648806fb455907ea9b,
+        type: 3}
+      propertyPath: m_Name
+      value: MenuButton
       objectReference: {fileID: 0}
     - target: {fileID: 2263949297096585388, guid: c6996d2b92fc21648806fb455907ea9b,
         type: 3}
