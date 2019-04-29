@@ -54,6 +54,11 @@ public class ParticleCollisionInstance : VerboseMonoBehaviour
         Destroy();
     }
 
+    public void SetDamage(int amount)
+    {
+        Damage = amount;
+    }
+
     public void AmplifyDamage(float damageFactor)
     {
         this.damageFactor = damageFactor;

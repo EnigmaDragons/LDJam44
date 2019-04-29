@@ -4,7 +4,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "WeaponName", menuName = "Weapon", order = 1)]
 class Weapon : ScriptableObject
 {
-    [SerializeField] GameObject projectile;
+    [SerializeField] GameObject projectilePrototype;
     [SerializeField] float fireInterval = 0.6f;
     [SerializeField] AudioClip fireSound;
     [SerializeField] float forwardOffset = 2f;
@@ -12,6 +12,7 @@ class Weapon : ScriptableObject
     [SerializeField] float delayBetweenShots = 0.18f;
     [SerializeField] Role weaponRole = Role.Enemy;
     [SerializeField] float accuracy = 1.0f;
+    [SerializeField] int damageAmount = 10;
 
     private float damageFactor = 1.0f;
     private double msBeforeFire;
@@ -60,20 +61,23 @@ class Weapon : ScriptableObject
         for (var i = 0; i < numProjectiles; i++)
         {
             const float accuracyFactor = 0.6f;
-            var inaccuracyX = Random.Range(-((1f - accuracy) * accuracyFactor), ((1f - accuracy) * accuracyFactor));
-            var inaccuracyY = Random.Range(-((1f - accuracy) * accuracyFactor), ((1f - accuracy) * accuracyFactor));
-            var inaccuracyZ = Random.Range(-((1f - accuracy) * accuracyFactor), ((1f - accuracy) * accuracyFactor));
-
-            var shotRotation = rotation * Quaternion.LookRotation(new Vector3(inaccuracyX, inaccuracyY, inaccuracyZ));
+            var inaccuracyPercent = 1f - accuracy;
+            var inaccuracy = inaccuracyPercent * accuracyFactor;
+            var shotRotation = rotation * Quaternion.LookRotation(new Vector3(
+                Random.Range(-inaccuracy, inaccuracy), 
+                Random.Range(-inaccuracy, inaccuracy), 
+                Random.Range(-inaccuracy, inaccuracy)));
 
             var ownerPos = owner.transform.position;
             var ownerDirection = owner.transform.forward;
             var spawnPos = ownerPos + ownerDirection * forwardOffset;
 
             game.PlaySoundEffect(fireSound);
-            var p = Instantiate(projectile, spawnPos, rotation);
-            p.GetComponent<ParticleCollisionInstance>().AmplifyDamage(damageFactor);
-            p.GetComponent<ParticleCollisionInstance>().SetRole(weaponRole);
+            var p = Instantiate(projectilePrototype, spawnPos, rotation);
+            var projectile = p.GetComponent<ParticleCollisionInstance>();
+            projectile.SetDamage(damageAmount);
+            projectile.AmplifyDamage(damageFactor);
+            projectile.SetRole(weaponRole);
             yield return new WaitForSeconds(delayBetweenShots);
         }
     }

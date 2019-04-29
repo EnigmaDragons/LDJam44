@@ -12,8 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ca41d8fec3e8d74ab72764b76a82203, type: 3}
   m_Name: E-LaserBurstBlaster
   m_EditorClassIdentifier: 
-  projectile: {fileID: 1699459221867030, guid: 64665cf4e8e583742a3fa9772781d147, type: 3}
+  projectilePrototype: {fileID: 0}
   fireInterval: 1.2
   fireSound: {fileID: 8300000, guid: cc6a55b64045510498ac8eb4fecca164, type: 3}
   forwardOffset: 2
   numProjectiles: 3
+  delayBetweenShots: 0.12
+  weaponRole: 2
+  accuracy: 0.96
+  damageAmount: 5
