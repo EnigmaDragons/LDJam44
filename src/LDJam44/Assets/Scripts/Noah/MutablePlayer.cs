@@ -11,6 +11,7 @@ namespace Assets.Scripts.Noah
         public int[] Counts;
         public string StationName;
         public float HealthScalingCost;
+        public int Loot;
         public Dictionary<string, int> Upgrades = new Dictionary<string, int>();
 
         public int Health;
