@@ -15,6 +15,7 @@ public class GameState : Singleton<GameState>
 
     public MutableSpaceStation CurrentSpaceStationData => GalaxyData.Stations.First(x => x.Name == PlayerData.StationName);
     public MutableSpaceStation TravelingToSpaceStation => GalaxyData.Stations.First(x => x.Name == TravelPlanData.Destination);
+    public float UpgradeEffect(string name) => GalaxyData.Upgrade(name).Effects[PlayerData.UpgradeLevel(name)];
 
     public override void Awake()
     {
@@ -22,7 +23,7 @@ public class GameState : Singleton<GameState>
         if (GalaxyData == null)
             GalaxyData = new MutableGalaxy(GalaxyState);
         if (PlayerData == null)
-            PlayerData = new MutablePlayer(PlayerState);
+            PlayerData = new MutablePlayer(PlayerState, GalaxyState);
         if (TravelPlanData == null)
             TravelPlanData = new MutableTravelPlan(TravelPlanState);
 

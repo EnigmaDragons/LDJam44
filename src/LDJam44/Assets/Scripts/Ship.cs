@@ -7,6 +7,7 @@ public class Ship : MonoBehaviour
     [SerializeField] float vSpeed = 8f;
     [SerializeField] Weapon weapon;
     [SerializeField] float acceleration = 0.3f;
+
     private bool stopping = false;
     private Rigidbody Rigidbody;
 
@@ -16,6 +17,12 @@ public class Ship : MonoBehaviour
         if (Rigidbody == null || weapon == null)
             Debug.LogError("Ship is missing its Rigidbody or Weapon");
         weapon.Equip(gameObject);
+
+        var gameState = GameObject.Find("GameState").GetComponent<GameState>();
+        zSpeed = gameState.UpgradeEffect("Engines");
+        hSpeed = gameState.UpgradeEffect("Thrusters");
+        vSpeed = gameState.UpgradeEffect("Thrusters");
+        acceleration = gameState.UpgradeEffect("Stabilizers");
     }
 
     void Update()

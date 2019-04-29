@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Assets.Scripts.Noah
 {
@@ -9,33 +11,20 @@ namespace Assets.Scripts.Noah
         public int[] Counts;
         public string StationName;
         public float HealthScalingCost;
-
-        public int Thrusters;
-        public int Stabilizers;
-        public int Trading;
-        public int Looting;
-        public int Drones;
-        public int Amp;
-        public int Shields;
-        public int Drain;
+        public Dictionary<string, int> Upgrades = new Dictionary<string, int>();
 
         public int Health;
 
-        public MutablePlayer(PlayerState player)
+        public int UpgradeLevel(string name) => Upgrades[name];
+
+        public MutablePlayer(PlayerState player, GalaxyState galaxy)
         {
             LifeForce = player.LifeForce;
             Products = new ProductState[0];
             Counts = new[] {0, 0, 0};
             StationName = player.StationName;
             HealthScalingCost = player.HealthScalingCost;
-            Thrusters = player.Thrusters;
-            Stabilizers = player.Stabilizers;
-            Trading = player.Trading;
-            Looting = player.Looting;
-            Drones = player.Drones;
-            Amp = player.Amp;
-            Shields = player.Shields;
-            Drain = player.Drain;
+            galaxy.Upgrades.ToList().ForEach(x => Upgrades[x.Name] = 0);
         }
 
         public void RecaluclateHealth()
