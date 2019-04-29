@@ -12,14 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9912d6ad60e8e08438def42307588bda, type: 3}
   m_Name: StartingPlayerData
   m_EditorClassIdentifier: 
-  LifeForce: 900
+  LifeForce: 100000
   StationName: Imperial Starbase
   HealthScalingCost: 1.01
-  Thrusters: 0
-  Stabilizers: 0
-  Trading: 0
-  Looting: 0
-  Drones: 0
-  Amp: 0
-  Shields: 0
-  Drain: 0
