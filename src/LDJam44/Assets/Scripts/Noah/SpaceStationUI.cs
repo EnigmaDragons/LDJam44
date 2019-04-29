@@ -10,6 +10,7 @@ public class SpaceStationUI : VerboseMonoBehaviour
     private GameServices game;
 
     public AudioClip ButtonSound;
+    public AudioClip BackButtonSound;
     public Text ErrorText;
     public Text StationName;
     public GameObject MainUI;
@@ -88,12 +89,14 @@ public class SpaceStationUI : VerboseMonoBehaviour
 
     public void GoToUpgrades()
     {
+        game.PlaySoundEffect(ButtonSound);
         MainUI.SetActive(false);
         UpgradesUI.SetActive(true);
     }
 
     public void LeaveUpgrades()
     {
+        game.PlaySoundEffect(BackButtonSound);
         UpgradesUI.SetActive(false);
         MainUI.SetActive(true);
     }

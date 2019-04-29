@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections;
 using System.Linq;
-using Assets.Scripts;
 using Assets.Scripts.Noah;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -16,6 +15,8 @@ public class LevelSummary : MonoBehaviour
     public Text ShipmentNum;
     public Text RemainingLifeForce;
     public Text RemainingLifeForceNum;
+    public Text Loot;
+    public Text LootNum;
     public GameObject Line;
     public Text Total;
     public Text TotalNum;
@@ -32,13 +33,15 @@ public class LevelSummary : MonoBehaviour
         var shipmentProfit = destinationStation.CurrentBuyPrices[player.Products[0].Name] * player.Counts[0] 
             + destinationStation.CurrentBuyPrices[player.Products[1].Name] * player.Counts[1]
             + destinationStation.CurrentBuyPrices[player.Products[2].Name] * player.Counts[2];
-        var total = shipmentProfit + player.LifeForce;
+        var total = shipmentProfit + player.LifeForce + player.Loot;
 
         ShipmentNum.text = shipmentProfit.ToString();
         RemainingLifeForceNum.text = player.LifeForce.ToString();
+        LootNum.text = player.Loot.ToString();
         TotalNum.text = total.ToString();
         StartCoroutine(PresentElements());
 
+        player.Loot = 0;
         player.LifeForce = total;
         player.StationName = gameState.TravelPlanData.Destination;
         player.RecaluclateHealth();
@@ -60,6 +63,9 @@ public class LevelSummary : MonoBehaviour
         yield return new WaitForSeconds(AnimationMilliseconds / 1000);
         RemainingLifeForce.gameObject.SetActive(true);
         RemainingLifeForceNum.gameObject.SetActive(true);
+        yield return new WaitForSeconds(AnimationMilliseconds / 1000);
+        Loot.gameObject.SetActive(true);
+        LootNum.gameObject.SetActive(true);
         yield return new WaitForSeconds(AnimationMilliseconds / 1000);
         Line.gameObject.SetActive(true);
         Total.gameObject.SetActive(true);

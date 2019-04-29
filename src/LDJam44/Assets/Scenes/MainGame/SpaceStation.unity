@@ -572,7 +572,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59ac7844233f78a4d8b7470670aeeef4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpaceStationCanvas: {fileID: 7883085444332946217, guid: 2c9c90f66ac5e854c8c7e01f44e2e7d1,
+  SpaceStationCanvas: {fileID: 1368506213764577626, guid: 2c9c90f66ac5e854c8c7e01f44e2e7d1,
     type: 3}
   SpaceStation: {fileID: 476798139245061965, guid: e6cf1d64f20e6da4f899e343fa8d246d,
     type: 3}
