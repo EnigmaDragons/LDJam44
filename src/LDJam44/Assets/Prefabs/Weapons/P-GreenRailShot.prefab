@@ -9642,7 +9642,7 @@ GameObject:
   - component: {fileID: 114180493908109616}
   - component: {fileID: 199555391388218598}
   m_Layer: 0
-  m_Name: Projectile 1
+  m_Name: P-GreenRailShot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14405,7 +14405,7 @@ MonoBehaviour:
   - {fileID: 1438542530079480, guid: 21710859533a00746ad2bdd323061a2d, type: 3}
   Offset: 0.1
   DestroyTimeDelay: 1
-  Damage: 14
+  Damage: 12
   HitSoundEffect: {fileID: 8300000, guid: d3a2576ca3d07af4d9d12550cd973ef7, type: 3}
   UseWorldSpacePosition: 1
   UseFirePointRotation: 0

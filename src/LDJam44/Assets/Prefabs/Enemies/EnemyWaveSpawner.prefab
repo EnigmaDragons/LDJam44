@@ -49,7 +49,7 @@ MonoBehaviour:
   - {fileID: 6824659529362425265, guid: 2afc9bba35699fe4386eec77de6f3dee, type: 3}
   wavePrototype: {fileID: 5384568737590657808, guid: 71f79972a20e2b44383766547f1bd7f9,
     type: 3}
-  densityFactor: 2
+  densityFactor: 3
   forwardBias: 1
   minEnemiesPerWave: 2
   maxEnemiesPerWave: 6
@@ -58,5 +58,5 @@ MonoBehaviour:
   minWaypointDistance: 15
   minAheadOfPlayer: 26
   maxAheadOfPlayer: 50
-  minSecondsBetweenEnemies: 0.5
-  maxSecondsBetweenEnemies: 1.5
+  minSecondsBetweenEnemies: 1
+  maxSecondsBetweenEnemies: 4

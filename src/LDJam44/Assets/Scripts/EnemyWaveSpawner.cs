@@ -6,7 +6,7 @@ class EnemyWaveSpawner : VerboseMonoBehaviour
 {
     [SerializeField] GameObject[] enemyPrototypes = new GameObject[0];
     [SerializeField] Wave wavePrototype;
-    [SerializeField] float densityFactor = 12f;
+    [SerializeField] float densityFactor = 3f;
     [SerializeField] float forwardBias = 1.0f;
     [SerializeField] int minEnemiesPerWave = 2;
     [SerializeField] int maxEnemiesPerWave = 7;
@@ -20,8 +20,14 @@ class EnemyWaveSpawner : VerboseMonoBehaviour
 
     public void Init(LevelSettings settings)
     {
+        Debug.Log("Difficulty: " + settings.Difficulty);
+        minEnemiesPerWave = settings.Difficulty;
+        maxEnemiesPerWave = settings.Difficulty + 2;
+        var computedDensityFactor = settings.Difficulty * densityFactor;
+
         var maxZ = settings.TravelDistance - SpawnBoundaries.endClearPlayAreaDistance;
-        for (var z = SpawnBoundaries.startClearPlayAreaDistance; z < maxZ; z += 180 * (1 / densityFactor))
+        var density = 1000 * (1 / computedDensityFactor);
+        for (var z = SpawnBoundaries.startClearPlayAreaDistance; z < maxZ; z += density)
             SpawnWave(maxZ, z, settings);
     }
 
@@ -65,7 +71,8 @@ class EnemyWaveSpawner : VerboseMonoBehaviour
     private Vector3 NextSaneWaypoint(Vector3 lastWaypoint)
     {
         var result = SpawnBoundaries.RandomInPlayZone(lastWaypoint.z, 20f);
-        while(Mathf.Abs(Vector3.Distance(lastWaypoint, result)) < minWaypointDistance)
+        var maxTries = 20;
+        for(var i = 0; Mathf.Abs(Vector3.Distance(lastWaypoint, result)) < minWaypointDistance || i > maxTries; i++)
             result = SpawnBoundaries.RandomInPlayZone(lastWaypoint.z, 20f);
         return result;
     }
