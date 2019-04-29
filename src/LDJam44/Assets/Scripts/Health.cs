@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using UnityEngine;
 
 public class Health : VerboseMonoBehaviour
@@ -7,17 +8,24 @@ public class Health : VerboseMonoBehaviour
     public int maxHp;
     public int currentHp;
     [SerializeField] AudioClip onDeath;
+    [SerializeField] AudioClip onDamageSound;
     [SerializeField] GameObject onDeathVfx;
 
     public float HpPercent => (float)currentHp / (float)maxHp;
 
     private bool destructionStarted;
     private GameServices game;
+    private Action onDamage = () => {};
 
     public void Init(int maxHp)
     {
         this.maxHp = maxHp;
         currentHp = maxHp;
+    }
+
+    public void OnDamage(Action a)
+    {
+        onDamage = a;
     }
 
     public void Start()
@@ -31,8 +39,11 @@ public class Health : VerboseMonoBehaviour
         if (destructionStarted)
             return;
 
+        if (onDamageSound != null)
+            game.PlaySoundEffect(onDamageSound);
         currentHp -= amount;
         ProcessDestruction();
+        onDamage();
     }
 
     private void ProcessDestruction()
@@ -56,7 +67,6 @@ public class Health : VerboseMonoBehaviour
             explosionRigidBody.velocity = rigidBody.velocity;
 
         game.PlaySoundEffect(onDeath);
-        AudioSource.PlayClipAtPoint(onDeath, transform.position);
     }
 
     private IEnumerator ResolveDestruction()

@@ -4,8 +4,6 @@
 public class PlayerState : ScriptableObject
 {
     public int LifeForce;
-    public ProductState[] Products;
-    public int[] Counts;
     public string StationName;
 
     public int Thrusters;

@@ -1,10 +1,10 @@
 ﻿using System.Linq;
-using Assets.Scripts;
 using UnityEngine;
 
 public class SetupStation : MonoBehaviour
 {
     public GameObject SpaceStationCanvas;
+    public GameObject SpaceStation;
 
     void Start()
     {
@@ -27,5 +27,7 @@ public class SetupStation : MonoBehaviour
             });
         });
         Instantiate(SpaceStationCanvas);
+        var stationGameObject = Instantiate(SpaceStation, new Vector3(0, 0, 0), SpaceStation.gameObject.transform.rotation);
+        stationGameObject.GetComponent<SpaceStationSkin>().SpaceStation = spaceStation;
     }
 }
