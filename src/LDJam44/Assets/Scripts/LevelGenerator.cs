@@ -47,6 +47,7 @@ public class LevelGenerator : VerboseMonoBehaviour
     {
         var settings = new LevelSettings { TravelDistance = s.TravelPlanData.Distance, Difficulty = s.TravelPlanData.Difficulty };
         asteroids.Init(settings);
+        asteroids.SpawnDecor(settings);
         enemies.Init(settings);
     }
 }

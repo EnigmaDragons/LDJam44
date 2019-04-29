@@ -1,4 +1,5 @@
 ﻿using Assets.Scripts.Noah;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -22,6 +23,8 @@ public class SpaceStationUI : VerboseMonoBehaviour
     public Text Product2Name;
     public Text Product2Description;
     public Text Product2Cost;
+
+    private Color errorOpaque;
 
     void Start()
     {
@@ -62,12 +65,19 @@ public class SpaceStationUI : VerboseMonoBehaviour
     {
         var price = spaceStation.CurrentSellPrices[spaceStation.ProductsForSale[productNum].Name];
         if (player.LifeForce <= price)
-            ErrorText.text = "Insufficient Life Force";
+            StartCoroutine(ShowErrorMessage());
         else
         {
             player.LifeForce -= price;
             player.Counts[productNum]++;
         }
+    }
+
+    private IEnumerator ShowErrorMessage()
+    {
+        ErrorText.text = "Insufficient Life Force";
+        yield return new WaitForSeconds(2.4f);
+        ErrorText.text = "";
     }
 
     public void Done()

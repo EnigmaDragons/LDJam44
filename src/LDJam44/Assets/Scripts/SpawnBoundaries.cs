@@ -2,6 +2,10 @@
 
 static class SpawnBoundaries
 {
+    public const int minDecorX = -200;
+    public const int maxDecorX = 200;
+    public const int minDecorY = -120;
+    public const int maxDecorY = 120;
     public const int minX = -80;
     public const int minY = -34;
     public const int maxX = 80;
@@ -14,6 +18,18 @@ static class SpawnBoundaries
     public const float startClearPlayAreaDistance = 38f;
     public const float endClearPlayAreaDistance = 30f;
     public const float playZoneFactor = 1.2f;
+
+    public static Vector3 RandomDecorZone(float z, float zVariance = 0)
+    {
+        var x = Random.Range(minDecorX, maxDecorX);
+        while (x > minScreenX && x < maxScreenX)
+            x = Random.Range(minDecorX, maxDecorX);
+        var y = Random.Range(minDecorY, maxDecorY);
+        while (y > minScreenY && y < maxScreenY)
+            y = Random.Range(minDecorY, maxDecorY);
+
+        return new Vector3(x, y, VariedZ(z, zVariance));
+    }
 
     public static Vector3 RandomOffPlayZone(float z, float zVariance = 0)
     {

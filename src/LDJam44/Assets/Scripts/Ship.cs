@@ -18,13 +18,13 @@ public class Ship : VerboseMonoBehaviour
         Rigidbody = VerboseGetComponent<Rigidbody>();
         if (weapon == null)
             Debug.LogError("Ship is missing its Weapon");
-        weapon.Equip(gameObject);
 
         var gameState = GameObject.Find("GameState").GetComponent<GameState>();
         zSpeed = gameState.UpgradeEffect("Engines");
         hSpeed = gameState.UpgradeEffect("Thrusters");
         vSpeed = gameState.UpgradeEffect("Thrusters");
         acceleration = gameState.UpgradeEffect("Stabilizers");
+        weapon.Equip(gameObject, gameState.UpgradeEffect("Damage"));
     }
 
     void Update()

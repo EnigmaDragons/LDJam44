@@ -18,7 +18,7 @@ public class EnemyShooting : VerboseMonoBehaviour
     private void Update()
     {
         cachedWeapon.Update();
-        if (SpawnBoundaries.IsInEnemyPlayArea(transform.position, target.transform.position))
+        if (target != null && SpawnBoundaries.IsInEnemyPlayArea(transform.position, target.transform.position))
             cachedWeapon.FireTowards(target.transform.position + VarianceAmount());
     }
 
