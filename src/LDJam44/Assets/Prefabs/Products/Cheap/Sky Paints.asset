@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Sky Paints
   m_EditorClassIdentifier: 
   Name: Sky Paints
-  Description: Banned due to too much sky graffiti
+  Description: 'Banned by: Law Enforcement. Reason: Graffiti'
   MinBuyPrice: 620
   MaxBuyPrice: 930
   MinSellPrice: 310

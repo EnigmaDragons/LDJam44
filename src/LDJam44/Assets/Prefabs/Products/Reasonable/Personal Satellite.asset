@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Personal Satellite
   m_EditorClassIdentifier: 
   Name: Personal Satellite
-  Description: '3, cat PC EH, '
+  Description: 'Banned by: Department of Truth. Reason: Spreading Rumors'
   MinBuyPrice: 3600
   MaxBuyPrice: 5400
   MinSellPrice: 1800

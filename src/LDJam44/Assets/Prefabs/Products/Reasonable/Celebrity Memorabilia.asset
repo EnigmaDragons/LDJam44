@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Celebrity Memorabilia
   m_EditorClassIdentifier: 
   Name: Celebrity Memorabilia
-  Description: 2, cat PC
+  Description: 'Banned by: Better Life Commitee. Reason: Public Nuisance'
   MinBuyPrice: 2800
   MaxBuyPrice: 4200
   MinSellPrice: 1400

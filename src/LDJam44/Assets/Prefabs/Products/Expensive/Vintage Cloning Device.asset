@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Vintage Cloning Device
   m_EditorClassIdentifier: 
   Name: Vintage Cloning Device
-  Description: '2, cat QL, '
+  Description: 'Banned by: Law Enforcement. Reason: Can''t tell if we caught the right
+    clone'
   MinBuyPrice: 60000
   MaxBuyPrice: 90000
   MinSellPrice: 30000

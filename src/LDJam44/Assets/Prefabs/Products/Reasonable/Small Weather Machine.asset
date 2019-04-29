@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Small Weather Machine
   m_EditorClassIdentifier: 
   Name: Small Weather Machine
-  Description: Banned due to too many storms caused by breakups
+  Description: 'Banned by: Sunshine Commitee. Reason: Constant Rain'
   MinBuyPrice: 4400
   MaxBuyPrice: 6600
   MinSellPrice: 2200

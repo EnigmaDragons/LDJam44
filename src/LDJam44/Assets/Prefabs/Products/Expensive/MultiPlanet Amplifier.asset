@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: MultiPlanet Amplifier
   m_EditorClassIdentifier: 
   Name: Multi-Planet Amplifier
-  Description: '4, cat PN QL '
+  Description: 'Banned by: Anti-Monopoly Department. Reason: Too Efficent'
   MinBuyPrice: 70000
   MaxBuyPrice: 105000
   MinSellPrice: 35000

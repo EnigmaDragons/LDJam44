@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Metropolis Bounce House - Instant
   m_EditorClassIdentifier: 
   Name: Metropolis Bounce House
-  Description: '2, cat PN '
+  Description: 'Banned by: City Planning Commitee. Reason: Annoying'
   MinBuyPrice: 20000
   MaxBuyPrice: 30000
   MinSellPrice: 10000

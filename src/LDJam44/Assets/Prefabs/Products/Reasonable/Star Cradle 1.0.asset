@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Star Cradle 1.0
   m_EditorClassIdentifier: 
   Name: Star Cradle 1.0
-  Description: '4, cat D EH QL '
+  Description: 'Banned by: Alien Safety Department. Reason: Danger'
   MinBuyPrice: 6000
   MaxBuyPrice: 9000
   MinSellPrice: 3000

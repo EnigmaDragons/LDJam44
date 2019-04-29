@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Crater Making Toy
   m_EditorClassIdentifier: 
   Name: Crater Making Toy
-  Description: 3, cat D EH
+  Description: 'Banned by: Dangerious Artifacts Department. Reason: Danger'
   MinBuyPrice: 7600
   MaxBuyPrice: 11400
   MinSellPrice: 3800

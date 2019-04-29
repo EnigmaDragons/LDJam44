@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Exercise Equipment
   m_EditorClassIdentifier: 
   Name: Exercise Equipment
-  Description: 1, cat QL
+  Description: 'Banned by: Alien Safety Department. Reason: Quality of Life'
   MinBuyPrice: 500
   MaxBuyPrice: 750
   MinSellPrice: 250
