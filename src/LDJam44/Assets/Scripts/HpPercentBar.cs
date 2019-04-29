@@ -6,6 +6,6 @@ class HpPercentBar : VerboseMonoBehaviour
 
     void Update()
     {
-        transform.localScale = new Vector3(Health.HpPercent, 1, 1);
+        transform.localScale = new Vector3(Mathf.Clamp(Health.HpPercent, 0, 1.0f), 1, 1);
     }
 }
