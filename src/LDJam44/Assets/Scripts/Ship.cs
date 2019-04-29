@@ -25,6 +25,7 @@ public class Ship : VerboseMonoBehaviour
         vSpeed = gameState.UpgradeEffect("Thrusters");
         acceleration = gameState.UpgradeEffect("Stabilizers");
         weapon.Equip(gameObject, gameState.UpgradeEffect("Damage"));
+        health.SetDamageReduction(gameState.UpgradeEffect("Armor"));
     }
 
     void Update()

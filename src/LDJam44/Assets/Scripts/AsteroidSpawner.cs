@@ -43,5 +43,6 @@ class AsteroidSpawner : VerboseMonoBehaviour
         var sizeAdjustment = Random.Range(-prototypeScale * 0.75f, prototypeScale * 2.4f);
         var o = Instantiate(asteroidPrototypes[selectedAsteroid], position, Quaternion.identity);
         o.transform.localScale += new Vector3(sizeAdjustment, sizeAdjustment, sizeAdjustment);
+        o.transform.rotation = Quaternion.Euler(Random.Range(0, 360f), Random.Range(0, 360f), Random.Range(0, 360f));
     }
 }
