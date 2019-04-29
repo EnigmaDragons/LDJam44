@@ -72,7 +72,7 @@ public class EnemyMovement : VerboseMonoBehaviour
         var targetDir = target - transform.position;
         var step = rotSpeed * Time.deltaTime;
         var newDir = Vector3.RotateTowards(transform.forward, targetDir, step, 0.0f);
-        transform.rotation = Quaternion.LookRotation(newDir );
+        transform.rotation = Quaternion.LookRotation(newDir);
     }
 
     bool WithinXYEpsilon(Vector3 first, Vector3 second)
