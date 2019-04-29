@@ -18,6 +18,9 @@ public class TitleScreenUI : MonoBehaviour
 
     public void Start()
     {
+        var gameState = GameObject.Find("GameState");
+        if (gameState != null)
+            Destroy(gameState);
         game = FindObjectOfType<GameServices>();
         float musicVolume = 0;
         Mixer.GetFloat("MusicVolume", out musicVolume);
