@@ -95,4 +95,4 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 557be9656b3880142bfd0978c62009ab, type: 2}
   - {fileID: 2100000, guid: 1ab5ede9c177e1a4c9273b93ab1c458f, type: 2}
   - {fileID: 2100000, guid: 1a3991706427e40498530d434d8f8f62, type: 2}
-  IsTravelingTo: 0
+  - {fileID: 2100000, guid: 560bb6423084a404183d31301d5bafb3, type: 2}
