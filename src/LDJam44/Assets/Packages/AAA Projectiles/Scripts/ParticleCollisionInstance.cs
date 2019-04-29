@@ -2,6 +2,7 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System;
 
 public class ParticleCollisionInstance : VerboseMonoBehaviour
 {
@@ -18,6 +19,7 @@ public class ParticleCollisionInstance : VerboseMonoBehaviour
 
     private float zStart;
     private bool isDestroying;
+    private float damageFactor = 1.0f;
 
     void Start()
     {
@@ -30,7 +32,7 @@ public class ParticleCollisionInstance : VerboseMonoBehaviour
     {
         Debug.Log($"Particle Collided with {other.name}");
         var health = other.GetComponent<Health>();
-        health?.ApplyDamage(Damage);
+        health?.ApplyDamage(Convert.ToInt32(Damage * damageFactor));
         game.PlaySoundEffect(HitSoundEffect);
 
         int numCollisionEvents = part.GetCollisionEvents(other, collisionEvents);     
@@ -46,6 +48,11 @@ public class ParticleCollisionInstance : VerboseMonoBehaviour
             }
         }
         Destroy();
+    }
+
+    public void AmplifyDamage(float damageFactor)
+    {
+        this.damageFactor = damageFactor;
     }
 
     private void Destroy()

@@ -8,13 +8,15 @@ class Weapon : ScriptableObject
     [SerializeField] AudioClip fireSound;
     [SerializeField] float forwardOffset = 2f;
 
+    private float damageFactor = 1.0f;
     private double msBeforeFire;
     private GameObject owner;
     private GameServices game;
     
-    public void Equip(GameObject owner)
+    public void Equip(GameObject owner, float damageFactor = 1.0f)
     {
         this.owner = owner;
+        this.damageFactor = damageFactor;
         game = FindObjectOfType<GameServices>();
     }
 
@@ -49,6 +51,7 @@ class Weapon : ScriptableObject
         var ownerDirection = owner.transform.forward;
         var spawnPos = ownerPos + ownerDirection * forwardOffset;
 
-        Instantiate(projectile, spawnPos, rotation);
+        var p = Instantiate(projectile, spawnPos, rotation);
+        p.GetComponent<ParticleCollisionInstance>().AmplifyDamage(damageFactor);
     }
 }
