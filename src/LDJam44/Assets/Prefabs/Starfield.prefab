@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1891108731229730637}
   - component: {fileID: 1891108731229730638}
   - component: {fileID: 1891108731229730639}
+  - component: {fileID: 5296850372830330534}
   m_Layer: 0
   m_Name: FarParticles
   m_TagString: Untagged
@@ -4752,6 +4753,18 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!114 &5296850372830330534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1891108731229730624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ed367dd13d69f041ab7f4df6bdd05b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1891108732878537742
 GameObject:
   m_ObjectHideFlags: 0
@@ -4763,6 +4776,7 @@ GameObject:
   - component: {fileID: 1891108732878537739}
   - component: {fileID: 1891108732878537740}
   - component: {fileID: 1891108732878537741}
+  - component: {fileID: 3267649539430483608}
   m_Layer: 0
   m_Name: CloseParticles
   m_TagString: Untagged
@@ -9504,6 +9518,18 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!114 &3267649539430483608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1891108732878537742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ed367dd13d69f041ab7f4df6bdd05b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8569400226174890392
 GameObject:
   m_ObjectHideFlags: 0
@@ -9515,7 +9541,7 @@ GameObject:
   - component: {fileID: 7752385120202242372}
   - component: {fileID: 6238858985597592164}
   m_Layer: 0
-  m_Name: SpaceParticles
+  m_Name: Starfield
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
