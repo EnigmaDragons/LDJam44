@@ -30,7 +30,7 @@ public class TitleScreenUI : MonoBehaviour
     public void Play()
     {
         game.PlaySoundEffect(ButtonSound);
-        game.NavigateToScene(SceneNames.SpaceStationScene);
+        game.NavigateToScene(SceneNames.GameScene);
     }
 
     public void Settings()
