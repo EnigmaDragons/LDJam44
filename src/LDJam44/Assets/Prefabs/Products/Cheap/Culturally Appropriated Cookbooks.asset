@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Culturally Appropriated Cookbooks
   m_EditorClassIdentifier: 
   Name: Culturally Appropriated Cookbooks
-  Description: 1, cat QL
+  Description: 'Banned by: Sensitivity Department. Reason: Quality Of Life'
   MinBuyPrice: 380
   MaxBuyPrice: 570
   MinSellPrice: 190

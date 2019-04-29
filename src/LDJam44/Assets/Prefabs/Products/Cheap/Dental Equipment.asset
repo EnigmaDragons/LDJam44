@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Dental Equipment
   m_EditorClassIdentifier: 
   Name: Dental Equipment
-  Description: 3, cat QL D, Special Seal
+  Description: 'Banned by: Public Health Commitee. Reason: Public Health'
   MinBuyPrice: 440
   MaxBuyPrice: 660
   MinSellPrice: 220

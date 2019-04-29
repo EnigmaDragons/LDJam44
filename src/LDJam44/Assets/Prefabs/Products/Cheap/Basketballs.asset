@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Basketballs
   m_EditorClassIdentifier: 
   Name: Basketballs
-  Description: '4, D QL PN EH,  Special Seal '
+  Description: 'Banned by: Department of A Better Future. Reason: Public Nuisance'
   MinBuyPrice: 320
   MaxBuyPrice: 480
   MinSellPrice: 160

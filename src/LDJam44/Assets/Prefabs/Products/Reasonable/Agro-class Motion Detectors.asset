@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Agro-class Motion Detectors
   m_EditorClassIdentifier: 
   Name: Agro-class Motion Detectors
-  Description: 3, cat D PN QL
+  Description: 'Banned by: Law Enforcement. Reason: Too many Trap Rooms'
   MinBuyPrice: 2000
   MaxBuyPrice: 3000
   MinSellPrice: 1000

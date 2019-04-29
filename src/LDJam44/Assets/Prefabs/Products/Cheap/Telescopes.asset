@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Telescopes
   m_EditorClassIdentifier: 
   Name: Telescopes
-  Description: 3, cat QL, Dept of Truth
+  Description: 'Banned by: Department of Truth. Reason: Rumor Spreading'
   MinBuyPrice: 560
   MaxBuyPrice: 840
   MinSellPrice: 280

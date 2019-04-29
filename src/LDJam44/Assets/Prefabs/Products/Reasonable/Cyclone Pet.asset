@@ -13,8 +13,7 @@ MonoBehaviour:
   m_Name: Cyclone Pet
   m_EditorClassIdentifier: 
   Name: Cyclone Pet
-  Description: Banned for being "Too Dangerious" these cute cyclones are a hot commodity
-    in people who own their own planets
+  Description: 'Banned by: Alien Safety Department. Reason: Danager'
   MinBuyPrice: 5200
   MaxBuyPrice: 7800
   MinSellPrice: 2600
