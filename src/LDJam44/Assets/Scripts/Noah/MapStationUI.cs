@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class MapStationUI : MonoBehaviour
 {
-    public SpaceStationState SpaceStation;
+    public MutableSpaceStation SpaceStation;
     public GameState GameState;
 
     private int distance;
@@ -19,15 +19,15 @@ public class MapStationUI : MonoBehaviour
 
     void Start()
     {
-        gameObject.GetComponent<RectTransform>().localPosition = new Vector3(SpaceStation.X * 45, SpaceStation.Y * 45, 0);
+        gameObject.GetComponent<RectTransform>().localPosition = new Vector3(SpaceStation.X * 78, SpaceStation.Y * 78, 0);
         Name.text = SpaceStation.Name;
-        distance = 30 * (int)Math.Ceiling(Vector2.Distance(new Vector2(SpaceStation.X, SpaceStation.Y), new Vector2(GameState.CurrentSpaceStationData.X, GameState.CurrentSpaceStationData.Y)));
+        distance = 50 * (int)Math.Ceiling(Vector2.Distance(new Vector2(SpaceStation.X, SpaceStation.Y), new Vector2(GameState.CurrentSpaceStationData.X, GameState.CurrentSpaceStationData.Y)));
         if (SpaceStation != GameState.CurrentSpaceStationData)
         {
-            Distance.text = distance.ToString();
-            Product0.text = $"{GameState.PlayerData.Products[0].Name}: {SpaceStation.CurrentBuyPrices[GameState.PlayerData.Products[0].Name]}";
-            Product1.text = $"{GameState.PlayerData.Products[1].Name}: {SpaceStation.CurrentBuyPrices[GameState.PlayerData.Products[1].Name]}";
-            Product2.text = $"{GameState.PlayerData.Products[2].Name}: {SpaceStation.CurrentBuyPrices[GameState.PlayerData.Products[2].Name]}";
+            Distance.text = $"Distance: {distance}";
+            Product0.text = $"{GameState.PlayerData.Products[0].Name}: {SpaceStation.CurrentBuyPrices[GameState.PlayerData.Products[0].Name]} LF";
+            Product1.text = $"{GameState.PlayerData.Products[1].Name}: {SpaceStation.CurrentBuyPrices[GameState.PlayerData.Products[1].Name]} LF";
+            Product2.text = $"{GameState.PlayerData.Products[2].Name}: {SpaceStation.CurrentBuyPrices[GameState.PlayerData.Products[2].Name]} LF";
             TravelButton.gameObject.SetActive(true);
         }
     }
