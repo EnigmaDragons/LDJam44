@@ -3,9 +3,9 @@ using UnityEngine.UI;
 
 public class MobileBloom : MonoBehaviour{
     [Range(0, 5)]
-    public float BloomAmount = 1f;
+    public float BloomAmount = 1.62f;
     [Range(0, 5)]
-    public float BlurAmount = 2f;
+    public float BlurAmount = 0.8f;
 	[Range(0, 1)]
 	public float FadeAmount = 0.2f;
     static readonly int scrWidth=Screen.width/4;

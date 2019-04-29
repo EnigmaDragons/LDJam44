@@ -455,9 +455,9 @@ Canvas:
   m_GameObject: {fileID: 1128229922}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
-  m_PlaneDistance: 100
+  m_RenderMode: 1
+  m_Camera: {fileID: 1511754123}
+  m_PlaneDistance: 2
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
@@ -707,6 +707,7 @@ GameObject:
   - component: {fileID: 1511754123}
   - component: {fileID: 1511754122}
   - component: {fileID: 1511754125}
+  - component: {fileID: 1511754126}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -773,7 +774,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1511754121}
   m_LocalRotation: {x: 0.38268343, y: 0, z: 0, w: 0.92387956}
-  m_LocalPosition: {x: 0, y: 2, z: -2}
+  m_LocalPosition: {x: 0, y: 3.69, z: -3.69}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -793,6 +794,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OrbitLocation: {x: 0, y: 0, z: 0}
   Speed: 9
+--- !u!114 &1511754126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1511754121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4faf46d9ae41f1c46892997a804c20af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BloomAmount: 1.62
+  BlurAmount: 0.8
+  FadeAmount: 0.4
+  material: {fileID: 2100000, guid: 6ced9dc3165b9bd439f57ddcee8abac6, type: 2}
 --- !u!1 &1691613568
 GameObject:
   m_ObjectHideFlags: 0

@@ -602,6 +602,7 @@ GameObject:
   - component: {fileID: 2023438942}
   - component: {fileID: 2023438941}
   - component: {fileID: 2023438944}
+  - component: {fileID: 2023438945}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -688,3 +689,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OrbitLocation: {x: -1.25, y: 0, z: 1.75}
   Speed: 9
+--- !u!114 &2023438945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2023438940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4faf46d9ae41f1c46892997a804c20af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BloomAmount: 1.62
+  BlurAmount: 0.8
+  FadeAmount: 0.41
+  material: {fileID: 2100000, guid: 6ced9dc3165b9bd439f57ddcee8abac6, type: 2}
