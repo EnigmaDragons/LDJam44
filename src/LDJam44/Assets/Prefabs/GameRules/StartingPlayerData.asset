@@ -12,13 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9912d6ad60e8e08438def42307588bda, type: 3}
   m_Name: StartingPlayerData
   m_EditorClassIdentifier: 
-  LifeForce: 1000
-  Products:
-  - {fileID: 11400000, guid: e37c235bb67579a4cb2f4e913e401e69, type: 2}
-  - {fileID: 11400000, guid: 4aa6d188529469649a5342ace6b19913, type: 2}
-  - {fileID: 11400000, guid: 52ec701091de6694bac3b36a98ac7af5, type: 2}
-  Counts: 000000000000000000000000
-  StationName: Frost
+  LifeForce: 900
+  StationName: Imperial Starbase
   Thrusters: 0
   Stabilizers: 0
   Trading: 0
