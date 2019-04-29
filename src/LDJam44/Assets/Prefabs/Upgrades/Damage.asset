@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd3227da2a06246469a1f4187129530f, type: 3}
   m_Name: Damage
   m_EditorClassIdentifier: 
-  Name: Damage
+  Name: Weapon Power
   Description: Increases the power of your weapons
   Costs: b80b0000e02e000050c30000
   Effects:

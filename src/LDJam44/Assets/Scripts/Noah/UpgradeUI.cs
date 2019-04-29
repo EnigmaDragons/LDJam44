@@ -18,9 +18,9 @@ public class UpgradeUI : MonoBehaviour
     void Start()
     {
         player = GameObject.Find("GameState").GetComponent<GameState>().PlayerData;
-        isMaxed = player.UpgradeLevel(Upgrade.Name) == Upgrade.Costs.Length;
-        cost = isMaxed ? 0 : Upgrade.Costs[player.UpgradeLevel(Upgrade.Name)];
-        Level.text = $"{player.UpgradeLevel(Upgrade.Name)}/{Upgrade.Costs.Length}";
+        isMaxed = player.UpgradeLevel(Upgrade.name) == Upgrade.Costs.Length;
+        cost = isMaxed ? 0 : Upgrade.Costs[player.UpgradeLevel(Upgrade.name)];
+        Level.text = $"{player.UpgradeLevel(Upgrade.name)}/{Upgrade.Costs.Length}";
         Name.text = Upgrade.Name;
         Description.text = Upgrade.Description;
         Cost.text = isMaxed ? "MAXED" : $"{cost} LF";
@@ -36,7 +36,7 @@ public class UpgradeUI : MonoBehaviour
     public void Buy()
     {
         player.LifeForce -= cost;
-        player.Upgrades[Upgrade.Name]++;
+        player.Upgrades[Upgrade.name]++;
         Start();
     }
 }

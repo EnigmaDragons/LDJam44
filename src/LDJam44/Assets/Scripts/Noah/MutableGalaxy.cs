@@ -14,7 +14,7 @@ public class MutableGalaxy
 
     public UpgradeRules Upgrade(string name)
     {
-        var r = Upgrades.FirstOrDefault(x => x.Name == name);
+        var r = Upgrades.FirstOrDefault(x => x.name == name);
         if (r == null)
             Debug.LogError($"Missing upgrade {name}");
         return r;

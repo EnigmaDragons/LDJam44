@@ -25,7 +25,7 @@ namespace Assets.Scripts.Noah
             Counts = new[] {0, 0, 0};
             StationName = player.StationName;
             HealthScalingCost = player.HealthScalingCost;
-            galaxy.Upgrades.ToList().ForEach(x => Upgrades[x.Name] = 0);
+            galaxy.Upgrades.ToList().ForEach(x => Upgrades[x.name] = 0);
         }
 
         public void RecaluclateHealth()
