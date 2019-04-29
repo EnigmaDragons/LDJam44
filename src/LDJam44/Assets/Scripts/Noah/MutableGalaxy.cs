@@ -1,4 +1,5 @@
 ﻿using System.Linq;
+using UnityEngine;
 
 public class MutableGalaxy
 {
@@ -11,5 +12,11 @@ public class MutableGalaxy
         Upgrades = galaxy.Upgrades;
     }
 
-    public UpgradeRules Upgrade(string name) => Upgrades.First(x => x.Name == name);
+    public UpgradeRules Upgrade(string name)
+    {
+        var r = Upgrades.FirstOrDefault(x => x.Name == name);
+        if (r == null)
+            Debug.LogError($"Missing upgrade {name}");
+        return r;
+    }
 }
