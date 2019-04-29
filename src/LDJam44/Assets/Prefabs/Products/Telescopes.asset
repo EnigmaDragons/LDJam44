@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5e0a7c889dc30c4f911fb512f53a9fc, type: 3}
   m_Name: Telescopes
   m_EditorClassIdentifier: 
-  Name: 
-  Description: 
+  Name: Telescopes
+  Description: 3, cat QL, Dept of Truth
   MinBuyPrice: 0
   MaxBuyPrice: 0
   MinSellPrice: 0
