@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class UpgradesUI : MonoBehaviour
 {
-    private GalaxyState galaxyState;
+    private MutableGalaxy galaxyState;
     private MutablePlayer player;
     private Action onAccept;
     private Action onReject;

@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class SpaceStationUI : MonoBehaviour
 {
-    private SpaceStationState spaceStation;
+    private MutableSpaceStation spaceStation;
     private MutablePlayer player;
 
     public Text ErrorText;

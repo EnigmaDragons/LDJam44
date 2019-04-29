@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Linq;
+using UnityEngine;
 
 public class LevelGenerator : VerboseMonoBehaviour
 {
@@ -36,7 +37,7 @@ public class LevelGenerator : VerboseMonoBehaviour
         var travelDistance = s.TravelPlanData.Distance;
         Instantiate(levelEnd, new Vector3(0, 0, travelDistance), Quaternion.identity);
         var station = Instantiate(spaceStation, new Vector3(0, -3, travelDistance + 30f), Quaternion.Euler(spaceStation.transform.eulerAngles.x, Random.Range(-180, 180), Random.Range(-180, 180)));
-        station.GetComponent<SpaceStationSkin>().IsTravelingTo = true;
+        station.GetComponent<SpaceStationSkin>().SpaceStation = GameObject.Find("GameState").GetComponent<GameState>().TravelingToSpaceStation;
         station.transform.localScale = new Vector3(25, 25, 25);
     }
 
