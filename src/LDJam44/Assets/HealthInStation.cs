@@ -15,6 +15,6 @@ public class HealthInStation : VerboseMonoBehaviour
 
     void Update()
     {
-        text.text = $"{player.Health} / {player.Health}";
+        text.text = $"HP {player.Health} / {player.Health}";
     }
 }

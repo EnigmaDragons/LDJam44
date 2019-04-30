@@ -5,8 +5,9 @@ using UnityEngine;
 class EnemyWaveSpawner : VerboseMonoBehaviour
 {
     [SerializeField] GameObject[] enemyPrototypes = new GameObject[0];
+    [SerializeField] private GameObject Mothership;
     [SerializeField] Wave wavePrototype;
-    [SerializeField] float densityFactor = 3f;
+    [SerializeField] float densityFactor = 2f;
     [SerializeField] float forwardBias = 1.0f;
     [SerializeField] int minEnemiesPerWave = 2;
     [SerializeField] int maxEnemiesPerWave = 7;
@@ -21,12 +22,14 @@ class EnemyWaveSpawner : VerboseMonoBehaviour
     public void Init(LevelSettings settings)
     {
         Debug.Log("Difficulty: " + settings.Difficulty);
-        minEnemiesPerWave = settings.Difficulty;
-        maxEnemiesPerWave = settings.Difficulty + 2;
+        minEnemiesPerWave = settings.Difficulty - 1;
+        maxEnemiesPerWave = settings.Difficulty + 1;
         var computedDensityFactor = settings.Difficulty * densityFactor;
 
         var maxZ = settings.TravelDistance - SpawnBoundaries.endClearPlayAreaDistance;
         var density = 1000 * (1 / computedDensityFactor);
+        if (settings.Difficulty > 5)
+            SpawnBoss(maxZ + 50, 100);
         for (var z = SpawnBoundaries.startClearPlayAreaDistance; z < maxZ; z += density)
             SpawnWave(maxZ, z, settings);
     }
@@ -68,12 +71,45 @@ class EnemyWaveSpawner : VerboseMonoBehaviour
         w.Init(waveConfig);
     }
 
+    private void SpawnBoss(float maxZ, float z)
+    {
+        var shouldStartForward = Random.Range(0f, 1f) <= forwardBias;
+        var startZ = z + maxAheadOfPlayer + 50;
+
+        var startPosition = SpawnBoundaries.RandomOffPlayZone(startZ);
+        var firstWaypoint = new Vector3(startPosition.x, startPosition.y, startZ - z);
+
+        var waypoints = new List<Vector3>();
+        waypoints.Add(firstWaypoint);
+
+        var numMidWaypoints = 99;
+        for (var i = 0; i < numMidWaypoints; i++)
+            waypoints.Add(NextSaneWaypoint(waypoints.Last()));
+
+        var endPosition = SpawnBoundaries.RandomOffPlayZone(waypoints.Last().z, 5f);
+        waypoints.Add(endPosition * 1.5f);
+
+        var waveConfig = new WaveConfig
+        {
+            EnemyProtoype = Mothership,
+            Path = waypoints.ToArray(),
+            NumEnemies = 1,
+            SecondsBetweenEnemies = 1,
+            ZTriggerThreshold = z,
+            MaxZAllowed = maxZ
+        };
+
+        var w = Instantiate(wavePrototype, startPosition, Quaternion.identity);
+        w.Init(waveConfig);
+    }
+
     private Vector3 NextSaneWaypoint(Vector3 lastWaypoint)
     {
-        var result = SpawnBoundaries.RandomInPlayZone(lastWaypoint.z, 20f);
+        var zVariance = 40;
+        var result = SpawnBoundaries.RandomInPlayZone(lastWaypoint.z, zVariance);
         var maxTries = 20;
         for(var i = 0; Mathf.Abs(Vector3.Distance(lastWaypoint, result)) < minWaypointDistance || i > maxTries; i++)
-            result = SpawnBoundaries.RandomInPlayZone(lastWaypoint.z, 20f);
+            result = SpawnBoundaries.RandomInPlayZone(lastWaypoint.z, zVariance);
         return result;
     }
 }

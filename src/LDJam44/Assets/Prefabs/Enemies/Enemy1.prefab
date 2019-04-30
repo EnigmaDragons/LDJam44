@@ -35,7 +35,7 @@ Transform:
   m_GameObject: {fileID: 5102087257348941164}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: -0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 20, y: 20, z: 20}
+  m_LocalScale: {x: 16, y: 16, z: 16}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -205,3 +205,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weapon: {fileID: 11400000, guid: f2ce48c5ea40eea44a5a47716d17c9cd, type: 2}
   varianceAmount: 2.5
+  difficultyDamageScaling: 1.25

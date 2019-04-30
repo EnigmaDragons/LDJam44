@@ -17,7 +17,7 @@ static class SpawnBoundaries
     public const int yOffset = 2;
     public const float startClearPlayAreaDistance = 38f;
     public const float endClearPlayAreaDistance = 30f;
-    public const float playZoneFactor = 1.2f;
+    public const float playZoneFactor = 1.5f;
 
     public static Vector3 RandomDecorZone(float z, float zVariance = 0)
     {
@@ -47,7 +47,7 @@ static class SpawnBoundaries
     {
         return new Vector3(
             Random.Range(minScreenX * playZoneFactor, maxScreenX * playZoneFactor), 
-            Random.Range(minScreenY * playZoneFactor * playZoneFactor, maxScreenY * playZoneFactor * playZoneFactor) + yOffset, 
+            Random.Range(minScreenY * playZoneFactor * playZoneFactor * playZoneFactor, maxScreenY * playZoneFactor * playZoneFactor * playZoneFactor) + yOffset, 
             VariedZ(z, zVariance));
     }
 
@@ -63,10 +63,14 @@ static class SpawnBoundaries
 
     private static float VariedZ(float z, float zVariance) => z + Random.Range(-zVariance, zVariance);
 
-    public static bool IsInEnemyPlayArea(Vector3 position, Vector3 playerPosition)
+    public static bool IsInPlayArea(Vector3 position)
     {
         return (position.x >= minScreenX * playZoneFactor && position.x <= maxScreenX * playZoneFactor)
-            && (position.y >= minScreenY * playZoneFactor && position.y <= maxScreenY * playZoneFactor)
-            && position.z > playerPosition.z + 8f;
+            && (position.y >= minScreenY * playZoneFactor * playZoneFactor && position.y <= maxScreenY * playZoneFactor * playZoneFactor);
+    }
+
+    public static bool IsInEnemyPlayArea(Vector3 position, Vector3 playerPosition)
+    {
+        return IsInPlayArea(position) && position.z > playerPosition.z + 8f;
     }
 }

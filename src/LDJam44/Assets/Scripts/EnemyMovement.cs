@@ -9,6 +9,7 @@ public class EnemyMovement : VerboseMonoBehaviour
     [SerializeField] private float speed = 2.5f;
     [SerializeField] private float rotSpeed = 2.5f;
     [SerializeField] private Transform[] editorWaypoints = new Transform[0];
+    [SerializeField] private bool isBoss = false;
 
     private Vector3[] waypoints;
     private float maxZAllowed;
@@ -80,10 +81,17 @@ public class EnemyMovement : VerboseMonoBehaviour
 
     void FaceTarget(Vector3 target)
     {
-        var targetDir = target - transform.position;
-        var step = rotSpeed * Time.deltaTime;
-        var newDir = Vector3.RotateTowards(transform.forward, targetDir, step, 0.0f);
-        transform.rotation = Quaternion.LookRotation(newDir);
+        if (isBoss)
+        {
+            transform.LookAt(new Vector3(playerShip.transform.position.x, playerShip.transform.position.y - 15, playerShip.transform.position.z));
+        }
+        else
+        {
+            var targetDir = target - transform.position;
+            var step = rotSpeed * Time.deltaTime;
+            var newDir = Vector3.RotateTowards(transform.forward, targetDir, step, 0.0f);
+            transform.rotation = Quaternion.LookRotation(newDir);
+        }
     }
 
     bool WithinXYEpsilon(Vector3 first, Vector3 second)

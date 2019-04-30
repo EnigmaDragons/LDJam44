@@ -6,6 +6,12 @@ public class GameServices : MonoBehaviour
 {
     public AudioSource SFX;
 
+    private void Update()
+    {
+        if (Input.GetKey("escape"))
+            Application.Quit();
+    }
+
     public void OnGameOver()
     {
         StartCoroutine(TriggerGameOver());
@@ -19,7 +25,8 @@ public class GameServices : MonoBehaviour
 
     public void PlaySoundEffect(AudioClip clip)
     {
-        SFX.PlayOneShot(clip);
+        if (clip != null)
+            SFX.PlayOneShot(clip);
     }
 
     public void NavigateToScene(string sceneName) => StartCoroutine(NavigateAfterDelay(sceneName));
