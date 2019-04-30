@@ -506,7 +506,7 @@ PrefabInstance:
       propertyPath: m_text
       value: You are a lone smuggler, moving banned products between stations trying
         to not get caught or plundered. Most people die but you are determined to
-        make it rich!
+        make it to 1,000,000 Life Force!
       objectReference: {fileID: 0}
     - target: {fileID: 2008774776146039038, guid: 27cbe16d45ff1a44fb5110b98b2b7d91,
         type: 3}
