@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Blackhole Earrings
   m_EditorClassIdentifier: 
   Name: Blackhole Earrings
-  Description: 'Banned by: Department of Apocolypse Prevention. Reason: Possible WMD'
+  Description: 'Banned by: Department of Apocalypse Prevention. Reason: Possible WMD'
   MinBuyPrice: 90000
   MaxBuyPrice: 135000
   MinSellPrice: 45000

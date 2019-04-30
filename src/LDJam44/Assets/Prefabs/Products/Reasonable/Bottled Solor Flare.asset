@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5e0a7c889dc30c4f911fb512f53a9fc, type: 3}
   m_Name: Bottled Solor Flare
   m_EditorClassIdentifier: 
-  Name: Bottled Solor Flare
+  Name: Bottled Solar Flare
   Description: 'Banned by: Power Consortium. Reason: Public Safety'
   MinBuyPrice: 6800
   MaxBuyPrice: 10200

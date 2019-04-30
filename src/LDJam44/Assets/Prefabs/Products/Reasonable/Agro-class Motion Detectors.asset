@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5e0a7c889dc30c4f911fb512f53a9fc, type: 3}
   m_Name: Agro-class Motion Detectors
   m_EditorClassIdentifier: 
-  Name: Agro-class Motion Detectors
-  Description: 'Banned by: Law Enforcement. Reason: Too many Trap Rooms'
+  Name: Argo-Class Motion Detectors
+  Description: 'Banned by: Law Enforcement. Reason: Too Many Trap Rooms'
   MinBuyPrice: 2000
   MaxBuyPrice: 3000
   MinSellPrice: 1000

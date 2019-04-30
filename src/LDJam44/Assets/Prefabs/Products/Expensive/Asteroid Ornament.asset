@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Asteroid Ornament
   m_EditorClassIdentifier: 
   Name: Asteroid Ornament
-  Description: 'Banned by: Solor System Owner''s Association. Reason: Planetary Clutter'
+  Description: 'Banned by: Solar Owner''s Association. Reason: Planetary Clutter'
   MinBuyPrice: 40000
   MaxBuyPrice: 60000
   MinSellPrice: 20000

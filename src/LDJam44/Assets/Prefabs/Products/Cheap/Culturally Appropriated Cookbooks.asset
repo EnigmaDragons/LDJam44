@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5e0a7c889dc30c4f911fb512f53a9fc, type: 3}
   m_Name: Culturally Appropriated Cookbooks
   m_EditorClassIdentifier: 
-  Name: Culturally Appropriated Cookbooks
+  Name: Cultural Sensitive Cookbooks
   Description: 'Banned by: Sensitivity Department. Reason: Quality Of Life'
   MinBuyPrice: 380
   MaxBuyPrice: 570

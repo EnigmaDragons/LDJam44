@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5e0a7c889dc30c4f911fb512f53a9fc, type: 3}
   m_Name: Prehistoric Zoo - Grow Your Own!
   m_EditorClassIdentifier: 
-  Name: Prehistoric Zoo - Grow Your Own!
+  Name: Prehistoric Zoo
   Description: 'Banned by: Public Safety Department. Reason: Dinosaurs Eating People'
   MinBuyPrice: 50000
   MaxBuyPrice: 75000

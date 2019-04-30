@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Planet Cloaking Device
   m_EditorClassIdentifier: 
   Name: Planet Cloaking Device
-  Description: 'Banned by: Deparment of Space Revenue. Reason: Tax Evasion'
+  Description: 'Banned by: Solar Revenue Service. Reason: Tax Evasion'
   MinBuyPrice: 80000
   MaxBuyPrice: 120000
   MinSellPrice: 40000

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Cyclone Pet
   m_EditorClassIdentifier: 
   Name: Cyclone Pet
-  Description: 'Banned by: Alien Safety Department. Reason: Danager'
+  Description: 'Banned by: Alien Safety Department. Reason: Danger'
   MinBuyPrice: 5200
   MaxBuyPrice: 7800
   MinSellPrice: 2600

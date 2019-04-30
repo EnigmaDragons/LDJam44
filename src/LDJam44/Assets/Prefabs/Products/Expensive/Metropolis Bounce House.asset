@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d5e0a7c889dc30c4f911fb512f53a9fc, type: 3}
-  m_Name: Metropolis Bounce House - Instant
+  m_Name: Metropolis Bounce House
   m_EditorClassIdentifier: 
   Name: Metropolis Bounce House
-  Description: 'Banned by: City Planning Commitee. Reason: Annoying'
+  Description: 'Banned by: City Planning Committee. Reason: Annoying'
   MinBuyPrice: 20000
   MaxBuyPrice: 30000
   MinSellPrice: 10000

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Island In A Box
   m_EditorClassIdentifier: 
   Name: Island In A Box
-  Description: 'Banned by: Overly Serious Division. Reason: Dangerious Levels of Fun'
+  Description: 'Banned by: Overly Serious Division. Reason: Dangerous Levels of Fun'
   MinBuyPrice: 30000
   MaxBuyPrice: 45000
   MinSellPrice: 15000
