@@ -50,7 +50,7 @@ public class Ship : VerboseMonoBehaviour
 
     private void UpdateLeaning()
     {
-        var vLeanAmount = Rigidbody.velocity.x * 5;
+        var vLeanAmount = Rigidbody.velocity.x * 6;
         var vTurnAmount = Rigidbody.velocity.x * 2;
         var hLeanAmount = Rigidbody.velocity.y * 3;
         transform.rotation = Quaternion.Euler(-hLeanAmount, vTurnAmount, 180 - vLeanAmount);
