@@ -7,6 +7,7 @@ public class SetupStation : MonoBehaviour
 {
     public GameObject SpaceStationCanvas;
     public GameObject SpaceStation;
+    public GameObject StationDockedShip;
 
     void Start()
     {
@@ -31,5 +32,6 @@ public class SetupStation : MonoBehaviour
         Instantiate(SpaceStationCanvas);
         var stationGameObject = Instantiate(SpaceStation, new Vector3(0, 0, 0), SpaceStation.gameObject.transform.rotation);
         stationGameObject.GetComponent<SpaceStationSkin>().SpaceStation = spaceStation;
+        Instantiate(StationDockedShip, StationDockedShip.transform.position, StationDockedShip.transform.rotation);
     }
 }
