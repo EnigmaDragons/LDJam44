@@ -36,7 +36,6 @@ public class MapStationUI : MonoBehaviour
             Product0.text = $"{GameState.PlayerData.Products[0].Name}: {SpaceStation.CurrentBuyPrices[GameState.PlayerData.Products[0].Name]} LF";
             Product1.text = $"{GameState.PlayerData.Products[1].Name}: {SpaceStation.CurrentBuyPrices[GameState.PlayerData.Products[1].Name]} LF";
             Product2.text = $"{GameState.PlayerData.Products[2].Name}: {SpaceStation.CurrentBuyPrices[GameState.PlayerData.Products[2].Name]} LF";
-            TravelButton.gameObject.SetActive(true);
         }
         else
         {
@@ -46,6 +45,8 @@ public class MapStationUI : MonoBehaviour
 
     public void Travel()
     {
+        if (SpaceStation.Name == GameState.CurrentSpaceStationData.Name)
+            return;
         GameState.TravelPlanData.Destination = SpaceStation.Name;
         GameState.TravelPlanData.Distance = distance;
         game.PlaySoundEffect(ButtonSound);

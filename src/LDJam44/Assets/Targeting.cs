@@ -11,7 +11,7 @@ public class Targeting : MonoBehaviour
 
     void Update()
     {
-        Targets = Targets.Where(x => x != null).ToList();
+        Targets = Targets.Where(x => x != null && Collider.bounds.Contains(x.transform.position)).ToList();
         if (Targets.Any())
         {
             Target = Targets.OrderBy(x => x.transform.position.x).First();
@@ -30,11 +30,5 @@ public class Targeting : MonoBehaviour
     {
         if (enemy.gameObject.layer == 10)
             Targets.Add(enemy.gameObject.GetComponent<Renderer>());
-    }
-
-    void OnTriggerExit(Collider enemy)
-    {
-        if (enemy.gameObject.layer == 10 && !Collider.bounds.Contains(enemy.transform.position))
-            Targets.Remove(enemy.gameObject.GetComponent<Renderer>());
     }
 }
