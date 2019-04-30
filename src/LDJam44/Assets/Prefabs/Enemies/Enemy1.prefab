@@ -127,7 +127,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   role: 2
-  maxHp: 10
+  maxHp: 75
   currentHp: 0
   loot: 1000
   onDeath: {fileID: 8300000, guid: 2101d9fe98db75d44bf99028573ca335, type: 3}
@@ -165,6 +165,7 @@ MonoBehaviour:
   speed: 3
   rotSpeed: 2.5
   editorWaypoints: []
+  isBoss: 0
 --- !u!114 &5102087257348941165
 MonoBehaviour:
   m_ObjectHideFlags: 0

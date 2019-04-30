@@ -6,6 +6,7 @@ public class Ship : VerboseMonoBehaviour
     [SerializeField] float hSpeed = 8f;
     [SerializeField] float vSpeed = 8f;
     [SerializeField] Weapon weapon;
+    [SerializeField] Targeting targetingSystem;
     [SerializeField] float acceleration = 0.3f;
 
     private bool stopping = false;
@@ -34,7 +35,7 @@ public class Ship : VerboseMonoBehaviour
     {
         weapon.Update();
         if (Input.GetButton("Fire1") && !stopping)
-            weapon.Fire();
+            weapon.FireHoming(targetingSystem.Target?.gameObject);
     }
 
     private void FixedUpdate()

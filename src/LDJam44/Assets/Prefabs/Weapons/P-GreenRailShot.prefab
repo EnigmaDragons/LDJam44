@@ -13426,7 +13426,7 @@ ParticleSystem:
     radiusScale: 0.0001
     collidesWith:
       serializedVersion: 2
-      m_Bits: 4294967295
+      m_Bits: 1280
     maxCollisionShapes: 256
     quality: 0
     voxelSize: 1
@@ -14405,7 +14405,7 @@ MonoBehaviour:
   - {fileID: 1438542530079480, guid: 21710859533a00746ad2bdd323061a2d, type: 3}
   Offset: 0.1
   DestroyTimeDelay: 1
-  Damage: 12
+  Damage: 10
   HitSoundEffect: {fileID: 8300000, guid: d3a2576ca3d07af4d9d12550cd973ef7, type: 3}
   UseWorldSpacePosition: 1
   UseFirePointRotation: 0
