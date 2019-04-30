@@ -17,6 +17,8 @@ public class LevelSummary : MonoBehaviour
     public Text RemainingLifeForceNum;
     public Text Loot;
     public Text LootNum;
+    public Text Converter;
+    public Text ConverterNum;
     public GameObject Line;
     public Text Total;
     public Text TotalNum;
@@ -33,11 +35,13 @@ public class LevelSummary : MonoBehaviour
         var shipmentProfit = destinationStation.CurrentBuyPrices[player.Products[0].Name] * player.Counts[0] 
             + destinationStation.CurrentBuyPrices[player.Products[1].Name] * player.Counts[1]
             + destinationStation.CurrentBuyPrices[player.Products[2].Name] * player.Counts[2];
-        var total = shipmentProfit + player.LifeForce + player.Loot;
+        int converterProfit = (int)(player.LifeForce * gameState.UpgradeEffect("Converters"));
+        var total = shipmentProfit + player.LifeForce + player.Loot + converterProfit;
 
         ShipmentNum.text = shipmentProfit.ToString();
         RemainingLifeForceNum.text = player.LifeForce.ToString();
         LootNum.text = player.Loot.ToString();
+        ConverterNum.text = converterProfit.ToString();
         TotalNum.text = total.ToString();
         StartCoroutine(PresentElements());
 
@@ -63,9 +67,18 @@ public class LevelSummary : MonoBehaviour
         RemainingLifeForce.gameObject.SetActive(true);
         RemainingLifeForceNum.gameObject.SetActive(true);
         yield return new WaitForSeconds(AnimationMilliseconds / 1000);
-        Loot.gameObject.SetActive(true);
-        LootNum.gameObject.SetActive(true);
-        yield return new WaitForSeconds(AnimationMilliseconds / 1000);
+        if (player.UpgradeLevel("Looting") > 0)
+        {
+            Loot.gameObject.SetActive(true);
+            LootNum.gameObject.SetActive(true);
+            yield return new WaitForSeconds(AnimationMilliseconds / 1000);
+        }
+        if (player.UpgradeLevel("Converters") > 0)
+        {
+            Converter.gameObject.SetActive(true);
+            ConverterNum.gameObject.SetActive(true);
+            yield return new WaitForSeconds(AnimationMilliseconds / 1000);
+        }
         Line.gameObject.SetActive(true);
         Total.gameObject.SetActive(true);
         TotalNum.gameObject.SetActive(true);

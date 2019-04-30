@@ -10,12 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cd3227da2a06246469a1f4187129530f, type: 3}
-  m_Name: Engines
+  m_Name: Converters
   m_EditorClassIdentifier: 
-  Name: Engines
-  Description: Allows you to travel faster forward getting to your destination sooner
-  Costs: b80b0000e02e0000
+  Name: Health Converters
+  Description: This gives you bonus Life Force based on how much health you have at
+    end of level
+  Costs: e8030000f82a0000
   Effects:
-  - 10
-  - 15
-  - 20
+  - 0
+  - 0.4
+  - 1

@@ -9,6 +9,12 @@ public class Targeting : MonoBehaviour
     public Collider Collider;
     public Renderer Target;
 
+    void Start()
+    {
+        var targetting = GameObject.Find("GameState").GetComponent<GameState>().UpgradeEffect("Targetting");
+        transform.localScale = new Vector3(targetting, targetting, transform.localScale.z);
+    }
+
     void Update()
     {
         Targets = Targets.Where(x => x != null && Collider.bounds.Contains(x.transform.position)).ToList();
