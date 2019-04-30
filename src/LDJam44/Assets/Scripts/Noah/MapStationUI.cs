@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class MapStationUI : MonoBehaviour
@@ -7,6 +6,8 @@ public class MapStationUI : MonoBehaviour
     public AudioClip ButtonSound;
     public MutableSpaceStation SpaceStation;
     public GameState GameState;
+    public GameObject SpaceStationObject;
+    public FlyToStation SpaceShip;
 
     private GameServices game;
     private int distance;
@@ -45,11 +46,11 @@ public class MapStationUI : MonoBehaviour
 
     public void Travel()
     {
-        if (SpaceStation.Name == GameState.CurrentSpaceStationData.Name)
+        if (SpaceStation.Name == GameState.CurrentSpaceStationData.Name || SpaceShip.IsTraveling)
             return;
         GameState.TravelPlanData.Destination = SpaceStation.Name;
         GameState.TravelPlanData.Distance = distance;
         game.PlaySoundEffect(ButtonSound);
-        game.NavigateToScene(SceneNames.ShipTravel);
+        SpaceShip.TravelTo(new Vector3(SpaceStationObject.transform.position.x, 1, SpaceStationObject.transform.position.z));
     }
 }

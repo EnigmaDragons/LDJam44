@@ -351,6 +351,8 @@ MonoBehaviour:
     type: 3}
   SpaceStationMapElementUI: {fileID: 3376222192018450759, guid: fbe0fa8c068eaaf46af4bedb4f0daca5,
     type: 3}
+  SpaceShip: {fileID: 3347249398115896604, guid: bd318cb6daf7a2942beacf8ebb45aa87,
+    type: 3}
 --- !u!114 &445116322
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -738,6 +740,7 @@ GameObject:
   - component: {fileID: 700411550}
   - component: {fileID: 700411549}
   - component: {fileID: 700411552}
+  - component: {fileID: 700411553}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -826,6 +829,19 @@ MonoBehaviour:
   BlurAmount: 1.04
   FadeAmount: 0.75
   material: {fileID: 2100000, guid: 6ced9dc3165b9bd439f57ddcee8abac6, type: 2}
+--- !u!114 &700411553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 700411548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8505086c54ae58044a2d3c469906a2d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Camera: {fileID: 700411550}
 --- !u!1 &765031579
 GameObject:
   m_ObjectHideFlags: 0
