@@ -8,7 +8,5 @@ public class SpaceStationState : ScriptableObject
     public Color Color;
     public float X;
     public float Y;
-    public ProductState[] CheapProducts;
-    public ProductState[] ReasonableProducts;
-    public ProductState[] ExpensiveProducts;
+    public ProductState[] Products;
 }

@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5e0a7c889dc30c4f911fb512f53a9fc, type: 3}
+  m_Name: 4Agro-class Motion Detectors
+  m_EditorClassIdentifier: 
+  Name: Argo-Class Motion Detectors
+  Description: 'Banned by: Law Enforcement. Reason: Too Many Trap Rooms'
+  MinBuyPrice: 5400
+  MaxBuyPrice: 8100
+  MinSellPrice: 2700
+  MaxSellPrice: 4050

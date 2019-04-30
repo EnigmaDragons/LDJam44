@@ -17,12 +17,11 @@ MonoBehaviour:
   Color: {r: 1, g: 0.7490196, b: 1, a: 1}
   X: -6.6
   Y: -3.6
-  CheapProducts:
+  Products:
   - {fileID: 11400000, guid: efca34419b4794a47aa124c2f1e36838, type: 2}
   - {fileID: 11400000, guid: 0ef4a2e0c4bd7474aa17423bd123fb8f, type: 2}
-  ReasonableProducts:
   - {fileID: 11400000, guid: 52ec701091de6694bac3b36a98ac7af5, type: 2}
   - {fileID: 11400000, guid: e37c235bb67579a4cb2f4e913e401e69, type: 2}
-  ExpensiveProducts:
+  - {fileID: 11400000, guid: c9bb109407a625e44afaea13da37ea85, type: 2}
   - {fileID: 11400000, guid: 5440d424f25f74f4a8526a8c82ff9d12, type: 2}
   - {fileID: 11400000, guid: ea82e56c9db505945a4749699022f9cd, type: 2}
