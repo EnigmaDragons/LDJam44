@@ -5,8 +5,9 @@ public class SpaceStationState : ScriptableObject
 {
     public string Name;
     public string Skin;
-    public int X;
-    public int Y;
+    public Color Color;
+    public float X;
+    public float Y;
     public ProductState[] CheapProducts;
     public ProductState[] ReasonableProducts;
     public ProductState[] ExpensiveProducts;

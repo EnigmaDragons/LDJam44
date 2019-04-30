@@ -23,7 +23,13 @@ public class MapStationUI : MonoBehaviour
         game = FindObjectOfType<GameServices>();
         gameObject.GetComponent<RectTransform>().localPosition = new Vector3(SpaceStation.X * 78, SpaceStation.Y * 78, 0);
         Name.text = SpaceStation.Name;
-        distance = 100 * (int)Math.Ceiling(Vector2.Distance(new Vector2(SpaceStation.X, SpaceStation.Y), new Vector2(GameState.CurrentSpaceStationData.X, GameState.CurrentSpaceStationData.Y)));
+        Name.color = SpaceStation.Color;
+        Distance.color = SpaceStation.Color;
+        Product0.color = SpaceStation.Color;
+        Product1.color = SpaceStation.Color;
+        Product2.color = SpaceStation.Color;
+        TravelButton.image.color = SpaceStation.Color;
+        distance = (int)(100 * Vector2.Distance(new Vector2(SpaceStation.X, SpaceStation.Y), new Vector2(GameState.CurrentSpaceStationData.X, GameState.CurrentSpaceStationData.Y)));
         if (SpaceStation != GameState.CurrentSpaceStationData)
         {
             Distance.text = $"Distance: {distance}";
@@ -31,6 +37,10 @@ public class MapStationUI : MonoBehaviour
             Product1.text = $"{GameState.PlayerData.Products[1].Name}: {SpaceStation.CurrentBuyPrices[GameState.PlayerData.Products[1].Name]} LF";
             Product2.text = $"{GameState.PlayerData.Products[2].Name}: {SpaceStation.CurrentBuyPrices[GameState.PlayerData.Products[2].Name]} LF";
             TravelButton.gameObject.SetActive(true);
+        }
+        else
+        {
+            Distance.text = $"You are here";
         }
     }
 
