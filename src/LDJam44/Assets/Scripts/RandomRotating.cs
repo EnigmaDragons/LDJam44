@@ -9,8 +9,8 @@ public class RandomRotating : MonoBehaviour
 
     void Start()
     {
-        Rotating.ZSpeed = Random.Range(-MaxRotation, MaxRotation);
-        Rotating.XSpeed = Random.Range(-MaxRotation, MaxRotation);
-        Rotating.YSpeed = Random.Range(-MaxRotation, MaxRotation);
+        Rotating.ZSpeed = Random.Range(-MaxRotation, MaxRotation + 1);
+        Rotating.XSpeed = Random.Range(-MaxRotation, MaxRotation + 1);
+        Rotating.YSpeed = Random.Range(-MaxRotation, MaxRotation + 1);
     }
 }

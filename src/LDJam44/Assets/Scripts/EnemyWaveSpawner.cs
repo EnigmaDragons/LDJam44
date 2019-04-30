@@ -50,7 +50,7 @@ class EnemyWaveSpawner : VerboseMonoBehaviour
         var waypoints = new List<Vector3>();
         waypoints.Add(firstWaypoint);
 
-        var numMidWaypoints = Random.Range(minWaypoints, maxWaypoints) - 2;
+        var numMidWaypoints = Random.Range(minWaypoints, maxWaypoints + 1) - 2;
         for (var i = 0; i < numMidWaypoints; i++)
             waypoints.Add(NextSaneWaypoint(waypoints.Last()));
 
@@ -61,7 +61,7 @@ class EnemyWaveSpawner : VerboseMonoBehaviour
         {
             EnemyProtoype = enemyPrototypes.Random(),
             Path = waypoints.ToArray(),
-            NumEnemies = Random.Range(minEnemiesPerWave, maxEnemiesPerWave),
+            NumEnemies = Random.Range(minEnemiesPerWave, maxEnemiesPerWave + 1),
             SecondsBetweenEnemies = Random.Range(minSecondsBetweenEnemies, maxSecondsBetweenEnemies),
             ZTriggerThreshold = z,
             MaxZAllowed = maxZ

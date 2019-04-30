@@ -44,10 +44,10 @@ public class GameState : Singleton<GameState>
             PlayerData.Counts = new[] { 0, 0, 0 };
             spaceStation.ProductsForSale.ToList().ForEach(product =>
             {
-                spaceStation.CurrentSellPrices[product.Name] = Random.Range(product.MinSellPrice, product.MaxSellPrice);
+                spaceStation.CurrentSellPrices[product.Name] = Random.Range(product.MinSellPrice, product.MaxSellPrice + 1);
                 GalaxyData.Stations.ToList().ForEach(station =>
                 {
-                    station.CurrentBuyPrices[product.Name] = Random.Range(product.MinBuyPrice, product.MaxBuyPrice);
+                    station.CurrentBuyPrices[product.Name] = Random.Range(product.MinBuyPrice, product.MaxBuyPrice + 1);
                 });
             });
         }

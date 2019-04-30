@@ -22,10 +22,10 @@ public class SetupStation : MonoBehaviour
         gameState.PlayerData.Counts = new[] {0, 0, 0};
         spaceStation.ProductsForSale.ToList().ForEach(product =>
         {
-            spaceStation.CurrentSellPrices[product.Name] = Random.Range(product.MinSellPrice, product.MaxSellPrice);
+            spaceStation.CurrentSellPrices[product.Name] = Random.Range(product.MinSellPrice, product.MaxSellPrice + 1);
             gameState.GalaxyData.Stations.ToList().ForEach(station =>
             {
-                station.CurrentBuyPrices[product.Name] = (int)Math.Ceiling(Random.Range(product.MinBuyPrice, product.MaxBuyPrice) * gameState.UpgradeEffect("Trading"));
+                station.CurrentBuyPrices[product.Name] = (int)Math.Ceiling(Random.Range(product.MinBuyPrice, product.MaxBuyPrice + 1) * gameState.UpgradeEffect("Trading"));
             });
         });
         Instantiate(SpaceStationCanvas);

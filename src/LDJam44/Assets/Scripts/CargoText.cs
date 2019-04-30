@@ -1,4 +1,5 @@
 ﻿
+using System.Linq;
 using TMPro;
 
 class CargoText : VerboseMonoBehaviour
@@ -8,6 +9,6 @@ class CargoText : VerboseMonoBehaviour
     private void Start()
     {
         text = VerboseGetComponent<TextMeshProUGUI>();
-        text.text = VerboseFindObjectOfType<GameState>().PlayerData.Products.Length.ToString();
+        text.text = VerboseFindObjectOfType<GameState>().PlayerData.Counts.Sum(x => x).ToString();
     }
 }
