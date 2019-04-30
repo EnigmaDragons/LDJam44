@@ -1,11 +1,13 @@
 ﻿using System.Collections.Generic;
+using UnityEngine;
 
 public class MutableSpaceStation
 {
     public string Name;
     public string Skin;
-    public int X;
-    public int Y;
+    public Color Color;
+    public float X;
+    public float Y;
     public ProductState[] CheapProducts;
     public ProductState[] ReasonableProducts;
     public ProductState[] ExpensiveProducts;
@@ -18,6 +20,7 @@ public class MutableSpaceStation
     {
         Name = spaceStation.Name;
         Skin = spaceStation.Skin;
+        Color = spaceStation.Color;
         X = spaceStation.X;
         Y = spaceStation.Y;
         CheapProducts = spaceStation.CheapProducts;
