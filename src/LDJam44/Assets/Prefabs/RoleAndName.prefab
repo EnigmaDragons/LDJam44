@@ -114,6 +114,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameText: {fileID: 916682488469881006}
   roleText: {fileID: 916682488090234357}
+  RoleAndName: {fileID: 916682487759440183}
 --- !u!95 &916682487759440180
 Animator:
   serializedVersion: 3

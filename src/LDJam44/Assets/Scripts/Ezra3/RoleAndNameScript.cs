@@ -5,6 +5,7 @@ public class RoleAndNameScript : MonoBehaviour
 {
     public Text nameText;
     public Text roleText;
+    public GameObject RoleAndName;
     int x = 0;
     int y = 0;
 
@@ -12,7 +13,7 @@ public class RoleAndNameScript : MonoBehaviour
     {
         if (x == AllCredits.Length)
         {
-            nameText.text = "";
+            RoleAndName.SetActive(false);
         }
         else
         {
@@ -24,7 +25,7 @@ public class RoleAndNameScript : MonoBehaviour
     {
         if (y == AllCredits.Length)
         {
-            roleText.text = "";
+            RoleAndName.SetActive(false);
         }
         else
         {
