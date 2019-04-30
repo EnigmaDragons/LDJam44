@@ -20,7 +20,8 @@ public class Targeting : MonoBehaviour
         Targets = Targets.Where(x => x != null && Collider.bounds.Contains(x.transform.position)).ToList();
         if (Targets.Any())
         {
-            Target = Targets.OrderBy(x => x.transform.position.x).First();
+            if (!Targets.Contains(Target))
+                Target = Targets.OrderBy(x => x.transform.position.x).First();
             Reticle.transform.position = Target.transform.position;
             var size = Target.bounds.size.x > Target.bounds.size.y ? Target.bounds.size.x : Target.bounds.size.y;
             Reticle.transform.localScale = new Vector3(size * 0.9f, size * 0.9f, 1);
