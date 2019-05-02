@@ -15,8 +15,8 @@ MonoBehaviour:
   Name: Omega Research Station
   Skin: PurpleSkin
   Color: {r: 1, g: 0.7490196, b: 1, a: 1}
-  X: -6.6
-  Y: -3.6
+  X: -6
+  Y: -3
   Products:
   - {fileID: 11400000, guid: efca34419b4794a47aa124c2f1e36838, type: 2}
   - {fileID: 11400000, guid: 0ef4a2e0c4bd7474aa17423bd123fb8f, type: 2}

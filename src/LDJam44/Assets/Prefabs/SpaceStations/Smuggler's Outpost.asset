@@ -15,8 +15,8 @@ MonoBehaviour:
   Name: Smuggler's Outpost
   Skin: RedSkin
   Color: {r: 1, g: 0.49803922, b: 0.49803922, a: 1}
-  X: 8.7
-  Y: 2.7
+  X: 9
+  Y: 3
   Products:
   - {fileID: 11400000, guid: a9513e3ce6224f54a919a04e032012a7, type: 2}
   - {fileID: 11400000, guid: 4aa6d188529469649a5342ace6b19913, type: 2}

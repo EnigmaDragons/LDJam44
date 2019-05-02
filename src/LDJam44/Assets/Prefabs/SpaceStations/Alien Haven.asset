@@ -15,8 +15,8 @@ MonoBehaviour:
   Name: Alien Haven
   Skin: GreenSkin
   Color: {r: 0.49803922, g: 1, b: 0.49803922, a: 1}
-  X: 6.8
-  Y: -3.2
+  X: 5
+  Y: -4
   Products:
   - {fileID: 11400000, guid: bc8b6650a598866499f9fe3869a951cc, type: 2}
   - {fileID: 11400000, guid: eabaccccce0708048b4d1f4e165a5cc3, type: 2}

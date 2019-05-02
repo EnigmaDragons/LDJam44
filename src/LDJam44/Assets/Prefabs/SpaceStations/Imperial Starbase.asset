@@ -15,8 +15,8 @@ MonoBehaviour:
   Name: Imperial Starbase
   Skin: BlueSkin
   Color: {r: 0.49803922, g: 0.49803922, b: 1, a: 1}
-  X: -1.9
-  Y: 4.1
+  X: -2
+  Y: 4
   Products:
   - {fileID: 11400000, guid: 6c987bfaedc08584db55927c9b5fa8cc, type: 2}
   - {fileID: 11400000, guid: 00b34431a8d576d4b803fc8c0d6d661a, type: 2}
