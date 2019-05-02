@@ -127,9 +127,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   role: 2
-  maxHp: 75
+  maxHp: 100
   currentHp: 0
-  loot: 1000
+  loot: 100
   onDeath: {fileID: 8300000, guid: 2101d9fe98db75d44bf99028573ca335, type: 3}
   onDamageSound: {fileID: 8300000, guid: 25d1111e0b776764981cfa43afea585c, type: 3}
   onDeathVfx: {fileID: 541646883767013081, guid: a6c2ce95cd676f54c881f3a367a2ac5a,
@@ -205,5 +205,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weapon: {fileID: 11400000, guid: f2ce48c5ea40eea44a5a47716d17c9cd, type: 2}
-  varianceAmount: 2.5
-  difficultyDamageScaling: 1.25
+  varianceAmount: 2
+  difficultyDamageScaling: 1.5
+  distanceMultiplier: 0.4035
+  engineMultiplier: 0.2795

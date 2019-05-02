@@ -28831,7 +28831,7 @@ MonoBehaviour:
   - {fileID: 1029544359644514, guid: aab2daf1fd2b23f4a9bdbbb38fc95704, type: 3}
   Offset: 0.1
   DestroyTimeDelay: 1
-  Damage: 5
+  Damage: 2
   HitSoundEffect: {fileID: 8300000, guid: 0d62ae0d19537214dab48fa3df781a1f, type: 3}
   UseWorldSpacePosition: 1
   UseFirePointRotation: 0

@@ -9804,7 +9804,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 40
+      scalar: 50
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -14405,7 +14405,7 @@ MonoBehaviour:
   - {fileID: 1438542530079480, guid: 21710859533a00746ad2bdd323061a2d, type: 3}
   Offset: 0.1
   DestroyTimeDelay: 1
-  Damage: 10
+  Damage: 50
   HitSoundEffect: {fileID: 8300000, guid: d3a2576ca3d07af4d9d12550cd973ef7, type: 3}
   UseWorldSpacePosition: 1
   UseFirePointRotation: 0

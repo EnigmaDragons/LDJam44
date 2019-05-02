@@ -7,7 +7,8 @@ class EnemyWaveSpawner : VerboseMonoBehaviour
     [SerializeField] GameObject[] enemyPrototypes = new GameObject[0];
     [SerializeField] private GameObject Mothership;
     [SerializeField] Wave wavePrototype;
-    [SerializeField] float densityFactor = 2f;
+    [SerializeField] float densityFactor = 1f;
+    [SerializeField] float baseDensity = 4f;
     [SerializeField] float forwardBias = 1.0f;
     [SerializeField] int minEnemiesPerWave = 2;
     [SerializeField] int maxEnemiesPerWave = 7;
@@ -24,7 +25,7 @@ class EnemyWaveSpawner : VerboseMonoBehaviour
         Debug.Log("Difficulty: " + settings.Difficulty);
         minEnemiesPerWave = settings.Difficulty - 1;
         maxEnemiesPerWave = settings.Difficulty + 1;
-        var computedDensityFactor = settings.Difficulty * densityFactor;
+        var computedDensityFactor = settings.Difficulty * densityFactor + baseDensity;
 
         var maxZ = settings.TravelDistance - SpawnBoundaries.endClearPlayAreaDistance;
         var density = 1000 * (1 / computedDensityFactor);

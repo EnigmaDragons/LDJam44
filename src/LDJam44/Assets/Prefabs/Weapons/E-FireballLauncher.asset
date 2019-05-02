@@ -21,4 +21,4 @@ MonoBehaviour:
   delayBetweenShots: 0.18
   weaponRole: 2
   accuracy: 1
-  damageAmount: 10
+  damageAmount: 3

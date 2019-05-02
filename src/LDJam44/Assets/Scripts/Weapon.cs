@@ -65,14 +65,6 @@ class Weapon : ScriptableObject
     {
         for (var i = 0; i < numProjectiles; i++)
         {
-            const float accuracyFactor = 0.6f;
-            var inaccuracyPercent = 1f - accuracy;
-            var inaccuracy = inaccuracyPercent * accuracyFactor;
-            var shotRotation = rotation * Quaternion.LookRotation(new Vector3(
-                Random.Range(-inaccuracy, inaccuracy), 
-                Random.Range(-inaccuracy, inaccuracy), 
-                Random.Range(-inaccuracy, inaccuracy)));
-
             var ownerPos = owner.transform.position;
             var ownerDirection = owner.transform.forward;
             var spawnPos = ownerPos + ownerDirection * forwardOffset;

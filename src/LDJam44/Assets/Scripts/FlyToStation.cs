@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 public class FlyToStation : MonoBehaviour
 {
@@ -27,9 +28,6 @@ public class FlyToStation : MonoBehaviour
 
         var step = Time.deltaTime * ForwardSpeed;
         transform.position = Vector3.MoveTowards(transform.position, travelLocation, step);
-
-        if (Vector3.Distance(transform.position, travelLocation) < 0.001f)
-            game.NavigateToScene(SceneNames.ShipTravel);
     }
 
     public void TravelTo(Vector3 location)
@@ -38,5 +36,12 @@ public class FlyToStation : MonoBehaviour
             return;
         IsTraveling = true;
         travelLocation = location;
+        StartCoroutine(SceneChange());
+    }
+
+    public IEnumerator SceneChange()
+    {
+        yield return new WaitForSeconds(1);
+        game.NavigateToScene(SceneNames.ShipTravel);
     }
 }

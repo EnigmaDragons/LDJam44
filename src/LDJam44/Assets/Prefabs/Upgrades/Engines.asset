@@ -16,6 +16,6 @@ MonoBehaviour:
   Description: Allows you to travel faster forward getting to your destination sooner
   Costs: b80b0000e02e0000
   Effects:
-  - 10
+  - 20
   - 15
   - 20

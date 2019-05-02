@@ -8,10 +8,12 @@ public class Ship : VerboseMonoBehaviour
     [SerializeField] Weapon weapon;
     [SerializeField] Targeting targetingSystem;
     [SerializeField] float acceleration = 0.3f;
+    [SerializeField] float fireInterval = 0.6f;
 
     private bool stopping = false;
     private Rigidbody Rigidbody;
     private Health health;
+    private double msBeforeFire;
 
     public bool Stopped => stopping;
 
@@ -34,8 +36,18 @@ public class Ship : VerboseMonoBehaviour
     void Update()
     {
         weapon.Update();
-        if (Input.GetButton("Fire1") && !stopping)
+        if (msBeforeFire > 0)
+            msBeforeFire -= Time.deltaTime;
+        if (!stopping && msBeforeFire <= 0 && Input.GetButtonUp("Fire2"))
+        {
             weapon.FireHoming(targetingSystem.Target?.gameObject);
+            msBeforeFire = fireInterval;
+        }
+        if (!stopping && msBeforeFire <= 0 && Input.GetButton("Fire1") && !Input.GetButton("Fire2"))
+        {
+            weapon.Fire();
+            msBeforeFire = fireInterval;
+        }
     }
 
     private void FixedUpdate()
@@ -50,10 +62,12 @@ public class Ship : VerboseMonoBehaviour
 
     private void UpdateLeaning()
     {
-        var vLeanAmount = Rigidbody.velocity.x * 6;
-        var vTurnAmount = Rigidbody.velocity.x * 2;
-        var hLeanAmount = Rigidbody.velocity.y * 3;
-        transform.rotation = Quaternion.Euler(-hLeanAmount, vTurnAmount, 180 - vLeanAmount);
+        
+
+        var vLeanAmount = Rigidbody.velocity.x * 5;
+        var vTurnAmount = Rigidbody.velocity.x;
+        var hLeanAmount = Rigidbody.velocity.y;
+        transform.rotation = Quaternion.Euler(-transform.position.y * 2.5f + 5 - hLeanAmount, transform.position.x * 2.5f + vTurnAmount, 180 - vLeanAmount);
     }
 
     private void UpdateVelocity()
