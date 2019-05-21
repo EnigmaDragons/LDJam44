@@ -8,6 +8,9 @@ public class Map : MonoBehaviour
     public GameObject Tutorial;
     public GameObject SpaceStation;
     public GameObject SpaceStationMapElementUI;
+    public GameObject SpaceShip;
+
+    private GameObject spaceship;
 
     void Start()
     {
@@ -21,6 +24,7 @@ public class Map : MonoBehaviour
     void Init()
     {
         Tutorial.SetActive(false);
+        spaceship = Instantiate(SpaceShip, new Vector3(gameState.CurrentSpaceStationData.X, 1, gameState.CurrentSpaceStationData.Y), SpaceShip.transform.rotation);
         gameState.GalaxyData.Stations.ToList().ForEach(x =>
         {
             var station = Instantiate(SpaceStation, new Vector3(x.X, 0, x.Y), Quaternion.Euler(SpaceStation.transform.eulerAngles.x, Random.Range(-180, 180), Random.Range(-180, 180)));
@@ -29,6 +33,8 @@ public class Map : MonoBehaviour
             var ui = Instantiate(SpaceStationMapElementUI, transform).GetComponent<MapStationUI>();
             ui.SpaceStation = x;
             ui.GameState = gameState;
+            ui.SpaceShip = spaceship.GetComponent<FlyToStation>();
+            ui.SpaceStationObject = station;
         });
     }
 

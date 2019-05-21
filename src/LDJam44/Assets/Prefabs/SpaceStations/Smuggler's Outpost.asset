@@ -15,14 +15,13 @@ MonoBehaviour:
   Name: Smuggler's Outpost
   Skin: RedSkin
   Color: {r: 1, g: 0.49803922, b: 0.49803922, a: 1}
-  X: 8.7
-  Y: 2.7
-  CheapProducts:
+  X: 9
+  Y: 3
+  Products:
   - {fileID: 11400000, guid: a9513e3ce6224f54a919a04e032012a7, type: 2}
   - {fileID: 11400000, guid: 4aa6d188529469649a5342ace6b19913, type: 2}
-  ReasonableProducts:
-  - {fileID: 11400000, guid: 49bccf2a60f212d438ae386fe781b92f, type: 2}
   - {fileID: 11400000, guid: 4419ae43362b3f645a21e915c4059ebb, type: 2}
-  ExpensiveProducts:
+  - {fileID: 11400000, guid: 49bccf2a60f212d438ae386fe781b92f, type: 2}
+  - {fileID: 11400000, guid: d574bf8f63a8c5c4c876140f7a04125b, type: 2}
   - {fileID: 11400000, guid: fb8bde0994396914fa98ee737d5d84a1, type: 2}
   - {fileID: 11400000, guid: 4fd0b53e83708314f87b3eeab0f2eb72, type: 2}

@@ -8,9 +8,7 @@ public class MutableSpaceStation
     public Color Color;
     public float X;
     public float Y;
-    public ProductState[] CheapProducts;
-    public ProductState[] ReasonableProducts;
-    public ProductState[] ExpensiveProducts;
+    public ProductState[] Products;
 
     public ProductState[] ProductsForSale;
     public Dictionary<string, int> CurrentBuyPrices = new Dictionary<string, int>();
@@ -23,8 +21,6 @@ public class MutableSpaceStation
         Color = spaceStation.Color;
         X = spaceStation.X;
         Y = spaceStation.Y;
-        CheapProducts = spaceStation.CheapProducts;
-        ReasonableProducts = spaceStation.ReasonableProducts;
-        ExpensiveProducts = spaceStation.ExpensiveProducts;
+        Products = spaceStation.Products;
     }
 }

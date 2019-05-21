@@ -46,28 +46,25 @@ class Weapon : ScriptableObject
         Fire(owner.transform.rotation);
     }
 
-    private void Fire(Quaternion rotation)
+    public void FireHoming(GameObject target)
+    {
+        Fire(owner.transform.rotation, target);
+    }
+
+    private void Fire(Quaternion rotation, GameObject target = null)
     {
         if (msBeforeFire > 0)
             return;
 
         msBeforeFire = fireInterval;
 
-        game.StartInBackround(LaunchProjectiles(rotation));
+        game.StartInBackround(LaunchProjectiles(rotation, target));
     }
 
-    private IEnumerator LaunchProjectiles(Quaternion rotation)
+    private IEnumerator LaunchProjectiles(Quaternion rotation, GameObject target)
     {
         for (var i = 0; i < numProjectiles; i++)
         {
-            const float accuracyFactor = 0.6f;
-            var inaccuracyPercent = 1f - accuracy;
-            var inaccuracy = inaccuracyPercent * accuracyFactor;
-            var shotRotation = rotation * Quaternion.LookRotation(new Vector3(
-                Random.Range(-inaccuracy, inaccuracy), 
-                Random.Range(-inaccuracy, inaccuracy), 
-                Random.Range(-inaccuracy, inaccuracy)));
-
             var ownerPos = owner.transform.position;
             var ownerDirection = owner.transform.forward;
             var spawnPos = ownerPos + ownerDirection * forwardOffset;
@@ -78,6 +75,7 @@ class Weapon : ScriptableObject
             projectile.SetDamage(damageAmount);
             projectile.AmplifyDamage(damageFactor);
             projectile.SetRole(weaponRole);
+            projectile.SetHomingTarget(target);
             yield return new WaitForSeconds(delayBetweenShots);
         }
     }

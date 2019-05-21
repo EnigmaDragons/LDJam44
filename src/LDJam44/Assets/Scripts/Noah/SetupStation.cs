@@ -7,17 +7,24 @@ public class SetupStation : MonoBehaviour
 {
     public GameObject SpaceStationCanvas;
     public GameObject SpaceStation;
+    public GameObject StationDockedShip;
 
     void Start()
     {
         var gameState = GameObject.Find("GameState").GetComponent<GameState>();
         var spaceStation = gameState.CurrentSpaceStationData;
-        spaceStation.ProductsForSale = new []
+
+        var i = 3;
+        for (var _ = 0; i < spaceStation.Products.Length; i++)
+            if (gameState.PlayerData.LifeForce < spaceStation.Products[i].MaxSellPrice)
+                break;
+        spaceStation.ProductsForSale = new[]
         {
-            spaceStation.CheapProducts.Random(),
-            spaceStation.ReasonableProducts.Random(),
-            spaceStation.ExpensiveProducts.Random()
+            spaceStation.Products[i - 3],
+            spaceStation.Products[i - 2],
+            spaceStation.Products[i - 1],
         };
+
         gameState.PlayerData.Products = gameState.CurrentSpaceStationData.ProductsForSale;
         gameState.PlayerData.Counts = new[] {0, 0, 0};
         spaceStation.ProductsForSale.ToList().ForEach(product =>
@@ -31,5 +38,6 @@ public class SetupStation : MonoBehaviour
         Instantiate(SpaceStationCanvas);
         var stationGameObject = Instantiate(SpaceStation, new Vector3(0, 0, 0), SpaceStation.gameObject.transform.rotation);
         stationGameObject.GetComponent<SpaceStationSkin>().SpaceStation = spaceStation;
+        Instantiate(StationDockedShip, StationDockedShip.transform.position, StationDockedShip.transform.rotation);
     }
 }

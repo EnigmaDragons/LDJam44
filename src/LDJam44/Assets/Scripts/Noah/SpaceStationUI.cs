@@ -102,9 +102,9 @@ public class SpaceStationUI : VerboseMonoBehaviour
     {
         GameObject.Find("GameState").GetComponent<GameState>().TravelPlanData.Difficulty = (spaceStation.CurrentBuyPrices[player.Products[0].Name] * player.Counts[0]
                                                                                            + spaceStation.CurrentBuyPrices[player.Products[1].Name] * player.Counts[1]
-                                                                                           + spaceStation.CurrentBuyPrices[player.Products[2].Name] * player.Counts[2]).ToString().Length; ;
-        game.PlaySoundEffect(ButtonSound);
-        game.NavigateToScene(SceneNames.Map);
+                                                                                           + spaceStation.CurrentBuyPrices[player.Products[2].Name] * player.Counts[2]).ToString().Length;
+        GameObject.FindObjectOfType<SpaceStationUndocking>().Launch();
+        MainUI.SetActive(false);
     }
 
     public void DismissTutorial()

@@ -53,7 +53,7 @@ namespace Assets.Scripts.Noah
                 nextHitPointCost = (int)Math.Ceiling(nextHitPointCost * HealthScalingCost);
             }
             health++;
-            Health = health;
+            Health = health + 40;
         }
     }
 }

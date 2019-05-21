@@ -20,5 +20,5 @@ MonoBehaviour:
   numProjectiles: 1
   delayBetweenShots: 1.5
   weaponRole: 2
-  accuracy: 0.92
-  damageAmount: 25
+  accuracy: 1
+  damageAmount: 4

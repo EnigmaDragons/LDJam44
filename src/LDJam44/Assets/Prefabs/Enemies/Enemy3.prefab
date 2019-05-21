@@ -94,6 +94,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1110078864755139256, guid: 25398ba78dee99a458cca06883a489f6,
         type: 3}
+    - target: {fileID: 3066295218750092007, guid: 5d7d7a03d0fe7f84ab54ac420418a1dd,
+        type: 3}
+      propertyPath: maxHp
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 3066295218750092007, guid: 5d7d7a03d0fe7f84ab54ac420418a1dd,
+        type: 3}
+      propertyPath: loot
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 8837146078604321584, guid: 5d7d7a03d0fe7f84ab54ac420418a1dd,
         type: 3}
       propertyPath: speed
@@ -108,7 +118,22 @@ PrefabInstance:
     - target: {fileID: 3358885140708833890, guid: 5d7d7a03d0fe7f84ab54ac420418a1dd,
         type: 3}
       propertyPath: varianceAmount
-      value: 10
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3358885140708833890, guid: 5d7d7a03d0fe7f84ab54ac420418a1dd,
+        type: 3}
+      propertyPath: weaponSpeed
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3358885140708833890, guid: 5d7d7a03d0fe7f84ab54ac420418a1dd,
+        type: 3}
+      propertyPath: engineMultiplier
+      value: 0.345
+      objectReference: {fileID: 0}
+    - target: {fileID: 3358885140708833890, guid: 5d7d7a03d0fe7f84ab54ac420418a1dd,
+        type: 3}
+      propertyPath: distanceMultiplier
+      value: 0.4925
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d7d7a03d0fe7f84ab54ac420418a1dd, type: 3}

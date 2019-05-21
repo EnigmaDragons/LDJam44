@@ -576,6 +576,8 @@ MonoBehaviour:
     type: 3}
   SpaceStation: {fileID: 476798139245061965, guid: e6cf1d64f20e6da4f899e343fa8d246d,
     type: 3}
+  StationDockedShip: {fileID: 1336126941019964283, guid: 01521d9fc86e75a469f43cb20e3ac9fa,
+    type: 3}
 --- !u!4 &1550475563
 Transform:
   m_ObjectHideFlags: 0

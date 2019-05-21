@@ -77,4 +77,29 @@ public class ParticleCollisionInstance : VerboseMonoBehaviour
         isDestroying = true;
         Destroy(gameObject, DestroyTimeDelay + 0.5f);
     }
+
+    //Homing System
+    private GameObject target;
+    private ParticleSystem.Particle[] particles;
+
+    public void SetHomingTarget(GameObject enemy)
+    {
+        Debug.Log("Homing Projectile Fired");
+        target = enemy;
+    }
+
+    void Update()
+    {
+        if (target == null)
+            return;
+        if (particles == null)
+            particles = new ParticleSystem.Particle[part.main.maxParticles];
+        var particleCount = part.GetParticles(particles);
+        var heading = target.transform.position - particles[0].position;
+        var distance = heading.magnitude;
+        var direction = heading / distance;
+        for (int i = 0; i < particleCount; i++)
+            particles[i].velocity = direction * particles[i].velocity.magnitude;
+        part.SetParticles(particles);
+    }
 }

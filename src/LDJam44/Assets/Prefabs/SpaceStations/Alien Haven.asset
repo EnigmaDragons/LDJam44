@@ -15,14 +15,13 @@ MonoBehaviour:
   Name: Alien Haven
   Skin: GreenSkin
   Color: {r: 0.49803922, g: 1, b: 0.49803922, a: 1}
-  X: 6.8
-  Y: -3.2
-  CheapProducts:
-  - {fileID: 11400000, guid: 78772ee3b3d68a44c84f6e00cf48c608, type: 2}
+  X: 5
+  Y: -4
+  Products:
   - {fileID: 11400000, guid: bc8b6650a598866499f9fe3869a951cc, type: 2}
-  ReasonableProducts:
-  - {fileID: 11400000, guid: fe202dbe8b3661c49bc1843d7ce30bdc, type: 2}
+  - {fileID: 11400000, guid: eabaccccce0708048b4d1f4e165a5cc3, type: 2}
   - {fileID: 11400000, guid: 5a30fe362b400734b93c1e31781a40a2, type: 2}
-  ExpensiveProducts:
-  - {fileID: 11400000, guid: f8b9e61b39254ef41a5951b84e31bfa3, type: 2}
+  - {fileID: 11400000, guid: fe202dbe8b3661c49bc1843d7ce30bdc, type: 2}
+  - {fileID: 11400000, guid: 9d5d1d2680e33914186a787e7036dda7, type: 2}
   - {fileID: 11400000, guid: ed2e09956a993164dacdcdab719fc0df, type: 2}
+  - {fileID: 11400000, guid: f8b9e61b39254ef41a5951b84e31bfa3, type: 2}

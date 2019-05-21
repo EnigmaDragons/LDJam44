@@ -58,5 +58,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerShipName: Spaceship
-  TravelSummary: {fileID: 7675305048116666362, guid: 18bcba3f69b614642b8b33f2f12ce85c,
+  TravelSummary: {fileID: 6388368841336234900, guid: 18bcba3f69b614642b8b33f2f12ce85c,
     type: 3}

@@ -17,6 +17,6 @@ MonoBehaviour:
   Costs: b80b00001027000050c30000
   Effects:
   - 0
-  - 0.02
-  - 0.1
   - 1
+  - 5
+  - 25

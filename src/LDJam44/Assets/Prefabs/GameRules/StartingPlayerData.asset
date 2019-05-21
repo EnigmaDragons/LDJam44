@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LifeForce: 900
   StationName: Imperial Starbase
-  HealthScalingCost: 1.01
+  HealthScalingCost: 1.1

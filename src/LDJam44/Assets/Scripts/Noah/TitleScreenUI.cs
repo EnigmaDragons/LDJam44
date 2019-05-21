@@ -20,7 +20,7 @@ public class TitleScreenUI : MonoBehaviour
     {
         var gameState = GameObject.Find("GameState");
         if (gameState != null)
-            Destroy(gameState);
+            gameState.GetComponent<GameState>().Reset();
         game = FindObjectOfType<GameServices>();
         float musicVolume = 0;
         Mixer.GetFloat("MusicVolume", out musicVolume);
